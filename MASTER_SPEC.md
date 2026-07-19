@@ -1,10 +1,9 @@
-# Master Spec: Script-to-Animated-Video Pipeline (DeliveryPilot)
+# Master Spec: Script-to-Animated-Video Pipeline 
 
 ## 1. Purpose
 
-Build a repo-driven pipeline that turns structured scene data (script + storyboard +
-sprites) into animated technical training videos, using Canva Bulk Create for slide
-generation and Canva's native Animate + AI voiceover for production.
+Build a video pipeline  presentation that represents the video production workflow (script + storyboard +
+sprites, frames ) into animated technical training videos, using Canva and AI to Create videos use this project as the bluprint for the production.
 
 **Core design principle — Cognitive Offload / Show, Don't Tell**
 Narration and visuals must not carry the same information twice. Redundant
