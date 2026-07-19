@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Carousel Scene Review</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Carousel Scene Review</h1>
+    <div class="topic-picker">
+      <label for="topic-select">Topic</label>
+      <select id="topic-select"></select>
+      <span id="save-status" class="save-status"></span>
+      <button id="save-btn" class="primary">Save</button>
+    </div>
+  </header>
+
+  <nav id="filmstrip" class="filmstrip"></nav>
+
+  <main id="card-root" class="card-root">
+    <p class="empty-state">Pick a topic to begin.</p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
