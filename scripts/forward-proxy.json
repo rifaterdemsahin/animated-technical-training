@@ -1,0 +1,60 @@
+{
+  "topic": "forward-proxy",
+  "scenes": [
+    {
+      "page_id": "fp-001",
+      "status": "ready",
+      "visual_action": "Client sends request; proxy intercepts and relabels sender before forwarding to server",
+      "sprite_sequence": ["client_idle", "client_action", "proxy_relabel", "server_receive"],
+      "incoming": "Every request from this office goes through one desk first.",
+      "outgoing": "The server never sees who really asked.",
+      "domain": "networking",
+      "exam_ref": "CCA-F-net-03",
+      "notes": ""
+    },
+    {
+      "page_id": "fp-002",
+      "status": "ready",
+      "visual_action": "Server hands response to proxy; proxy relabels destination and passes it back to the waiting client",
+      "sprite_sequence": ["server_receive", "server_response", "proxy_forward", "client_receive"],
+      "incoming": "The server replies to the desk, not to you directly.",
+      "outgoing": "The desk hands the answer back to whoever asked.",
+      "domain": "networking",
+      "exam_ref": "CCA-F-net-04",
+      "notes": ""
+    },
+    {
+      "page_id": "fp-003",
+      "status": "draft",
+      "visual_action": "Three separate clients each send a request; proxy funnels all three through the same outgoing identity",
+      "sprite_sequence": ["client_idle", "client_action", "proxy_relabel"],
+      "incoming": "Ten desks in the building, one exit door.",
+      "outgoing": "Outside, every request looks like it came from the same place.",
+      "domain": "networking",
+      "exam_ref": "CCA-F-net-05",
+      "notes": "needs a third client sprite added to sequence before marking ready"
+    },
+    {
+      "page_id": "fp-004",
+      "status": "ready",
+      "visual_action": "Proxy checks its cache shelf, finds a matching answer, and hands it to the client without contacting the server",
+      "sprite_sequence": ["client_action", "proxy_relabel", "client_receive"],
+      "incoming": "Sometimes the desk already has the answer on a shelf.",
+      "outgoing": "No trip to the server needed this time.",
+      "domain": "networking",
+      "exam_ref": "CCA-F-net-06",
+      "notes": ""
+    },
+    {
+      "page_id": "fp-005",
+      "status": "draft",
+      "visual_action": "",
+      "sprite_sequence": ["client_idle"],
+      "incoming": "",
+      "outgoing": "",
+      "domain": "networking",
+      "exam_ref": "CCA-F-net-07",
+      "notes": "placeholder scene left intentionally incomplete to exercise the validator"
+    }
+  ]
+}
