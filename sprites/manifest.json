@@ -1,9 +1,0 @@
-{
-  "client_idle": { "file": "sprites/client/client_idle_neutral.png", "character": "client", "pose": "idle", "expression": "neutral" },
-  "client_action": { "file": "sprites/client/client_action_neutral.png", "character": "client", "pose": "action", "expression": "neutral" },
-  "client_receive": { "file": "sprites/client/client_receive_neutral.png", "character": "client", "pose": "receive", "expression": "neutral" },
-  "proxy_relabel": { "file": "sprites/proxy/proxy_relabel_neutral.png", "character": "proxy", "pose": "relabel", "expression": "neutral" },
-  "proxy_forward": { "file": "sprites/proxy/proxy_forward_neutral.png", "character": "proxy", "pose": "forward", "expression": "neutral" },
-  "server_receive": { "file": "sprites/server/server_receive_neutral.png", "character": "server", "pose": "receive", "expression": "neutral" },
-  "server_response": { "file": "sprites/server/server_response_neutral.png", "character": "server", "pose": "response", "expression": "neutral" }
-}

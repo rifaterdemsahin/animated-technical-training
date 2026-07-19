@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎬 Animated Technical Training — Pipeline</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --bg-alt: #1e293b;
+    --card: #16213e;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent1: #f472b6;
+    --accent2: #38bdf8;
+    --accent3: #34d399;
+    --accent4: #fbbf24;
+    --accent5: #a78bfa;
+    --border: #334155;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(160deg, var(--bg), #111827 60%, var(--bg-alt));
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+  header { text-align: center; margin-bottom: 2.5rem; }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0 0 0.5rem;
+    background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3), var(--accent4));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tagline { color: var(--muted); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
+  .links { margin-top: 1.2rem; display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+  .links a {
+    color: var(--bg);
+    background: var(--accent2);
+    text-decoration: none;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.15s ease;
+  }
+  .links a:hover { transform: translateY(-2px); }
+  .links a.alt { background: var(--accent3); }
+  .links a.alt2 { background: var(--accent4); }
+
+  section { margin-bottom: 3rem; }
+  h2 {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .principle {
+    background: var(--card);
+    border-left: 5px solid var(--accent1);
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+  }
+  .principle strong { color: var(--accent1); }
+
+  .pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .stage {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.4rem;
+    position: relative;
+  }
+  .stage h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .stage p { margin: 0.2rem 0; color: var(--muted); font-size: 0.92rem; }
+  .stage ul { margin: 0.4rem 0 0; padding-left: 1.2rem; color: var(--muted); font-size: 0.92rem; }
+  .arrow {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--accent2);
+    padding: 0.35rem 0;
+  }
+
+  .s1 { border-top: 4px solid var(--accent2); }
+  .s1 h3 { color: var(--accent2); }
+  .s2 { border-top: 4px solid var(--accent1); }
+  .s2 h3 { color: var(--accent1); }
+  .s3 { border-top: 4px solid var(--accent4); }
+  .s3 h3 { color: var(--accent4); }
+  .s4 { border-top: 4px solid var(--accent3); }
+  .s4 h3 { color: var(--accent3); }
+  .s5 { border-top: 4px solid var(--accent5); }
+  .s5 h3 { color: var(--accent5); }
+  .s6 { border-top: 4px solid #fb7185; }
+  .s6 h3 { color: #fb7185; }
+
+  .phases {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.8rem;
+  }
+  .phase {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  .phase .num {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .phase:nth-child(1) .num { color: var(--accent2); }
+  .phase:nth-child(2) .num { color: var(--accent1); }
+  .phase:nth-child(3) .num { color: var(--accent4); }
+  .phase:nth-child(4) .num { color: var(--accent3); }
+  .phase:nth-child(5) .num { color: var(--accent5); }
+  .phase:nth-child(6) .num { color: #fb7185; }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.3rem;
+  }
+  .card h3 { margin-top: 0; font-size: 1rem; }
+  code {
+    background: rgba(148,163,184,0.15);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: var(--accent3);
+  }
+  pre {
+    background: #0b1120;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.85rem;
+    color: #a5f3fc;
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 3rem;
+  }
+  a { color: var(--accent2); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>🎬 Animated Technical Training</h1>
+    <p class="tagline">Show, don't tell. A repo-driven pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
+    <div class="links">
+      <a href="MASTER_SPEC.md">📐 Master Spec</a>
+      <a class="alt" href="https://animated-technical-training.fly.dev/" target="_blank" rel="noopener">🗂️ Carousel App</a>
+      <a class="alt2" href="README.md">📄 README</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>🧠 Core Principle</h2>
+    <div class="principle">
+      <p><strong>Cognitive Offload — Show, Don't Tell 👁️</strong><br>
+      Narration and visuals must never carry the same information twice. Concept transfer lives in the animation
+      (<code>visual_action</code>); voiceover (<code>incoming</code>/<code>outgoing</code>) stays light and confirmatory.</p>
+      <p>✅ <strong>The Mute Test:</strong> if a scene, watched with no audio, doesn't convey the concept — it isn't done.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>🔗 Pipeline</h2>
+    <div class="pipeline">
+
+      <div class="stage s1">
+        <h3>🎨 1. Canva — Source of Truth</h3>
+        <ul>
+          <li>Script — master flow for the content</li>
+          <li>Images (AI-generated sprite assets)</li>
+          <li>Storyboard — Gemini-generated inspirational frames</li>
+          <li>Notes — per-frame script &amp; animation direction</li>
+        </ul>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s2">
+        <h3>🎞️ 2. Carousel Review App</h3>
+        <ul>
+          <li>Frame view per scene: sprite preview + incoming/outgoing + <code>visual_action</code> notes</li>
+          <li>Inline edit, clone scene, reorder</li>
+          <li>Mark scenes ✅ "ready"</li>
+        </ul>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s3">
+        <h3>📦 3. Export Step</h3>
+        <ul>
+          <li>Flattens "ready" scenes for Canva import</li>
+          <li>Embeds sprite images</li>
+          <li>Respects Canva's 300-page limit — batches by video if exceeded</li>
+        </ul>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s4">
+        <h3>⚡ 4. Canva Bulk Create</h3>
+        <ul>
+          <li>Exports all pages as video (sprite + incoming + outgoing)</li>
+          <li>Voiceovers embedded inside the videos</li>
+        </ul>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s5">
+        <h3>✨ 5. Canva Manual Finishing</h3>
+        <ul>
+          <li>Animate per element/page — motion path preferred over generic entrance FX</li>
+          <li>Generate AI voice per page from incoming/outgoing text</li>
+        </ul>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s6">
+        <h3>🚀 6. Export MP4</h3>
+        <p>Final per-domain training video files.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>🏗️ Build Phases</h2>
+    <div class="phases">
+      <div class="phase"><div class="num">1</div>Outline 📝</div>
+      <div class="phase"><div class="num">2</div>Script 📜</div>
+      <div class="phase"><div class="num">3</div>Visual Production 🖼️</div>
+      <div class="phase"><div class="num">4</div>Import 📥</div>
+      <div class="phase"><div class="num">5</div>Voiceovers 🎙️</div>
+      <div class="phase"><div class="num">6</div>Polish 💎</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📁 Repo Layout</h2>
+    <pre>index.html            → this page: pipeline overview
+MASTER_SPEC.md        → full design, schema &amp; build phases
+Canva Course Folder   → script / storyboards / presentation (linked)
+README.md             → project overview
+rationale/            → why the pipeline was designed this way
+output/               → sample MP4 outputs (cringe vs. quality)
+models/               → image-model comparison for sprite generation</pre>
+  </section>
+
+  <section>
+    <h2>🌐 References</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>🖌️ Manual Animation</h3>
+        <p><a href="https://www.canva.com/design/DAHP1RV4ILg/nTilowGAWQrxcqefQoFSUQ/edit" target="_blank" rel="noopener">Source design</a></p>
+      </div>
+      <div class="card">
+        <h3>🎥 Manual Animation Output</h3>
+        <p><a href="https://www.canva.com/design/DAHP1c7gOR8/BNhFha3kTMtMAdpgteVUPw/edit?ui=e30#" target="_blank" rel="noopener">Rendered output</a></p>
+      </div>
+      <div class="card">
+        <h3>🗂️ Bulk Generation App</h3>
+        <p><a href="https://animated-technical-training.fly.dev/" target="_blank" rel="noopener">animated-technical-training.fly.dev</a></p>
+      </div>
+      <div class="card">
+        <h3>💳 Canva AI Costs</h3>
+        <p><a href="https://www.canva.com/settings/billing-and-teams" target="_blank" rel="noopener">Billing &amp; teams</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Manual build wins on aesthetics — a comic deserves craft over cringe. 🎨✨
+  </footer>
+
+</div>
+</body>
+</html>
