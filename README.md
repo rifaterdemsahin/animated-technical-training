@@ -1,7 +1,11 @@
 # animated-technical-training
 animated technical training focus on show not tell
 
-Live: https://rifaterdemsahin.github.io/animated-technical-training/
+Live docs: https://rifaterdemsahin.github.io/animated-technical-training/
+Carousel app (Bulk Generation): https://animated-technical-training.fly.dev/
+
+> Manual Animation: https://www.canva.com/design/DAHP1RV4ILg/nTilowGAWQrxcqefQoFSUQ/edit
+> Manual Animation Output: https://www.canva.com/design/DAHP1c7gOR8/BNhFha3kTMtMAdpgteVUPw/edit?ui=e30#
 
 ## What this is
 
@@ -66,3 +70,13 @@ Mongo/Fly.io setup.
 
 `pipeline/CANVA_UPLOAD_CHECKLIST.md` links the hand-built Canva template and
 its exported video that this pipeline is automating around.
+
+## Which image model to use for sprites
+
+See the [model comparison page](models/) (FLUX.1 [schnell] vs. Stable
+Diffusion vs. GPT Image 2) — cheaper/faster models are fine for early drafts,
+switch to a higher-fidelity model once a scene's `visual_action` is locked.
+
+## Canva AI Costs
+
+- https://www.canva.com/settings/billing-and-teams
