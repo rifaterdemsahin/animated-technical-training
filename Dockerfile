@@ -11,7 +11,7 @@ RUN adduser -D -u 10001 app
 WORKDIR /app
 COPY --from=build /out/carousel-server ./carousel-server
 COPY tools/carousel/server/static ./static
-COPY sprites ./sprites
+RUN mkdir -p ./sprites
 COPY scripts ./scripts
 
 ENV STATIC_DIR=/app/static
