@@ -20,27 +20,28 @@ no audio, does not convey the concept, the scene is not done.
 ## 2. High-Level Architecture
 
 ```
-[GitHub Repo: source of truth]
-   scripts/*.json  (per-topic scene arrays)
-   sprites/*.png + manifest.json  (Gemini-generated assets)
+[Canva: source of truth]
+   script  master flow for the content
+   images/*.png  (AI-generated assets)
+   storyboard  ( gemini created inspitional images )
+   notes   (per-frame the script and the animations)
         │
         ▼
-[Carousel Review App] (local/web tool, reads repo data)
-   - card view per scene: sprite preview + incoming/outgoing + visual_action
-   - inline edit, clone scene, reorder, mark "ready"
-   - writes back to scripts/*.json
-        │
+[Carousel Review App] (Canva Presentations)
+   - Frame view per scene: sprite preview + incoming/outgoing + visual_action in notes
+   - inline edit, clone scene, reorder, mark "ready" check mark
+   - Script gets updates if needed         │
         ▼
-[CSV Export Step]
-   - flattens ready scenes into Canva Bulk Create CSV
-   - embeds sprite images (not URLs)
-   - respects Canva limits: max 300 rows, 150 columns, 1 data field per element
-   - batches by topic/domain if >300 scenes
+[Export Step]
+   - flattens ready scenes into Canva to be imported by the video format
+   - Embeds sprite images 
+   - respects Canva limits: max 300 pages
+   - batches by video if >300 scenes
         │
         ▼
 [Canva: Bulk Create]
-   - master template with placeholders (sprite, incoming, outgoing)
-   - one CSV row → one page
+   - Export all as video (sprite, incoming, outgoing)
+   - Voiceovers inside the videos 
         │
         ▼
 [Canva: Manual finishing]
@@ -50,7 +51,7 @@ no audio, does not convey the concept, the scene is not done.
         ▼
 [Canva: Export MP4]  →  per-domain video files
 ```
-
+>>>>>> left over here move on from here!
 ---
 
 ## 3. Repo Structure
