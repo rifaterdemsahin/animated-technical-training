@@ -6,3 +6,8 @@ animated technical training focus on show not tell
 > Manual Animation Output : https://www.canva.com/design/DAHP1c7gOR8/BNhFha3kTMtMAdpgteVUPw/edit?ui=e30#
 
 > Solve Bulk Generation : https://animated-technical-training.fly.dev/
+
+
+# Canva AI Costs
+
+- https://www.canva.com/settings/billing-and-teams
