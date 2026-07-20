@@ -92,6 +92,14 @@
   }
   .stage p { margin: 0.2rem 0; color: var(--muted); font-size: 0.92rem; }
   .stage ul { margin: 0.4rem 0 0; padding-left: 1.2rem; color: var(--muted); font-size: 0.92rem; }
+  .stage p.why {
+    margin-top: 0.6rem;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border);
+    font-size: 0.85rem;
+  }
+  .stage p.why a { text-decoration: none; }
+  .stage p.why a:hover { text-decoration: underline; }
   .arrow {
     text-align: center;
     font-size: 1.4rem;
@@ -206,6 +214,7 @@
           <li>Storyboard — Gemini-generated inspirational frames</li>
           <li>Notes — per-frame script &amp; animation direction</li>
         </ul>
+        <p class="why">💡 <a href="rationale/readme.md#canva">Why one Canva design →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -216,6 +225,7 @@
           <li>Inline edit, clone scene, reorder</li>
           <li>Mark scenes ✅ "ready"</li>
         </ul>
+        <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -226,6 +236,7 @@
           <li>Embeds sprite images</li>
           <li>Respects Canva's 300-page limit — batches by video if exceeded</li>
         </ul>
+        <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -235,6 +246,7 @@
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
         </ul>
+        <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -244,12 +256,14 @@
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
         </ul>
+        <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s6">
         <h3>🚀 6. Export MP4</h3>
         <p>Final per-domain training video files.</p>
+        <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
       </div>
 
     </div>
