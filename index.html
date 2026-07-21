@@ -150,6 +150,8 @@
     background: var(--border);
   }
   .phase-group:first-child { margin-top: 0; }
+  .phase-group a { color: inherit; text-decoration: none; }
+  .phase-group a:hover { text-decoration: underline; }
   .stage {
     background: var(--card);
     border: 1px solid var(--border);
@@ -272,7 +274,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v1.8.0</div>
+    <div class="version">v1.9.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -321,6 +323,7 @@
       low quality.</strong></p>
       <p>🎯 That means every scene needs to be <strong>frame by frame mapped</strong> — script, storyboard and
       animation direction locked before automation touches it, not patched after.</p>
+      <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg" alt="Animation example" onclick="openModal(this.src)">
     </div>
   </section>
 
@@ -328,7 +331,7 @@
     <h2><a href="?section=pipeline">🔗 Pipeline</a></h2>
     <div class="pipeline">
 
-      <h3 class="phase-group">🧪 Preprod</h3>
+      <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
       <div class="stage s0">
         <h3>🔍 0. Research — Canva Whiteboard</h3>
         <ul>
@@ -380,7 +383,7 @@
       </div>
       <div class="arrow">⬇️</div>
 
-      <h3 class="phase-group">🏭 Prod</h3>
+      <h3 id="prod" class="phase-group"><a href="?section=prod">🏭 Prod</a></h3>
       <div class="stage s4">
         <h3>⚡ 4. Canva Bulk Create</h3>
         <ul>
@@ -402,7 +405,7 @@
       </div>
       <div class="arrow">⬇️</div>
 
-      <h3 class="phase-group">🎬 Post</h3>
+      <h3 id="post" class="phase-group"><a href="?section=post">🎬 Post</a></h3>
       <div class="stage s6">
         <h3>✨ 6. Canva Manual Finishing</h3>
         <ul>
@@ -425,7 +428,7 @@
   </section>
 
   <section id="build-phases">
-    <h2><a href="?section=build-phases">🏗️ Build Phases</a></h2>
+    <h2><a href="?section=build-phases">🏗️ Stages</a></h2>
     <div class="phases">
       <div class="phase"><div class="num">1</div>Outline 📝</div>
       <div class="phase"><div class="num">2</div>Script 📜</div>
