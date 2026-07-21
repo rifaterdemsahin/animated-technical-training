@@ -30,6 +30,8 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 📺 **Sample:** [Tech with Nana →](https://www.youtube.com/watch?v=xo5V9g9joFs) [Info Graphics →](https://www.youtube.com/watch?v=f0aNDS_i7VQ)
 
+🎓 **The Journey:** This is Rifat Erdem Sahin's own self-learning journey — investing in paid AI certificates for himself, then packaging that experience into this animated product so the audience can leverage it too. Passing the exam is proof to himself; running cohorts collects real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that feedback, then a Join button paywall opens for everyone else.
+
 ## 🧠 Core Principle
 
 **Cognitive Offload — Show, Don't Tell 👁️**
@@ -73,6 +75,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 ☐ **Task:** Generate outline.
 
 ☐ **Task:** Generate script.
+
+☐ **Task:** Complete the paid AI certificate — proof to himself before teaching it.
 
 ✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
 
@@ -194,11 +198,26 @@ Final per-domain training video files.
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
+#### 🔓 9. Distribution — Free Cohort → Paywall
+
+- First 100 people get the full end-to-end course for free
+- Collect feedback from that free cohort
+- Fix the gaps that feedback surfaces
+- Turn on the Join button paywall for everyone else
+
+☐ **Task:** Ship free access to the first 100 people.
+
+☐ **Task:** Fix gaps identified from cohort feedback.
+
+☐ **Task:** Turn on the Join button paywall.
+
+✅ **Quality Gate:** gaps from the free cohort are fixed before the paywall goes live.
+
 ## 🏗️ Stages
 
 ### 🧪 Preprod
 
-- 0. Research 🔍 — 4 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script)
+- 0. Research 🔍 — 5 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script; Complete the paid AI certificate)
 - 1. Canva Slides 🎨 — 1 subtask (Build the script, images, storyboard & notes in one Canva design)
 - 2. Review 🎞️ — 1 subtask (Review each scene in Canva Presentations and mark it "ready")
 - 3. Add Animation Frames 🎞️ — 1 subtask (Review each scene into many images that would help with animation)
@@ -213,6 +232,7 @@ Final per-domain training video files.
 
 - 7. Manual Finish ✨ — 1 subtask (Manually animate elements per page and generate AI voice for each)
 - 8. Export MP4 🚀 — 1 subtask (Export the final per-domain MP4 training video files)
+- 9. Distribution 🔓 — 3 subtasks (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
 
 ## 🌐 References
 

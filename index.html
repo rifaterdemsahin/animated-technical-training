@@ -18,6 +18,7 @@
     --accent5: #a78bfa;
     --accent6: #22d3ee;
     --accent7: #fb923c;
+    --accent8: #a3e635;
     --border: #334155;
   }
   * { box-sizing: border-box; }
@@ -282,6 +283,8 @@
   .s7 h3 { color: var(--accent5); }
   .s8 { border-top: 4px solid #fb7185; }
   .s8 h3 { color: #fb7185; }
+  .s9 { border-top: 4px solid var(--accent8); }
+  .s9 h3 { color: var(--accent8); }
 
   .phases {
     display: grid;
@@ -390,7 +393,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v4.0.0</div>
+    <div class="version">v4.1.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -427,7 +430,12 @@
       feedback in our <a href="?section=stage1">cohorts</a> and take daily notes in a <a href="?section=stage0">whiteboard</a>, and cast a wide net so we can include a much
       wider audience and listen audience problems.</p>
       <p>⚠️ <strong>Risk:</strong> Non-certified professionals implementing half-baked solutions can harm production systems.</p>
-      <p>📺 <strong>Sample:</strong> <a href="https://www.youtube.com/watch?v=xo5V9g9joFs" target="_blank" rel="noopener">Tech with Nana →</a></p>
+      <p>📺 <strong>Sample:</strong> <a href="https://www.youtube.com/watch?v=xo5V9g9joFs" target="_blank" rel="noopener">Tech with Nana →</a> <a href="https://www.youtube.com/watch?v=f0aNDS_i7VQ" target="_blank" rel="noopener">Info Graphics →</a></p>
+      <p>🎓 <strong>The Journey:</strong> This is Rifat Erdem Sahin's own self-learning journey — investing in paid AI
+      certificates for himself, then packaging that experience into this animated product so the audience can
+      leverage it too. Passing the exam is proof to himself; running <a href="?section=stage1">cohorts</a> collects
+      real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that
+      feedback, then a Join button paywall opens for everyone else.</p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
@@ -488,6 +496,7 @@
         <p class="task">☐ <strong>Task:</strong> Daily — add new screenshots and tasks to the whiteboard.</p>
         <p class="task">☐ <strong>Task:</strong> Generate outline.</p>
         <p class="task">☐ <strong>Task:</strong> Generate script.</p>
+        <p class="task">☐ <strong>Task:</strong> Complete the paid AI certificate — proof to himself before teaching it.</p>
         <p class="gate">✅ <strong>Quality Gate:</strong> every research note has a source screenshot before moving to slide-building.</p>
       </div>
       <div class="arrow">⬇️</div>
@@ -601,6 +610,21 @@
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
       </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s9" id="stage9">
+        <h3><a href="?section=stage9">🔓 9. Distribution — Free Cohort → Paywall</a></h3>
+        <ul>
+          <li>First 100 people get the full end-to-end course for free</li>
+          <li>Collect feedback from that free cohort</li>
+          <li>Fix the gaps that feedback surfaces</li>
+          <li>Turn on the Join button paywall for everyone else</li>
+        </ul>
+        <p class="task">☐ <strong>Task:</strong> Ship free access to the first 100 people.</p>
+        <p class="task">☐ <strong>Task:</strong> Fix gaps identified from cohort feedback.</p>
+        <p class="task">☐ <strong>Task:</strong> Turn on the Join button paywall.</p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> gaps from the free cohort are fixed before the paywall goes live.</p>
+      </div>
 
     </div>
     <div class="section-nav">
@@ -613,7 +637,7 @@
     <h2><a href="?section=build-phases">🏗️ Stages</a></h2>
     <h3 id="stages-preprod" class="phase-group"><a href="?section=stages-preprod">🧪 Preprod</a></h3>
     <div class="phases">
-      <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">4 subtasks</div></div>
+      <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script • Complete the paid AI certificate"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">5 subtasks</div></div>
       <div class="phase" data-tasks="Build the script, images, storyboard &amp; notes in one Canva design"><div class="num" style="color:var(--accent2)">1</div>Canva Slides 🎨<div class="sub">1 subtask</div></div>
       <div class="phase" data-tasks="Review each scene in Canva Presentations and mark it &quot;ready&quot;"><div class="num" style="color:var(--accent1)">2</div>Review 🎞️<div class="sub">1 subtask</div></div>
       <div class="phase" data-tasks="Review each scene into many images that would help with animation"><div class="num" style="color:var(--accent7)">3</div>Animation Frames 🎞️<div class="sub">1 subtask</div></div>
@@ -628,6 +652,7 @@
     <div class="phases">
       <div class="phase" data-tasks="Manually animate elements per page and generate AI voice for each"><div class="num" style="color:var(--accent5)">7</div>Manual Finish ✨<div class="sub">1 subtask</div></div>
       <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">8</div>Export MP4 🚀<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Ship free access to the first 100 people • Fix gaps identified from cohort feedback • Turn on the Join button paywall"><div class="num" style="color:var(--accent8)">9</div>Distribution 🔓<div class="sub">3 subtasks</div></div>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
