@@ -16,6 +16,7 @@
     --accent3: #34d399;
     --accent4: #fbbf24;
     --accent5: #a78bfa;
+    --accent6: #22d3ee;
     --border: #334155;
   }
   * { box-sizing: border-box; }
@@ -64,7 +65,19 @@
   .links a.alt { background: var(--accent3); }
   .links a.alt2 { background: var(--accent4); }
 
-  section { margin-bottom: 3rem; }
+  section {
+    margin-bottom: 2rem;
+    padding: 1.5rem 1.6rem;
+    border-radius: 16px;
+  }
+  section:nth-of-type(1) { background: rgba(244,114,182,0.08); }
+  section:nth-of-type(2) { background: rgba(52,211,153,0.08); }
+  section:nth-of-type(3) { background: rgba(56,189,248,0.08); }
+  section:nth-of-type(4) { background: rgba(251,191,36,0.08); }
+  section:nth-of-type(5) { background: rgba(167,139,250,0.08); }
+  section:nth-of-type(6) { background: rgba(251,113,133,0.08); }
+  section:nth-of-type(7) { background: rgba(148,163,184,0.08); }
+  section:nth-of-type(8) { background: rgba(244,114,182,0.06); }
   h2 {
     font-size: 1.4rem;
     display: flex;
@@ -73,6 +86,37 @@
     border-bottom: 2px solid var(--border);
     padding-bottom: 0.5rem;
     margin-bottom: 1.3rem;
+  }
+  h2 a { color: inherit; text-decoration: none; }
+  h2 a:hover { text-decoration: underline; }
+
+  .thumb {
+    width: 130px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+    margin-top: 0.6rem;
+    display: block;
+    transition: transform 0.15s ease;
+  }
+  .thumb:hover { transform: scale(1.03); }
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    cursor: zoom-out;
+  }
+  .modal.open { display: flex; }
+  .modal img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
   }
 
   .principle {
@@ -88,6 +132,24 @@
     flex-direction: column;
     gap: 0;
   }
+  .phase-group {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1.6rem 0 0.7rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .phase-group::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .phase-group:first-child { margin-top: 0; }
   .stage {
     background: var(--card);
     border: 1px solid var(--border);
@@ -112,6 +174,16 @@
   }
   .stage p.why a { text-decoration: none; }
   .stage p.why a:hover { text-decoration: underline; }
+  .stage p.task {
+    margin: 0.6rem 0 0;
+    padding: 0.5rem 0.7rem;
+    background: rgba(148,163,184,0.12);
+    border-radius: 8px;
+    font-size: 0.88rem;
+  }
+  .stage p.task strong { color: var(--accent4); }
+  .stage p.task a { text-decoration: none; }
+  .stage p.task a:hover { text-decoration: underline; }
   .arrow {
     text-align: center;
     font-size: 1.4rem;
@@ -129,10 +201,12 @@
   .s3 h3 { color: var(--accent4); }
   .s4 { border-top: 4px solid var(--accent3); }
   .s4 h3 { color: var(--accent3); }
-  .s5 { border-top: 4px solid var(--accent5); }
-  .s5 h3 { color: var(--accent5); }
-  .s6 { border-top: 4px solid #fb7185; }
-  .s6 h3 { color: #fb7185; }
+  .s5 { border-top: 4px solid var(--accent6); }
+  .s5 h3 { color: var(--accent6); }
+  .s6 { border-top: 4px solid var(--accent5); }
+  .s6 h3 { color: var(--accent5); }
+  .s7 { border-top: 4px solid #fb7185; }
+  .s7 h3 { color: #fb7185; }
 
   .phases {
     display: grid;
@@ -198,7 +272,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v1.2.0</div>
+    <div class="version">v1.8.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -207,26 +281,30 @@
     </div>
   </header>
 
-  <section>
-    <h2>🧩 Problem</h2>
+  <section id="problem">
+    <h2><a href="?section=problem">🧩 Problem</a></h2>
     <div class="principle">
-      <p>We need to create technical animation for the Claude AI Architect course — and cast a wide net so we
-      can include a much wider audience.</p>
+      <p><strong>Problem:</strong> Rapid AI progress keeps raising the skill expectations placed on people, faster
+      than most can keep up.</p>
+      <p><strong>How:</strong> We need to create technical animation for the Claude AI Architect course — and cast
+      a wide net so we can include a much wider audience.</p>
       <p><strong>👥 People:</strong> people who are part of the new AI revolution that started with GPT, and
       are now updating their workflows to a much more powerful tool.</p>
-      <p><strong>🛠️ Domain:</strong> tools getting enabled with AI.</p>
+      <p><strong>🛠️ Domain:</strong> tools getting enabled with AI are shifting and effecting many industries not just coding.</p>
+      <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png" alt="Problem illustration" onclick="openModal(this.src)">
     </div>
   </section>
 
-  <section>
-    <h2>✅ Solution</h2>
+  <section id="solution">
+    <h2><a href="?section=solution">✅ Solution</a></h2>
     <div class="principle">
       <p>Comics-based animated technical training, so the concepts are easier to consume.</p>
+      <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/comic_animation_sample.jpeg" alt="Comic animation sample" onclick="openModal(this.src)">
     </div>
   </section>
 
-  <section>
-    <h2>🧠 Core Principle</h2>
+  <section id="core-principle">
+    <h2><a href="?section=core-principle">🧠 Core Principle</a></h2>
     <div class="principle">
       <p><strong>Cognitive Offload — Show, Don't Tell 👁️</strong><br>
       Narration and visuals must never carry the same information twice. Concept transfer lives in the animation
@@ -235,8 +313,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>⚖️ Half Hands-On, Half Automated</h2>
+  <section id="hands-on">
+    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a></h2>
     <div class="principle">
       <p>Bulk export and asset generation are automated to move fast; animation timing and voice are finished
       manually to reach top quality — <strong>audience retention and reach are on the line, so we can't risk
@@ -246,39 +324,45 @@
     </div>
   </section>
 
-  <section>
-    <h2>🔗 Pipeline</h2>
+  <section id="pipeline">
+    <h2><a href="?section=pipeline">🔗 Pipeline</a></h2>
     <div class="pipeline">
 
+      <h3 class="phase-group">🧪 Preprod</h3>
       <div class="stage s0">
         <h3>🔍 0. Research — Canva Whiteboard</h3>
         <ul>
           <li>Save reference images &amp; text as they're found</li>
           <li>Left to right flow — chronological research trail</li>
         </ul>
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/whiteboard_notes.jpeg" alt="Whiteboard notes" onclick="openModal(this.src)">
+        <p class="why">🗂️ <a href="https://www.canva.com/design/DAHN5D7MhYE/ZPkd6ouYrf20A1MhZu0WZQ/edit" target="_blank" rel="noopener">Open whiteboard →</a></p>
+        <p class="task">☐ <strong>Task:</strong> <a href="https://www.canva.com/folder/FAHMZK9u-JE" target="_blank" rel="noopener">Create the Canva course folder structure →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s1">
-        <h3>🎨 1. Canva — Source of Truth</h3>
+        <h3>🎨 1. Canva Slides — Source of Cohort Session</h3>
         <ul>
           <li>Script — master flow for the content</li>
           <li>Images (AI-generated sprite assets)</li>
           <li>Storyboard — Gemini-generated inspirational frames</li>
           <li>Notes — per-frame script &amp; animation direction</li>
         </ul>
+        <p class="task">☐ <strong>Task:</strong> Build the script, images, storyboard &amp; notes in one Canva design.</p>
         <p class="why">💡 <a href="rationale/readme.md#canva">Why one Canva design →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s2">
-        <h3>🎞️ 2. Carousel Review App</h3>
+        <h3>🎞️ 2. Review Canva Presentations</h3>
         <p>Done in Canva Presentations — no separate tool.</p>
         <ul>
           <li>Frame view per scene: sprite preview + incoming/outgoing + <code>visual_action</code> notes</li>
           <li>Inline edit, clone scene, reorder</li>
           <li>Mark scenes ✅ "ready"</li>
         </ul>
+        <p class="task">☐ <strong>Task:</strong> Review each scene in Canva Presentations and mark it "ready".</p>
         <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
       </div>
       <div class="arrow">⬇️</div>
@@ -291,41 +375,57 @@
           <li>Embeds sprite images</li>
           <li>Respects Canva's 300-page limit — batches by video if exceeded</li>
         </ul>
+        <p class="task">☐ <strong>Task:</strong> Run the export script to flatten "ready" scenes for Canva import.</p>
         <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
+      <h3 class="phase-group">🏭 Prod</h3>
       <div class="stage s4">
         <h3>⚡ 4. Canva Bulk Create</h3>
         <ul>
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
         </ul>
+        <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create to export all pages as video.</p>
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s5">
-        <h3>✨ 5. Canva Manual Finishing</h3>
+        <h3>🧬 5. Asset Generation</h3>
+        <ul>
+          <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
+          <li>Fill gaps before manual finishing starts</li>
+        </ul>
+        <p class="task">☐ <strong>Task:</strong> Generate and collect any missing AI assets for scenes.</p>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <h3 class="phase-group">🎬 Post</h3>
+      <div class="stage s6">
+        <h3>✨ 6. Canva Manual Finishing</h3>
         <ul>
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
         </ul>
+        <p class="task">☐ <strong>Task:</strong> Manually animate elements per page and generate AI voice for each.</p>
         <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s6">
-        <h3>🚀 6. Export MP4</h3>
+      <div class="stage s7">
+        <h3>🚀 7. Export MP4</h3>
         <p>Final per-domain training video files.</p>
+        <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
       </div>
 
     </div>
   </section>
 
-  <section>
-    <h2>🏗️ Build Phases</h2>
+  <section id="build-phases">
+    <h2><a href="?section=build-phases">🏗️ Build Phases</a></h2>
     <div class="phases">
       <div class="phase"><div class="num">1</div>Outline 📝</div>
       <div class="phase"><div class="num">2</div>Script 📜</div>
@@ -336,8 +436,8 @@
     </div>
   </section>
 
-  <section>
-    <h2>📁 Repo Layout</h2>
+  <section id="repo-layout">
+    <h2><a href="?section=repo-layout">📁 Repo Layout</a></h2>
     <pre>index.html            → this page: pipeline overview
 MASTER_SPEC.md        → full design, schema &amp; build phases
 Canva Course Folder   → script / storyboards / presentation (linked)
@@ -347,8 +447,8 @@ output/               → sample MP4 outputs (cringe vs. quality)
 models/               → image-model comparison for sprite generation</pre>
   </section>
 
-  <section>
-    <h2>🌐 References</h2>
+  <section id="references">
+    <h2><a href="?section=references">🌐 References</a></h2>
     <div class="grid2">
       <div class="card">
         <h3>🖌️ Manual Animation</h3>
@@ -367,8 +467,32 @@ models/               → image-model comparison for sprite generation</pre>
 
   <footer>
     Manual build wins on aesthetics — a comic deserves craft over cringe. 🎨✨
+    <p><a href="https://rifaterdemsahin.github.io/animated-technical-training/" target="_blank" rel="noopener">🌐 View on GitHub Pages</a></p>
   </footer>
 
 </div>
+
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img id="imgModalImg" src="" alt="Whiteboard notes — full size">
+</div>
+
+<script>
+  function openModal(src) {
+    document.getElementById('imgModalImg').src = src;
+    document.getElementById('imgModal').classList.add('open');
+  }
+  function closeModal() {
+    document.getElementById('imgModal').classList.remove('open');
+  }
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  var targetSection = new URLSearchParams(window.location.search).get('section');
+  if (targetSection) {
+    var el = document.getElementById(targetSection);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
 </body>
 </html>
