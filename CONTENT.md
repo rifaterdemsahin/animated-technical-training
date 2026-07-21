@@ -80,6 +80,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⏱️ **Est. Time:** ~30 min/day
 
+🎯 **Confidence:** 90%
+
 ✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
@@ -103,6 +105,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⏱️ **Est. Time:** ~3 hrs/week
 
+🎯 **Confidence:** 85%
+
 ✅ **Quality Gate:** script, images, storyboard & notes complete for every scene before review.
 
 #### 🎞️ 2. Review Canva Presentations
@@ -123,6 +127,8 @@ Done in Canva Presentations — no separate tool.
 
 ⏱️ **Est. Time:** ~1.5 hrs/week
 
+🎯 **Confidence:** 85%
+
 ✅ **Quality Gate:** every scene marked ✅ ready before export.
 
 #### 🎞️ 3. Add Animation Frames
@@ -139,6 +145,8 @@ Close the gap to create the images to be animated
 
 ⏱️ **Est. Time:** ~3 hrs/week
 
+🎯 **Confidence:** 60%
+
 #### 📦 4. Export Step
 
 Exports from the Canva Slides presentation, to import into Canva Video.
@@ -154,6 +162,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 💡 [Why flatten & batch →](rationale/readme.md#export)
 
 ⏱️ **Est. Time:** ~20 min
+
+🎯 **Confidence:** 80%
 
 ✅ **Quality Gate:** all ready scenes flattened and under the 300-page limit before bulk create.
 
@@ -172,6 +182,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ⏱️ **Est. Time:** ~45 min
 
+🎯 **Confidence:** 75%
+
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
 #### 🧬 6. Asset Generation
@@ -184,6 +196,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 ☐ **Task:** Produce music & sound effects for the scenes.
 
 ⏱️ **Est. Time:** ~1.5 hrs
+
+🎯 **Confidence:** 55%
 
 ✅ **Quality Gate:** no missing sprites, backgrounds, music, or sound effects remain before manual finishing.
 
@@ -200,6 +214,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ⏱️ **Est. Time:** ~6 hrs
 
+🎯 **Confidence:** 85%
+
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
 #### 🚀 8. Export MP4
@@ -213,6 +229,8 @@ Final per-domain training video files.
 💡 [Why per-domain files →](rationale/readme.md#export-mp4)
 
 ⏱️ **Est. Time:** ~20 min
+
+🎯 **Confidence:** 90%
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
@@ -231,30 +249,34 @@ Final per-domain training video files.
 
 ⏱️ **Est. Time:** ~3 hrs (ongoing)
 
+🎯 **Confidence:** 50%
+
 ✅ **Quality Gate:** gaps from the free cohort are fixed before the paywall goes live.
 
 ## 🏗️ Stages
 
 ⏱️ **Total estimated time:** ~23 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).
 
+🎯 **Average confidence:** 76% — lowest at stage 9 Distribution (50%, unproven paywall model) and stage 6 Asset Generation (55%, new music/SFX workflow); highest at stage 0 Research and stage 8 Export MP4 (90%, both well-worn habits).
+
 ### 🧪 Preprod
 
-- 0. Research 🔍 — 5 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script; Complete the paid AI certificate)
-- 1. Canva Slides 🎨 — 1 subtask (Build the script, images, storyboard & notes in one Canva design)
-- 2. Review 🎞️ — 1 subtask (Review each scene in Canva Presentations and mark it "ready")
-- 3. Add Animation Frames 🎞️ — 1 subtask (Review each scene into many images that would help with animation)
-- 4. Export Step 📦 — 1 subtask (Run the export script to flatten "ready" scenes for Canva import)
+- 0. Research 🔍 — 5 subtasks · 90% confidence (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script; Complete the paid AI certificate)
+- 1. Canva Slides 🎨 — 1 subtask · 85% confidence (Build the script, images, storyboard & notes in one Canva design)
+- 2. Review 🎞️ — 1 subtask · 85% confidence (Review each scene in Canva Presentations and mark it "ready")
+- 3. Add Animation Frames 🎞️ — 1 subtask · 60% confidence (Review each scene into many images that would help with animation)
+- 4. Export Step 📦 — 1 subtask · 80% confidence (Run the export script to flatten "ready" scenes for Canva import)
 
 ### 🏭 Prod
 
-- 5. Bulk Create ⚡ — 1 subtask (Run Canva Bulk Create to export all pages as video)
-- 6. Asset Gen 🧬 — 2 subtasks (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
+- 5. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
+- 6. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
 
 ### 🎬 Post
 
-- 7. Manual Finish ✨ — 1 subtask (Manually animate elements per page and generate AI voice for each)
-- 8. Export MP4 🚀 — 1 subtask (Export the final per-domain MP4 training video files)
-- 9. Distribution 🔓 — 3 subtasks (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
+- 7. Manual Finish ✨ — 1 subtask · 85% confidence (Manually animate elements per page and generate AI voice for each)
+- 8. Export MP4 🚀 — 1 subtask · 90% confidence (Export the final per-domain MP4 training video files)
+- 9. Distribution 🔓 — 3 subtasks · 50% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
 
 ## 🌐 References
 
