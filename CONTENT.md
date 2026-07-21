@@ -70,6 +70,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎓 **Why it matters:** documenting research daily is the same study habit that gets him exam-ready for the certificate.
 
+🧰 **Tools:** [Canva](https://www.canva.com/)
+
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
 
 ☐ **Task:** Daily — add new screenshots and tasks to the whiteboard.
@@ -98,6 +100,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 ![Stage 1 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/1.%20Canva%20Slides%20%E2%80%94%20Source%20of%20Cohort%20Session.jpg)
 
 🎓 **Why it matters:** structuring the script and storyboard mirrors how certification content itself is organized — building it teaches the material twice.
+
+🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
 
@@ -129,6 +133,8 @@ Done in Canva Presentations — no separate tool.
 
 🎓 **Why it matters:** reviewing scenes before export is the same rigor as reviewing his own understanding before a mock exam.
 
+🧰 **Tools:** [Canva](https://www.canva.com/)
+
 ☐ **Task:** Review each scene in Canva Presentations and mark it "ready".
 
 📅 **Cadence:** Sundays Night
@@ -153,6 +159,8 @@ Close the gap to create the images to be animated
 
 🎓 **Why it matters:** breaking one idea into many frames forces real understanding of the mechanics, not just recognition of them.
 
+🧰 **Tools:** [Canva](https://www.canva.com/), [Canva MCP](https://www.canva.dev/)
+
 ☐ **Task:** Review each scene into many images that would help with animation.
 
 📅 **Cadence:** Week days
@@ -174,6 +182,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 ![Stage 4 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg)
 
 🎓 **Why it matters:** turning scattered study material into a transferable package is useful for the exam and for teaching it.
+
+🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Run the export script to flatten "ready" scenes for Canva import.
 
@@ -199,6 +209,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 🎓 **Why it matters:** mapping the course's architecture is the same exercise as mapping the certification syllabus — you can't teach a structure you haven't diagrammed.
 
+🧰 **Tools:** [Mermaid](https://mermaid.js.org/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/)
+
 ☐ **Task:** Build the mindmap of the course architecture.
 
 ☐ **Task:** Cross-check the mindmap against the certification syllabus.
@@ -222,6 +234,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 🎓 **Why it matters:** seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.
 
+🧰 **Tools:** [Canva](https://www.canva.com/)
+
 ☐ **Task:** Run Canva Bulk Create to export all pages as video.
 
 💡 [Why bulk create →](rationale/readme.md#bulk-create)
@@ -240,6 +254,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 - Fill gaps before manual finishing starts
 
 🎓 **Why it matters:** filling in missing pieces mirrors closing his own knowledge gaps before certification day.
+
+🧰 **Tools:** [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations)
 
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
@@ -262,6 +278,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 🎓 **Why it matters:** making a concept click for someone else is the deepest test of whether he actually understands it.
 
+🧰 **Tools:** [Canva](https://www.canva.com/)
+
 ☐ **Task:** Manually animate elements per page and generate AI voice for each.
 
 💡 [Why manual, not automated →](rationale/readme.md#manual-finishing)
@@ -281,6 +299,8 @@ Final per-domain training video files.
 ![Stage 9 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
 
 🎓 **Why it matters:** a finished artifact is proof of mastery — for the audience, and for himself.
+
+🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Export the final per-domain MP4 training video files.
 
@@ -303,6 +323,8 @@ Final per-domain training video files.
 
 🎓 **Why it matters:** teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.
 
+🧰 **Tools:** [Canva](https://www.canva.com/)
+
 ☐ **Task:** Ship free access to the first 100 people.
 
 ☐ **Task:** Fix gaps identified from cohort feedback.
@@ -323,7 +345,7 @@ Final per-domain training video files.
 
 🎯 **Average confidence:** 66% — lowest at stage 10 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "🧹 Clear All Notes" button at the top of the page wipes every stage's notes (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every stage's confidence + notes to the clipboard.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "🧹 Clear All Notes" button at the top of the page wipes every stage's notes (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every stage's confidence + notes to the clipboard. Every top-level section header also has a ▾/▸ collapse toggle, with the collapsed/expanded state of each section saved to its own separate cookie.
 
 ### 🧪 Preprod
 

@@ -130,6 +130,20 @@
   }
   h2 a { color: inherit; text-decoration: none; }
   h2 a:hover { text-decoration: underline; }
+  .collapse-btn {
+    margin-left: auto;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 6px;
+    width: 26px;
+    height: 26px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  .collapse-btn:hover { background: rgba(148,163,184,0.15); color: var(--text); }
+  .section-body.collapsed { display: none; }
 
   .thumb {
     width: 130px;
@@ -438,7 +452,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v5.2.0</div>
+    <div class="version">v5.3.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -454,8 +468,8 @@
   </div>
 
   <section id="problem">
-    <h2><a href="?section=problem">🧩 Problem</a></h2>
-    <div class="principle">
+    <h2><a href="?section=problem">🧩 Problem</a> <button class="collapse-btn" id="toggle-problem" onclick="toggleSection('problem')" aria-label="Collapse section">▾</button></h2>
+    <div class="principle section-body" id="body-problem">
       <p><strong>Problem:</strong> Rapid AI progress keeps raising the skill expectations placed on people, faster
       than most can keep up.</p>
       <p><strong>👥 Audience:</strong> people who are part of the new AI revolution that started with chatGPT, and
@@ -470,8 +484,8 @@
   </section>
 
   <section id="solution">
-    <h2><a href="?section=solution">✅ Solution</a></h2>
-    <div class="principle">
+    <h2><a href="?section=solution">✅ Solution</a> <button class="collapse-btn" id="toggle-solution" onclick="toggleSection('solution')" aria-label="Collapse section">▾</button></h2>
+    <div class="principle section-body" id="body-solution">
       <p>Comics-based animated technical training, so the concepts are easier to consume.</p>
       <p><strong>Rationale:</strong> We have seen shorter animated videos have a much higher retention.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/comic_animation_sample.jpeg" alt="Comic animation sample" onclick="openModal(this.src)">
@@ -493,8 +507,8 @@
   </section>
 
   <section id="core-principle">
-    <h2><a href="?section=core-principle">🧠 Core Principle</a></h2>
-    <div class="principle">
+    <h2><a href="?section=core-principle">🧠 Core Principle</a> <button class="collapse-btn" id="toggle-core-principle" onclick="toggleSection('core-principle')" aria-label="Collapse section">▾</button></h2>
+    <div class="principle section-body" id="body-core-principle">
       <p><strong>Cognitive Offload — Show, Don't Tell 👁️</strong><br>
       Narration and visuals must never carry the same information twice. Concept transfer lives in the animation
       (<code>visual_action</code>); voiceover (<code>incoming</code>/<code>outgoing</code>) stays light and confirmatory.</p>
@@ -510,8 +524,8 @@
   </section>
 
   <section id="hands-on">
-    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a></h2>
-    <div class="principle">
+    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a> <button class="collapse-btn" id="toggle-hands-on" onclick="toggleSection('hands-on')" aria-label="Collapse section">▾</button></h2>
+    <div class="principle section-body" id="body-hands-on">
       <p><a href="?section=stage6">Bulk export</a> and <a href="?section=stage7">asset generation</a> are automated to move fast; animation timing and voice are finished
       manually to reach top quality — <strong>audience retention and reach are on the line, so we can't risk
       low quality by auto generating content that does not line up with what audience needs.</strong></p>
@@ -527,8 +541,8 @@
   </section>
 
   <section id="pipeline">
-    <h2><a href="?section=pipeline">🔗 Video Production Pipeline</a></h2>
-    <div class="pipeline">
+    <h2><a href="?section=pipeline">🔗 Video Production Pipeline</a> <button class="collapse-btn" id="toggle-pipeline" onclick="toggleSection('pipeline')" aria-label="Collapse section">▾</button></h2>
+    <div class="pipeline section-body" id="body-pipeline">
 
       <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
       <div class="stage s0" id="stage0">
@@ -542,6 +556,7 @@
         <p class="why">🗂️ <a href="https://www.canva.com/design/DAHN5D7MhYE/ZPkd6ouYrf20A1MhZu0WZQ/edit" target="_blank" rel="noopener">Open whiteboard →</a></p>
         <p class="why">📅 <strong>Cadence:</strong> Daily</p>
         <p class="why">🎓 <strong>Why it matters:</strong> documenting research daily is the same study habit that gets him exam-ready for the certificate.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> <a href="https://www.canva.com/folder/FAHMZK9u-JE" target="_blank" rel="noopener">Create the Canva course folder structure →</a></p>
         <p class="task">☐ <strong>Task:</strong> Daily — add new screenshots and tasks to the whiteboard.</p>
         <p class="task">☐ <strong>Task:</strong> Generate outline.</p>
@@ -564,6 +579,7 @@
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/1.%20Canva%20Slides%20%E2%80%94%20Source%20of%20Cohort%20Session.jpg" alt="Stage 1 illustration: Canva Slides — Source of Cohort Session" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> structuring the script and storyboard mirrors how certification content itself is organized — building it teaches the material twice.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Build the script, images, storyboard &amp; notes in one Canva design.</p>
         <p class="why">🎨 <a href="https://www.canva.com/design/DAHQCqMC7Ck/2MvbdPMlSTcF9wtS6Y75zQ/edit?ui=eyJBIjp7fX0" target="_blank" rel="noopener">Open Slides →</a></p>
         <p class="why">🖼️ <a href="https://www.canva.com/design/DAHOxcN-Gx4/6kGlPNG10LlEP6bzv4PXSQ/edit" target="_blank" rel="noopener">Open Storyboard →</a></p>
@@ -586,6 +602,7 @@
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/2.%20Review%20Canva%20Presentations.jpg" alt="Stage 2 illustration: Review Canva Presentations" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> reviewing scenes before export is the same rigor as reviewing his own understanding before a mock exam.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Review each scene in Canva Presentations and mark it "ready".</p>
         <p class="why">📅 <strong>Cadence:</strong> Sundays Night</p>
         <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
@@ -605,6 +622,7 @@
           <li>Mark animations ✅ "ready"</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> breaking one idea into many frames forces real understanding of the mechanics, not just recognition of them.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a>, <a href="https://www.canva.dev/" target="_blank" rel="noopener">Canva MCP</a></p>
         <p class="task">☐ <strong>Task:</strong> Review each scene into many images that would help with animation.</p>
         <p class="why">📅 <strong>Cadence:</strong> Week days</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
@@ -623,6 +641,7 @@
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg" alt="Stage 4 illustration: Export Step" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> turning scattered study material into a transferable package is useful for the exam and for teaching it.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Run the export script to flatten "ready" scenes for Canva import.</p>
         <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
@@ -642,6 +661,7 @@
           <li>Mark the structure ✅ "locked"</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> mapping the course's architecture is the same exercise as mapping the certification syllabus — you can't teach a structure you haven't diagrammed.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://mermaid.js.org/" target="_blank" rel="noopener">Mermaid</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a></p>
         <p class="task">☐ <strong>Task:</strong> Build the mindmap of the course architecture.</p>
         <p class="task">☐ <strong>Task:</strong> Cross-check the mindmap against the certification syllabus.</p>
         <p class="why">📅 <strong>Cadence:</strong> Once per course</p>
@@ -660,6 +680,7 @@
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 6 illustration: Canva Bulk Create" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create to export all pages as video.</p>
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~45 min</p>
@@ -676,6 +697,7 @@
           <li>Fill gaps before manual finishing starts</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> filling in missing pieces mirrors closing his own knowledge gaps before certification day.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://higgsfield.ai/" target="_blank" rel="noopener">Higgsfield</a>, <a href="https://www.mage.space/creations" target="_blank" rel="noopener">Mage.space</a></p>
         <p class="task">☐ <strong>Task:</strong> Generate and collect any missing AI assets for scenes.</p>
         <p class="task">☐ <strong>Task:</strong> Produce music &amp; sound effects for the scenes.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
@@ -693,6 +715,7 @@
           <li>Generate AI voice per page from incoming/outgoing text</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> making a concept click for someone else is the deepest test of whether he actually understands it.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Manually animate elements per page and generate AI voice for each.</p>
         <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~6 hrs</p>
@@ -707,6 +730,7 @@
         <p>Final per-domain training video files.</p>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 9 illustration: Export MP4" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> a finished artifact is proof of mastery — for the audience, and for himself.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
@@ -725,6 +749,7 @@
           <li>Turn on the Join button paywall for everyone else</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Ship free access to the first 100 people.</p>
         <p class="task">☐ <strong>Task:</strong> Fix gaps identified from cohort feedback.</p>
         <p class="task">☐ <strong>Task:</strong> Turn on the Join button paywall.</p>
@@ -742,7 +767,8 @@
   </section>
 
   <section id="build-phases">
-    <h2><a href="?section=build-phases">🏗️ Stages</a></h2>
+    <h2><a href="?section=build-phases">🏗️ Stages</a> <button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
+    <div class="section-body" id="body-build-phases">
     <p>⏱️ <strong>Total estimated time:</strong> ~25 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).</p>
     <p>🎯 <strong>Average confidence:</strong> 66% — lowest at stage 10 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).</p>
     <h3 id="stages-preprod" class="phase-group"><a href="?section=stages-preprod">🧪 Preprod</a></h3>
@@ -765,6 +791,7 @@
       <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">9</div>Export MP4 🚀<div class="sub">1 subtask · 80%</div></div>
       <div class="phase" data-tasks="Ship free access to the first 100 people • Fix gaps identified from cohort feedback • Turn on the Join button paywall"><div class="num" style="color:var(--accent8)">10</div>Distribution 🔓<div class="sub">3 subtasks · 10%</div></div>
     </div>
+    </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
       <button onclick="scrollSection('build-phases', 1)" aria-label="Next section">▼</button>
@@ -772,8 +799,8 @@
   </section>
 
   <section id="references">
-    <h2><a href="?section=references">🌐 References</a></h2>
-    <div class="grid2">
+    <h2><a href="?section=references">🌐 References</a> <button class="collapse-btn" id="toggle-references" onclick="toggleSection('references')" aria-label="Collapse section">▾</button></h2>
+    <div class="grid2 section-body" id="body-references">
       <div class="card" id="ref-manual-animation">
         <h3><a href="?section=ref-manual-animation">🖌️ Manual Animation</a></h3>
         <p><a href="https://www.canva.com/design/DAHP1RV4ILg/nTilowGAWQrxcqefQoFSUQ/edit" target="_blank" rel="noopener">Source design</a></p>
@@ -1008,6 +1035,40 @@
     });
     saveStageData();
   }
+
+  function saveSectionState() {
+    var data = {};
+    sectionOrder.forEach(function (id) {
+      var body = document.getElementById('body-' + id);
+      data[id] = body ? body.classList.contains('collapsed') : false;
+    });
+    setCookie('sectionCollapseState', JSON.stringify(data), 365);
+  }
+
+  function loadSectionState() {
+    var raw = getCookie('sectionCollapseState');
+    if (!raw) return;
+    var data;
+    try { data = JSON.parse(raw); } catch (e) { return; }
+    sectionOrder.forEach(function (id) {
+      if (!data[id]) return;
+      var body = document.getElementById('body-' + id);
+      var btn = document.getElementById('toggle-' + id);
+      if (body) body.classList.add('collapsed');
+      if (btn) btn.textContent = '▸';
+    });
+  }
+
+  function toggleSection(id) {
+    var body = document.getElementById('body-' + id);
+    var btn = document.getElementById('toggle-' + id);
+    if (!body) return;
+    body.classList.toggle('collapsed');
+    if (btn) btn.textContent = body.classList.contains('collapsed') ? '▸' : '▾';
+    saveSectionState();
+  }
+
+  loadSectionState();
 
   loadStageData();
 
