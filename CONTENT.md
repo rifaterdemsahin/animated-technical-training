@@ -323,7 +323,7 @@ Final per-domain training video files.
 
 🎯 **Average confidence:** 66% — lowest at stage 10 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "📋 Copy All Stage Data" button at the bottom of the page copies every stage's confidence + notes to the clipboard.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "🧹 Clear All Notes" button at the top of the page wipes every stage's notes (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every stage's confidence + notes to the clipboard.
 
 ### 🧪 Preprod
 

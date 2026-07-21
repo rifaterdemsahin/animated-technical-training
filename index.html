@@ -438,7 +438,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v5.1.0</div>
+    <div class="version">v5.2.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -448,6 +448,10 @@
       <a class="alt2" href="https://github.com/rifaterdemsahin/animated-technical-training/edit/main/CONTENT.md" target="_blank" rel="noopener">✏️ Edit Content</a>
     </div>
   </header>
+
+  <div class="cookie-tools">
+    <button onclick="clearAllNotes()">🧹 Clear All Notes</button>
+  </div>
 
   <section id="problem">
     <h2><a href="?section=problem">🧩 Problem</a></h2>
@@ -994,6 +998,15 @@
     }).catch(function () {
       if (status) status.textContent = '⚠️ Copy failed — clipboard permission blocked.';
     });
+  }
+
+  function clearAllNotes() {
+    if (!confirm('Clear notes from all stages? This cannot be undone.')) return;
+    stageIdsAll.forEach(function (id) {
+      var notesEl = document.getElementById('notes-' + id);
+      if (notesEl) notesEl.value = '';
+    });
+    saveStageData();
   }
 
   loadStageData();
