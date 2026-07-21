@@ -26,6 +26,8 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 **How:** We need to create technical animation for the Claude AI Architect course — Collect feedback in our cohorts and take daily notes in a whiteboard, and cast a wide net so we can include a much wider audience and listen audience problems.
 
+⚠️ **Risk:** Non-certified professionals implementing half-baked solutions can harm production systems.
+
 ## 🧠 Core Principle
 
 **Cognitive Offload — Show, Don't Tell 👁️**
@@ -60,6 +62,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 📅 **Cadence:** Daily
 
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
+
+☐ **Task:** Daily — add new screenshots and tasks to the whiteboard.
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
 
@@ -143,20 +147,20 @@ Final per-domain training video files.
 
 ### 🧪 Preprod
 
-- 0. Research 🔍 — 2 subtasks
-- 1. Canva Slides 🎨 — 1 subtask
-- 2. Review 🎞️ — 1 subtask
-- 3. Export Step 📦 — 1 subtask
+- 0. Research 🔍 — 2 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard)
+- 1. Canva Slides 🎨 — 1 subtask (Build the script, images, storyboard & notes in one Canva design)
+- 2. Review 🎞️ — 1 subtask (Review each scene in Canva Presentations and mark it "ready")
+- 3. Export Step 📦 — 1 subtask (Run the export script to flatten "ready" scenes for Canva import)
 
 ### 🏭 Prod
 
-- 4. Bulk Create ⚡ — 1 subtask
-- 5. Asset Gen 🧬 — 1 subtask
+- 4. Bulk Create ⚡ — 1 subtask (Run Canva Bulk Create to export all pages as video)
+- 5. Asset Gen 🧬 — 1 subtask (Generate and collect any missing AI assets for scenes)
 
 ### 🎬 Post
 
-- 6. Manual Finish ✨ — 1 subtask
-- 7. Export MP4 🚀 — 1 subtask
+- 6. Manual Finish ✨ — 1 subtask (Manually animate elements per page and generate AI voice for each)
+- 7. Export MP4 🚀 — 1 subtask (Export the final per-domain MP4 training video files)
 
 ## 🌐 References
 
