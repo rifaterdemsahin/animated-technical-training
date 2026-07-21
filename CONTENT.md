@@ -4,6 +4,8 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 [📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md) · [📝 Content](CONTENT.md) · [✏️ Edit Content](https://github.com/rifaterdemsahin/animated-technical-training/edit/main/CONTENT.md)
 
+**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references)
+
 ## 🧩 Problem
 
 **Problem:** Rapid AI progress keeps raising the skill expectations placed on people, faster than most can keep up.
@@ -53,6 +55,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🗂️ [Open whiteboard →](https://www.canva.com/design/DAHN5D7MhYE/ZPkd6ouYrf20A1MhZu0WZQ/edit)
 
+📅 **Cadence:** Daily
+
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
@@ -65,6 +69,10 @@ Bulk export and asset generation are automated to move fast; animation timing an
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
 
 🎨 [Open Slides →](https://www.canva.com/design/DAHQCqMC7Ck/2MvbdPMlSTcF9wtS6Y75zQ/edit?ui=eyJBIjp7fX0)
+
+🖼️ [Open Storyboard →](https://www.canva.com/design/DAHOxcN-Gx4/6kGlPNG10LlEP6bzv4PXSQ/edit)
+
+📅 **Cadence:** Sundays
 
 💡 [Why one Canva design →](rationale/readme.md#canva)
 
@@ -131,24 +139,22 @@ Final per-domain training video files.
 
 ## 🏗️ Stages
 
-1. Outline 📝
-2. Script 📜
-3. Visual Production 🖼️
-4. Import 📥
-5. Voiceovers 🎙️
-6. Polish 💎
+### 🧪 Preprod
 
-## 📁 Repo Layout
+- 0. Research 🔍 — 2 subtasks
+- 1. Canva Slides 🎨 — 1 subtask
+- 2. Review 🎞️ — 1 subtask
+- 3. Export Step 📦 — 1 subtask
 
-```
-index.html            → this page: pipeline overview
-MASTER_SPEC.md        → full design, schema & build phases
-Canva Course Folder   → script / storyboards / presentation (linked)
-README.md             → project overview
-rationale/            → why the pipeline was designed this way
-output/               → sample MP4 outputs (cringe vs. quality)
-models/               → image-model comparison for sprite generation
-```
+### 🏭 Prod
+
+- 4. Bulk Create ⚡ — 1 subtask
+- 5. Asset Gen 🧬 — 1 subtask
+
+### 🎬 Post
+
+- 6. Manual Finish ✨ — 1 subtask
+- 7. Export MP4 🚀 — 1 subtask
 
 ## 🌐 References
 
@@ -163,6 +169,22 @@ models/               → image-model comparison for sprite generation
 ### 💳 Canva AI Costs
 
 [Billing & teams](https://www.canva.com/settings/billing-and-teams)
+
+### 🤖 Claude
+
+[claude.ai](https://claude.ai/)
+
+### 🪄 Mage.space
+
+[Creations](https://www.mage.space/creations)
+
+### ♊ Gemini
+
+[gemini.google.com](https://gemini.google.com/)
+
+### 🎞️ Higgsfield
+
+[higgsfield.ai](https://higgsfield.ai/)
 
 ---
 

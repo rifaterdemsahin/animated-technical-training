@@ -65,6 +65,30 @@
   .links a.alt { background: var(--accent3); }
   .links a.alt2 { background: var(--accent4); }
 
+  .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.7rem 1rem;
+    background: rgba(15,23,42,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+  }
+  .topnav a {
+    flex: 0 0 auto;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(148,163,184,0.12);
+    white-space: nowrap;
+  }
+  .topnav a:hover { background: rgba(148,163,184,0.28); }
+
   section {
     margin-bottom: 2rem;
     padding: 1.5rem 1.6rem;
@@ -77,7 +101,6 @@
   section:nth-of-type(5) { background: rgba(167,139,250,0.08); }
   section:nth-of-type(6) { background: rgba(251,113,133,0.08); }
   section:nth-of-type(7) { background: rgba(148,163,184,0.08); }
-  section:nth-of-type(8) { background: rgba(244,114,182,0.06); }
   h2 {
     font-size: 1.4rem;
     display: flex;
@@ -187,6 +210,8 @@
     align-items: center;
     gap: 0.5rem;
   }
+  .stage h3 a, .card h3 a { color: inherit; text-decoration: none; }
+  .stage h3 a:hover, .card h3 a:hover { text-decoration: underline; }
   .stage p { margin: 0.2rem 0; color: var(--muted); font-size: 0.92rem; }
   .stage ul { margin: 0.4rem 0 0; padding-left: 1.2rem; color: var(--muted); font-size: 0.92rem; }
   .stage p.why {
@@ -253,6 +278,7 @@
   .phase:nth-child(4) .num { color: var(--accent3); }
   .phase:nth-child(5) .num { color: var(--accent5); }
   .phase:nth-child(6) .num { color: #fb7185; }
+  .phase .sub { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
 
   .grid2 {
     display: grid;
@@ -292,10 +318,19 @@
 </style>
 </head>
 <body>
+<nav class="topnav">
+  <a href="?section=problem">🧩 Problem</a>
+  <a href="?section=solution">✅ Solution</a>
+  <a href="?section=core-principle">🧠 Core Principle</a>
+  <a href="?section=hands-on">⚖️ Hands-On</a>
+  <a href="?section=pipeline">🔗 Pipeline</a>
+  <a href="?section=build-phases">🏗️ Stages</a>
+  <a href="?section=references">🌐 References</a>
+</nav>
 <div class="wrap">
 
   <header>
-    <div class="version">v2.2.0</div>
+    <div class="version">v3.0.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -374,20 +409,21 @@
     <div class="pipeline">
 
       <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
-      <div class="stage s0">
-        <h3>🔍 0. Research — Canva Whiteboard</h3>
+      <div class="stage s0" id="stage0">
+        <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a></h3>
         <ul>
           <li>Save reference images &amp; text as they're found</li>
           <li>Left to right flow — chronological research trail</li>
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/whiteboard_notes.jpeg" alt="Whiteboard notes" onclick="openModal(this.src)">
         <p class="why">🗂️ <a href="https://www.canva.com/design/DAHN5D7MhYE/ZPkd6ouYrf20A1MhZu0WZQ/edit" target="_blank" rel="noopener">Open whiteboard →</a></p>
+        <p class="why">📅 <strong>Cadence:</strong> Daily</p>
         <p class="task">☐ <strong>Task:</strong> <a href="https://www.canva.com/folder/FAHMZK9u-JE" target="_blank" rel="noopener">Create the Canva course folder structure →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s1">
-        <h3>🎨 1. Canva Slides — Source of Cohort Session</h3>
+      <div class="stage s1" id="stage1">
+        <h3><a href="?section=stage1">🎨 1. Canva Slides — Source of Cohort Session</a></h3>
         <ul>
           <li>Script — master flow for the content</li>
           <li>Images (AI-generated sprite assets)</li>
@@ -396,12 +432,14 @@
         </ul>
         <p class="task">☐ <strong>Task:</strong> Build the script, images, storyboard &amp; notes in one Canva design.</p>
         <p class="why">🎨 <a href="https://www.canva.com/design/DAHQCqMC7Ck/2MvbdPMlSTcF9wtS6Y75zQ/edit?ui=eyJBIjp7fX0" target="_blank" rel="noopener">Open Slides →</a></p>
+        <p class="why">🖼️ <a href="https://www.canva.com/design/DAHOxcN-Gx4/6kGlPNG10LlEP6bzv4PXSQ/edit" target="_blank" rel="noopener">Open Storyboard →</a></p>
+        <p class="why">📅 <strong>Cadence:</strong> Sundays</p>
         <p class="why">💡 <a href="rationale/readme.md#canva">Why one Canva design →</a></p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s2">
-        <h3>🎞️ 2. Review Canva Presentations</h3>
+      <div class="stage s2" id="stage2">
+        <h3><a href="?section=stage2">🎞️ 2. Review Canva Presentations</a></h3>
         <p>Done in Canva Presentations — no separate tool.</p>
         <ul>
           <li>Frame view per scene: sprite preview + incoming/outgoing + <code>visual_action</code> notes</li>
@@ -413,8 +451,8 @@
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s3">
-        <h3>📦 3. Export Step</h3>
+      <div class="stage s3" id="stage3">
+        <h3><a href="?section=stage3">📦 3. Export Step</a></h3>
         <p>Exports from the Canva Slides presentation, to import into Canva Video.</p>
         <ul>
           <li>Flattens "ready" scenes for Canva import</li>
@@ -427,8 +465,8 @@
       <div class="arrow">⬇️</div>
 
       <h3 id="prod" class="phase-group"><a href="?section=prod">🏭 Prod</a></h3>
-      <div class="stage s4">
-        <h3>⚡ 4. Canva Bulk Create</h3>
+      <div class="stage s4" id="stage4">
+        <h3><a href="?section=stage4">⚡ 4. Canva Bulk Create</a></h3>
         <ul>
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
@@ -438,8 +476,8 @@
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s5">
-        <h3>🧬 5. Asset Generation</h3>
+      <div class="stage s5" id="stage5">
+        <h3><a href="?section=stage5">🧬 5. Asset Generation</a></h3>
         <ul>
           <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
           <li>Fill gaps before manual finishing starts</li>
@@ -449,8 +487,8 @@
       <div class="arrow">⬇️</div>
 
       <h3 id="post" class="phase-group"><a href="?section=post">🎬 Post</a></h3>
-      <div class="stage s6">
-        <h3>✨ 6. Canva Manual Finishing</h3>
+      <div class="stage s6" id="stage6">
+        <h3><a href="?section=stage6">✨ 6. Canva Manual Finishing</a></h3>
         <ul>
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
@@ -460,8 +498,8 @@
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s7">
-        <h3>🚀 7. Export MP4</h3>
+      <div class="stage s7" id="stage7">
+        <h3><a href="?section=stage7">🚀 7. Export MP4</a></h3>
         <p>Final per-domain training video files.</p>
         <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
@@ -476,13 +514,22 @@
 
   <section id="build-phases">
     <h2><a href="?section=build-phases">🏗️ Stages</a></h2>
+    <h3 class="phase-group">🧪 Preprod</h3>
     <div class="phases">
-      <div class="phase"><div class="num">1</div>Outline 📝</div>
-      <div class="phase"><div class="num">2</div>Script 📜</div>
-      <div class="phase"><div class="num">3</div>Visual Production 🖼️</div>
-      <div class="phase"><div class="num">4</div>Import 📥</div>
-      <div class="phase"><div class="num">5</div>Voiceovers 🎙️</div>
-      <div class="phase"><div class="num">6</div>Polish 💎</div>
+      <div class="phase"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">2 subtasks</div></div>
+      <div class="phase"><div class="num" style="color:var(--accent2)">1</div>Canva Slides 🎨<div class="sub">1 subtask</div></div>
+      <div class="phase"><div class="num" style="color:var(--accent1)">2</div>Review 🎞️<div class="sub">1 subtask</div></div>
+      <div class="phase"><div class="num" style="color:var(--accent4)">3</div>Export Step 📦<div class="sub">1 subtask</div></div>
+    </div>
+    <h3 class="phase-group">🏭 Prod</h3>
+    <div class="phases">
+      <div class="phase"><div class="num" style="color:var(--accent3)">4</div>Bulk Create ⚡<div class="sub">1 subtask</div></div>
+      <div class="phase"><div class="num" style="color:var(--accent6)">5</div>Asset Gen 🧬<div class="sub">1 subtask</div></div>
+    </div>
+    <h3 class="phase-group">🎬 Post</h3>
+    <div class="phases">
+      <div class="phase"><div class="num" style="color:var(--accent5)">6</div>Manual Finish ✨<div class="sub">1 subtask</div></div>
+      <div class="phase"><div class="num" style="color:#fb7185">7</div>Export MP4 🚀<div class="sub">1 subtask</div></div>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
@@ -490,35 +537,36 @@
     </div>
   </section>
 
-  <section id="repo-layout">
-    <h2><a href="?section=repo-layout">📁 Repo Layout</a></h2>
-    <pre>index.html            → this page: pipeline overview
-MASTER_SPEC.md        → full design, schema &amp; build phases
-Canva Course Folder   → script / storyboards / presentation (linked)
-README.md             → project overview
-rationale/            → why the pipeline was designed this way
-output/               → sample MP4 outputs (cringe vs. quality)
-models/               → image-model comparison for sprite generation</pre>
-    <div class="section-nav">
-      <button onclick="scrollSection('repo-layout', -1)" aria-label="Previous section">▲</button>
-      <button onclick="scrollSection('repo-layout', 1)" aria-label="Next section">▼</button>
-    </div>
-  </section>
-
   <section id="references">
     <h2><a href="?section=references">🌐 References</a></h2>
     <div class="grid2">
-      <div class="card">
-        <h3>🖌️ Manual Animation</h3>
+      <div class="card" id="ref-manual-animation">
+        <h3><a href="?section=ref-manual-animation">🖌️ Manual Animation</a></h3>
         <p><a href="https://www.canva.com/design/DAHP1RV4ILg/nTilowGAWQrxcqefQoFSUQ/edit" target="_blank" rel="noopener">Source design</a></p>
       </div>
-      <div class="card">
-        <h3>🎥 Manual Animation Output</h3>
+      <div class="card" id="ref-manual-animation-output">
+        <h3><a href="?section=ref-manual-animation-output">🎥 Manual Animation Output</a></h3>
         <p><a href="https://www.canva.com/design/DAHP1c7gOR8/BNhFha3kTMtMAdpgteVUPw/edit?ui=e30#" target="_blank" rel="noopener">Rendered output</a></p>
       </div>
-      <div class="card">
-        <h3>💳 Canva AI Costs</h3>
+      <div class="card" id="ref-canva-costs">
+        <h3><a href="?section=ref-canva-costs">💳 Canva AI Costs</a></h3>
         <p><a href="https://www.canva.com/settings/billing-and-teams" target="_blank" rel="noopener">Billing &amp; teams</a></p>
+      </div>
+      <div class="card" id="ref-claude">
+        <h3><a href="?section=ref-claude">🤖 Claude</a></h3>
+        <p><a href="https://claude.ai/" target="_blank" rel="noopener">claude.ai</a></p>
+      </div>
+      <div class="card" id="ref-mage">
+        <h3><a href="?section=ref-mage">🪄 Mage.space</a></h3>
+        <p><a href="https://www.mage.space/creations" target="_blank" rel="noopener">Creations</a></p>
+      </div>
+      <div class="card" id="ref-gemini">
+        <h3><a href="?section=ref-gemini">♊ Gemini</a></h3>
+        <p><a href="https://gemini.google.com/" target="_blank" rel="noopener">gemini.google.com</a></p>
+      </div>
+      <div class="card" id="ref-higgsfield">
+        <h3><a href="?section=ref-higgsfield">🎞️ Higgsfield</a></h3>
+        <p><a href="https://higgsfield.ai/" target="_blank" rel="noopener">higgsfield.ai</a></p>
       </div>
     </div>
     <div class="section-nav">
@@ -556,7 +604,7 @@ models/               → image-model comparison for sprite generation</pre>
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  var sectionOrder = ['problem', 'solution', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'repo-layout', 'references'];
+  var sectionOrder = ['problem', 'solution', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references'];
   function scrollSection(current, dir) {
     var idx = sectionOrder.indexOf(current) + dir;
     if (idx >= 0 && idx < sectionOrder.length) {
