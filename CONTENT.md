@@ -2,7 +2,7 @@
 
 Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards & sprites into animated technical training videos using Canva + AI.
 
-[📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md)
+[📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md) · [📝 Content](CONTENT.md) · [✏️ Edit Content](https://github.com/rifaterdemsahin/animated-technical-training/edit/main/CONTENT.md)
 
 ## 🧩 Problem
 
@@ -63,6 +63,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 - Notes — per-frame script & animation direction
 
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
+
+🎨 [Open Slides →](https://www.canva.com/design/DAHQCqMC7Ck/2MvbdPMlSTcF9wtS6Y75zQ/edit?ui=eyJBIjp7fX0)
 
 💡 [Why one Canva design →](rationale/readme.md#canva)
 
