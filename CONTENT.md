@@ -68,6 +68,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 📅 **Cadence:** Daily
 
+🎓 **Why it matters:** documenting research daily is the same study habit that gets him exam-ready for the certificate.
+
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
 
 ☐ **Task:** Daily — add new screenshots and tasks to the whiteboard.
@@ -92,6 +94,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 - Notes — per-frame script & animation direction
 
 ![Stage 1 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/1.%20Canva%20Slides%20%E2%80%94%20Source%20of%20Cohort%20Session.jpg)
+
+🎓 **Why it matters:** structuring the script and storyboard mirrors how certification content itself is organized — building it teaches the material twice.
 
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
 
@@ -119,6 +123,8 @@ Done in Canva Presentations — no separate tool.
 
 ![Stage 2 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/2.%20Review%20Canva%20Presentations.jpg)
 
+🎓 **Why it matters:** reviewing scenes before export is the same rigor as reviewing his own understanding before a mock exam.
+
 ☐ **Task:** Review each scene in Canva Presentations and mark it "ready".
 
 📅 **Cadence:** Sundays Night
@@ -139,6 +145,8 @@ Close the gap to create the images to be animated
 - Animation prompts to be written
 - Mark animations ✅ "ready"
 
+🎓 **Why it matters:** breaking one idea into many frames forces real understanding of the mechanics, not just recognition of them.
+
 ☐ **Task:** Review each scene into many images that would help with animation.
 
 📅 **Cadence:** Week days
@@ -157,6 +165,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ![Stage 4 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg)
 
+🎓 **Why it matters:** turning scattered study material into a transferable package is useful for the exam and for teaching it.
+
 ☐ **Task:** Run the export script to flatten "ready" scenes for Canva import.
 
 💡 [Why flatten & batch →](rationale/readme.md#export)
@@ -169,12 +179,36 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ### 🏭 Prod
 
-#### ⚡ 5. Canva Bulk Create
+#### 🧠 5. Mindmap Architecture
+
+Diagram the course's topic architecture before bulk-rendering anything.
+
+- Map modules, dependencies, and flow across the whole course
+- Cross-check the mindmap against the certification syllabus
+- Mark the structure ✅ "locked"
+
+🎓 **Why it matters:** mapping the course's architecture is the same exercise as mapping the certification syllabus — you can't teach a structure you haven't diagrammed.
+
+☐ **Task:** Build the mindmap of the course architecture.
+
+☐ **Task:** Cross-check the mindmap against the certification syllabus.
+
+📅 **Cadence:** Once per course
+
+⏱️ **Est. Time:** ~2 hrs
+
+🎯 **Confidence:** 55%
+
+✅ **Quality Gate:** mindmap architecture locked and matches the certification syllabus before bulk create.
+
+#### ⚡ 6. Canva Bulk Create
 
 - Exports all pages as video (sprite + incoming + outgoing)
 - Voiceovers embedded inside the videos
 
-![Stage 5 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
+![Stage 6 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
+
+🎓 **Why it matters:** seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.
 
 ☐ **Task:** Run Canva Bulk Create to export all pages as video.
 
@@ -186,10 +220,12 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
-#### 🧬 6. Asset Generation
+#### 🧬 7. Asset Generation
 
 - Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery
 - Fill gaps before manual finishing starts
+
+🎓 **Why it matters:** filling in missing pieces mirrors closing his own knowledge gaps before certification day.
 
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
@@ -203,10 +239,12 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ### 🎬 Post
 
-#### ✨ 7. Canva Manual Finishing
+#### ✨ 8. Canva Manual Finishing
 
 - Animate per element/page — motion path preferred over generic entrance FX
 - Generate AI voice per page from incoming/outgoing text
+
+🎓 **Why it matters:** making a concept click for someone else is the deepest test of whether he actually understands it.
 
 ☐ **Task:** Manually animate elements per page and generate AI voice for each.
 
@@ -218,11 +256,13 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
-#### 🚀 8. Export MP4
+#### 🚀 9. Export MP4
 
 Final per-domain training video files.
 
-![Stage 8 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
+![Stage 9 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
+
+🎓 **Why it matters:** a finished artifact is proof of mastery — for the audience, and for himself.
 
 ☐ **Task:** Export the final per-domain MP4 training video files.
 
@@ -234,12 +274,14 @@ Final per-domain training video files.
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
-#### 🔓 9. Distribution — Free Cohort → Paywall
+#### 🔓 10. Distribution — Free Cohort → Paywall
 
 - First 100 people get the full end-to-end course for free
 - Collect feedback from that free cohort
 - Fix the gaps that feedback surfaces
 - Turn on the Join button paywall for everyone else
+
+🎓 **Why it matters:** teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.
 
 ☐ **Task:** Ship free access to the first 100 people.
 
@@ -255,9 +297,11 @@ Final per-domain training video files.
 
 ## 🏗️ Stages
 
-⏱️ **Total estimated time:** ~23 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).
+⏱️ **Total estimated time:** ~25 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).
 
-🎯 **Average confidence:** 76% — lowest at stage 9 Distribution (50%, unproven paywall model) and stage 6 Asset Generation (55%, new music/SFX workflow); highest at stage 0 Research and stage 8 Export MP4 (90%, both well-worn habits).
+🎯 **Average confidence:** 74% — lowest at stage 10 Distribution (50%, unproven paywall model), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55% (newer, less-proven steps); highest at stage 0 Research and stage 9 Export MP4 (90%, both well-worn habits).
+
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "📋 Copy All Stage Data" button at the bottom of the page copies every stage's confidence + notes to the clipboard.
 
 ### 🧪 Preprod
 
@@ -269,14 +313,15 @@ Final per-domain training video files.
 
 ### 🏭 Prod
 
-- 5. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
-- 6. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
+- 5. Mindmap Architecture 🧠 — 2 subtasks · 55% confidence (Build the mindmap of the course architecture; Cross-check the mindmap against the certification syllabus)
+- 6. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
+- 7. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
 
 ### 🎬 Post
 
-- 7. Manual Finish ✨ — 1 subtask · 85% confidence (Manually animate elements per page and generate AI voice for each)
-- 8. Export MP4 🚀 — 1 subtask · 90% confidence (Export the final per-domain MP4 training video files)
-- 9. Distribution 🔓 — 3 subtasks · 50% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
+- 8. Manual Finish ✨ — 1 subtask · 85% confidence (Manually animate elements per page and generate AI voice for each)
+- 9. Export MP4 🚀 — 1 subtask · 90% confidence (Export the final per-domain MP4 training video files)
+- 10. Distribution 🔓 — 3 subtasks · 50% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
 
 ## 🌐 References
 
