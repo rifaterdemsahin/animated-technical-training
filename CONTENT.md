@@ -28,7 +28,7 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 ⚠️ **Risk:** Non-certified professionals implementing half-baked solutions can harm production systems.
 
-📺 **Sample:** [Tech with Nana →](https://www.youtube.com/watch?v=xo5V9g9joFs)
+📺 **Sample:** [Tech with Nana →](https://www.youtube.com/watch?v=xo5V9g9joFs) [Info Graphics →](https://www.youtube.com/watch?v=f0aNDS_i7VQ)
 
 ## 🧠 Core Principle
 
@@ -91,7 +91,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🖼️ [Open Storyboard →](https://www.canva.com/design/DAHOxcN-Gx4/6kGlPNG10LlEP6bzv4PXSQ/edit)
 
-📅 **Cadence:** Sundays
+📅 **Cadence:** Sundays Morning
 
 💡 [Why one Canva design →](rationale/readme.md#canva)
 
@@ -109,11 +109,23 @@ Done in Canva Presentations — no separate tool.
 
 ☐ **Task:** Review each scene in Canva Presentations and mark it "ready".
 
-📅 **Cadence:** Sundays
+📅 **Cadence:** Sundays Night
 
 💡 [Why review before export →](rationale/readme.md#carousel)
 
 ✅ **Quality Gate:** every scene marked ✅ ready before export.
+
+#### 🎞️ 3. Add Animation Frames
+
+Close the gap to create the images to be animated
+
+- One image can be displayed in multiple images
+- Animation prompts to be written
+- Mark animations ✅ "ready"
+
+  ☐ **Task:** Review each scene into many images that would help with animation.
+
+📅 **Cadence:** Week days
 
 #### 📦 3. Export Step
 
