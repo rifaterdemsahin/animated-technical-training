@@ -28,6 +28,8 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 ⚠️ **Risk:** Non-certified professionals implementing half-baked solutions can harm production systems.
 
+📺 **Sample:** [Tech with Nana →](https://www.youtube.com/watch?v=xo5V9g9joFs)
+
 ## 🧠 Core Principle
 
 **Cognitive Offload — Show, Don't Tell 👁️**
@@ -36,6 +38,8 @@ Narration and visuals must never carry the same information twice. Concept trans
 ✅ **The Mute Test:** if a scene, watched with no audio, doesn't convey the concept — it isn't done.
 
 🧪 **The Subtitle Test:** watch the scene with just the subtitle showing — if the animation still makes sense on its own, that's the main animation test.
+
+![Show, don't tell illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png)
 
 ## ⚖️ Half Hands-On, Half Automated
 
@@ -66,6 +70,12 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ☐ **Task:** Daily — add new screenshots and tasks to the whiteboard.
 
+☐ **Task:** Generate outline.
+
+☐ **Task:** Generate script.
+
+✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
+
 #### 🎨 1. Canva Slides — Source of Cohort Session
 
 - Script — master flow for the content
@@ -85,6 +95,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 💡 [Why one Canva design →](rationale/readme.md#canva)
 
+✅ **Quality Gate:** script, images, storyboard & notes complete for every scene before review.
+
 #### 🎞️ 2. Review Canva Presentations
 
 Done in Canva Presentations — no separate tool.
@@ -97,7 +109,11 @@ Done in Canva Presentations — no separate tool.
 
 ☐ **Task:** Review each scene in Canva Presentations and mark it "ready".
 
+📅 **Cadence:** Sundays
+
 💡 [Why review before export →](rationale/readme.md#carousel)
+
+✅ **Quality Gate:** every scene marked ✅ ready before export.
 
 #### 📦 3. Export Step
 
@@ -113,6 +129,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 💡 [Why flatten & batch →](rationale/readme.md#export)
 
+✅ **Quality Gate:** all ready scenes flattened and under the 300-page limit before bulk create.
+
 ### 🏭 Prod
 
 #### ⚡ 4. Canva Bulk Create
@@ -126,12 +144,16 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 💡 [Why bulk create →](rationale/readme.md#bulk-create)
 
+✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
+
 #### 🧬 5. Asset Generation
 
 - Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery
 - Fill gaps before manual finishing starts
 
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
+
+✅ **Quality Gate:** no missing sprites or backgrounds remain before manual finishing.
 
 ### 🎬 Post
 
@@ -144,6 +166,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 💡 [Why manual, not automated →](rationale/readme.md#manual-finishing)
 
+✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
+
 #### 🚀 7. Export MP4
 
 Final per-domain training video files.
@@ -154,11 +178,13 @@ Final per-domain training video files.
 
 💡 [Why per-domain files →](rationale/readme.md#export-mp4)
 
+✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
+
 ## 🏗️ Stages
 
 ### 🧪 Preprod
 
-- 0. Research 🔍 — 2 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard)
+- 0. Research 🔍 — 4 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script)
 - 1. Canva Slides 🎨 — 1 subtask (Build the script, images, storyboard & notes in one Canva design)
 - 2. Review 🎞️ — 1 subtask (Review each scene in Canva Presentations and mark it "ready")
 - 3. Export Step 📦 — 1 subtask (Run the export script to flatten "ready" scenes for Canva import)

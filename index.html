@@ -247,6 +247,15 @@
   .stage p.task strong { color: var(--accent4); }
   .stage p.task a { text-decoration: none; }
   .stage p.task a:hover { text-decoration: underline; }
+  .stage p.gate {
+    margin: 0.6rem 0 0;
+    padding: 0.5rem 0.7rem;
+    background: rgba(52,211,153,0.1);
+    border: 1px dashed var(--accent3);
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+  .stage p.gate strong { color: var(--accent3); }
   .arrow {
     text-align: center;
     font-size: 1.4rem;
@@ -378,7 +387,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v3.3.0</div>
+    <div class="version">v3.4.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -415,6 +424,7 @@
       feedback in our <a href="?section=stage1">cohorts</a> and take daily notes in a <a href="?section=stage0">whiteboard</a>, and cast a wide net so we can include a much
       wider audience and listen audience problems.</p>
       <p>⚠️ <strong>Risk:</strong> Non-certified professionals implementing half-baked solutions can harm production systems.</p>
+      <p>📺 <strong>Sample:</strong> <a href="https://www.youtube.com/watch?v=xo5V9g9joFs" target="_blank" rel="noopener">Tech with Nana →</a></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
@@ -431,6 +441,7 @@
       <p>✅ <strong>The Mute Test:</strong> if a scene, watched with no audio, doesn't convey the concept — it isn't done.</p>
       <p>🧪 <strong>The Subtitle Test:</strong> watch the scene with just the subtitle showing — if the animation still
       makes sense on its own, that's the main animation test.</p>
+      <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png" alt="Show, don't tell illustration" onclick="openModal(this.src)">
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('core-principle', -1)" aria-label="Previous section">▲</button>
@@ -472,6 +483,9 @@
         <p class="why">📅 <strong>Cadence:</strong> Daily</p>
         <p class="task">☐ <strong>Task:</strong> <a href="https://www.canva.com/folder/FAHMZK9u-JE" target="_blank" rel="noopener">Create the Canva course folder structure →</a></p>
         <p class="task">☐ <strong>Task:</strong> Daily — add new screenshots and tasks to the whiteboard.</p>
+        <p class="task">☐ <strong>Task:</strong> Generate outline.</p>
+        <p class="task">☐ <strong>Task:</strong> Generate script.</p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> every research note has a source screenshot before moving to slide-building.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -489,6 +503,7 @@
         <p class="why">🖼️ <a href="https://www.canva.com/design/DAHOxcN-Gx4/6kGlPNG10LlEP6bzv4PXSQ/edit" target="_blank" rel="noopener">Open Storyboard →</a></p>
         <p class="why">📅 <strong>Cadence:</strong> Sundays</p>
         <p class="why">💡 <a href="rationale/readme.md#canva">Why one Canva design →</a></p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> script, images, storyboard &amp; notes complete for every scene before review.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -502,7 +517,9 @@
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/2.%20Review%20Canva%20Presentations.jpg" alt="Stage 2 illustration: Review Canva Presentations" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Review each scene in Canva Presentations and mark it "ready".</p>
+        <p class="why">📅 <strong>Cadence:</strong> Sundays</p>
         <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> every scene marked ✅ ready before export.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -517,6 +534,7 @@
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg" alt="Stage 3 illustration: Export Step" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Run the export script to flatten "ready" scenes for Canva import.</p>
         <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> all ready scenes flattened and under the 300-page limit before bulk create.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -530,6 +548,7 @@
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 4 illustration: Canva Bulk Create" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create to export all pages as video.</p>
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> every page rendered as video with voiceover before manual finishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -540,6 +559,7 @@
           <li>Fill gaps before manual finishing starts</li>
         </ul>
         <p class="task">☐ <strong>Task:</strong> Generate and collect any missing AI assets for scenes.</p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites or backgrounds remain before manual finishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -552,6 +572,7 @@
         </ul>
         <p class="task">☐ <strong>Task:</strong> Manually animate elements per page and generate AI voice for each.</p>
         <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> every scene passes the <a href="?section=core-principle">Mute Test &amp; Subtitle Test</a> before export.</p>
       </div>
       <div class="arrow">⬇️</div>
 
@@ -561,6 +582,7 @@
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 7 illustration: Export MP4" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
       </div>
 
     </div>
@@ -574,7 +596,7 @@
     <h2><a href="?section=build-phases">🏗️ Stages</a></h2>
     <h3 id="stages-preprod" class="phase-group"><a href="?section=stages-preprod">🧪 Preprod</a></h3>
     <div class="phases">
-      <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">2 subtasks</div></div>
+      <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">4 subtasks</div></div>
       <div class="phase" data-tasks="Build the script, images, storyboard &amp; notes in one Canva design"><div class="num" style="color:var(--accent2)">1</div>Canva Slides 🎨<div class="sub">1 subtask</div></div>
       <div class="phase" data-tasks="Review each scene in Canva Presentations and mark it &quot;ready&quot;"><div class="num" style="color:var(--accent1)">2</div>Review 🎞️<div class="sub">1 subtask</div></div>
       <div class="phase" data-tasks="Run the export script to flatten &quot;ready&quot; scenes for Canva import"><div class="num" style="color:var(--accent4)">3</div>Export Step 📦<div class="sub">1 subtask</div></div>
