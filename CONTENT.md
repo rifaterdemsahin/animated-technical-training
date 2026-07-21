@@ -56,6 +56,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 - Left to right flow — chronological research trail
 
 ![Whiteboard notes](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/whiteboard_notes.jpeg)
+![Stage 0 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/0.%20Research%20%E2%80%94%20Canva%20Whiteboard.jpg)
 
 🗂️ [Open whiteboard →](https://www.canva.com/design/DAHN5D7MhYE/ZPkd6ouYrf20A1MhZu0WZQ/edit)
 
@@ -71,6 +72,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 - Images (AI-generated sprite assets)
 - Storyboard — Gemini-generated inspirational frames
 - Notes — per-frame script & animation direction
+
+![Stage 1 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/1.%20Canva%20Slides%20%E2%80%94%20Source%20of%20Cohort%20Session.jpg)
 
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
 
@@ -90,6 +93,8 @@ Done in Canva Presentations — no separate tool.
 - Inline edit, clone scene, reorder
 - Mark scenes ✅ "ready"
 
+![Stage 2 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/2.%20Review%20Canva%20Presentations.jpg)
+
 ☐ **Task:** Review each scene in Canva Presentations and mark it "ready".
 
 💡 [Why review before export →](rationale/readme.md#carousel)
@@ -102,6 +107,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 - Embeds sprite images
 - Respects Canva's 300-page limit — batches by video if exceeded
 
+![Stage 3 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg)
+
 ☐ **Task:** Run the export script to flatten "ready" scenes for Canva import.
 
 💡 [Why flatten & batch →](rationale/readme.md#export)
@@ -112,6 +119,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 - Exports all pages as video (sprite + incoming + outgoing)
 - Voiceovers embedded inside the videos
+
+![Stage 4 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
 
 ☐ **Task:** Run Canva Bulk Create to export all pages as video.
 
@@ -138,6 +147,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 #### 🚀 7. Export MP4
 
 Final per-domain training video files.
+
+![Stage 7 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
 
 ☐ **Task:** Export the final per-domain MP4 training video files.
 
