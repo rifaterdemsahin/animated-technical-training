@@ -78,6 +78,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ☐ **Task:** Complete the paid AI certificate — proof to himself before teaching it.
 
+⏱️ **Est. Time:** ~30 min/day
+
 ✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
@@ -99,6 +101,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 💡 [Why one Canva design →](rationale/readme.md#canva)
 
+⏱️ **Est. Time:** ~3 hrs/week
+
 ✅ **Quality Gate:** script, images, storyboard & notes complete for every scene before review.
 
 #### 🎞️ 2. Review Canva Presentations
@@ -117,6 +121,8 @@ Done in Canva Presentations — no separate tool.
 
 💡 [Why review before export →](rationale/readme.md#carousel)
 
+⏱️ **Est. Time:** ~1.5 hrs/week
+
 ✅ **Quality Gate:** every scene marked ✅ ready before export.
 
 #### 🎞️ 3. Add Animation Frames
@@ -131,6 +137,8 @@ Close the gap to create the images to be animated
 
 📅 **Cadence:** Week days
 
+⏱️ **Est. Time:** ~3 hrs/week
+
 #### 📦 4. Export Step
 
 Exports from the Canva Slides presentation, to import into Canva Video.
@@ -144,6 +152,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 ☐ **Task:** Run the export script to flatten "ready" scenes for Canva import.
 
 💡 [Why flatten & batch →](rationale/readme.md#export)
+
+⏱️ **Est. Time:** ~20 min
 
 ✅ **Quality Gate:** all ready scenes flattened and under the 300-page limit before bulk create.
 
@@ -160,6 +170,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 💡 [Why bulk create →](rationale/readme.md#bulk-create)
 
+⏱️ **Est. Time:** ~45 min
+
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
 #### 🧬 6. Asset Generation
@@ -170,6 +182,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
 ☐ **Task:** Produce music & sound effects for the scenes.
+
+⏱️ **Est. Time:** ~1.5 hrs
 
 ✅ **Quality Gate:** no missing sprites, backgrounds, music, or sound effects remain before manual finishing.
 
@@ -184,6 +198,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 💡 [Why manual, not automated →](rationale/readme.md#manual-finishing)
 
+⏱️ **Est. Time:** ~6 hrs
+
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
 #### 🚀 8. Export MP4
@@ -195,6 +211,8 @@ Final per-domain training video files.
 ☐ **Task:** Export the final per-domain MP4 training video files.
 
 💡 [Why per-domain files →](rationale/readme.md#export-mp4)
+
+⏱️ **Est. Time:** ~20 min
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
@@ -211,9 +229,13 @@ Final per-domain training video files.
 
 ☐ **Task:** Turn on the Join button paywall.
 
+⏱️ **Est. Time:** ~3 hrs (ongoing)
+
 ✅ **Quality Gate:** gaps from the free cohort are fixed before the paywall goes live.
 
 ## 🏗️ Stages
+
+⏱️ **Total estimated time:** ~23 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).
 
 ### 🧪 Preprod
 
@@ -269,3 +291,5 @@ Final per-domain training video files.
 Manual build wins on aesthetics — a comic deserves craft over cringe. 🎨✨
 
 [🌐 View on GitHub Pages](https://rifaterdemsahin.github.io/animated-technical-training/)
+
+[🔗 Last commit](https://github.com/rifaterdemsahin/animated-technical-training/commits/main)
