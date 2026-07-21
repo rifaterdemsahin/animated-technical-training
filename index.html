@@ -17,6 +17,7 @@
     --accent4: #fbbf24;
     --accent5: #a78bfa;
     --accent6: #22d3ee;
+    --accent7: #fb923c;
     --border: #334155;
   }
   * { box-sizing: border-box; }
@@ -269,16 +270,18 @@
   .s1 h3 { color: var(--accent2); }
   .s2 { border-top: 4px solid var(--accent1); }
   .s2 h3 { color: var(--accent1); }
-  .s3 { border-top: 4px solid var(--accent4); }
-  .s3 h3 { color: var(--accent4); }
-  .s4 { border-top: 4px solid var(--accent3); }
-  .s4 h3 { color: var(--accent3); }
-  .s5 { border-top: 4px solid var(--accent6); }
-  .s5 h3 { color: var(--accent6); }
-  .s6 { border-top: 4px solid var(--accent5); }
-  .s6 h3 { color: var(--accent5); }
-  .s7 { border-top: 4px solid #fb7185; }
-  .s7 h3 { color: #fb7185; }
+  .s3 { border-top: 4px solid var(--accent7); }
+  .s3 h3 { color: var(--accent7); }
+  .s4 { border-top: 4px solid var(--accent4); }
+  .s4 h3 { color: var(--accent4); }
+  .s5 { border-top: 4px solid var(--accent3); }
+  .s5 h3 { color: var(--accent3); }
+  .s6 { border-top: 4px solid var(--accent6); }
+  .s6 h3 { color: var(--accent6); }
+  .s7 { border-top: 4px solid var(--accent5); }
+  .s7 h3 { color: var(--accent5); }
+  .s8 { border-top: 4px solid #fb7185; }
+  .s8 h3 { color: #fb7185; }
 
   .phases {
     display: grid;
@@ -387,7 +390,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v3.4.0</div>
+    <div class="version">v4.0.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -452,7 +455,7 @@
   <section id="hands-on">
     <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a></h2>
     <div class="principle">
-      <p><a href="?section=stage4">Bulk export</a> and <a href="?section=stage5">asset generation</a> are automated to move fast; animation timing and voice are finished
+      <p><a href="?section=stage5">Bulk export</a> and <a href="?section=stage6">asset generation</a> are automated to move fast; animation timing and voice are finished
       manually to reach top quality — <strong>audience retention and reach are on the line, so we can't risk
       low quality by auto generating content that does not line up with what audience needs.</strong></p>
       <p>🎯 That means every scene needs to be <strong>frame by frame mapped</strong> — <a href="?section=stage0">whiteboard</a>,<a href="?section=stage1">script</a>,<a href="?section=stage1">slides</a>,
@@ -517,21 +520,34 @@
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/2.%20Review%20Canva%20Presentations.jpg" alt="Stage 2 illustration: Review Canva Presentations" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Review each scene in Canva Presentations and mark it "ready".</p>
-        <p class="why">📅 <strong>Cadence:</strong> Sundays</p>
+        <p class="why">📅 <strong>Cadence:</strong> Sundays Night</p>
         <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene marked ✅ ready before export.</p>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s3" id="stage3">
-        <h3><a href="?section=stage3">📦 3. Export Step</a></h3>
+        <h3><a href="?section=stage3">🎞️ 3. Add Animation Frames</a></h3>
+        <p>Close the gap to create the images to be animated.</p>
+        <ul>
+          <li>One image can be displayed in multiple images</li>
+          <li>Animation prompts to be written</li>
+          <li>Mark animations ✅ "ready"</li>
+        </ul>
+        <p class="task">☐ <strong>Task:</strong> Review each scene into many images that would help with animation.</p>
+        <p class="why">📅 <strong>Cadence:</strong> Week days</p>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s4" id="stage4">
+        <h3><a href="?section=stage4">📦 4. Export Step</a></h3>
         <p>Exports from the Canva Slides presentation, to import into Canva Video.</p>
         <ul>
           <li>Flattens "ready" scenes for Canva import</li>
           <li>Embeds sprite images</li>
           <li>Respects Canva's 300-page limit — batches by video if exceeded</li>
         </ul>
-        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg" alt="Stage 3 illustration: Export Step" onclick="openModal(this.src)">
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg" alt="Stage 4 illustration: Export Step" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Run the export script to flatten "ready" scenes for Canva import.</p>
         <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
         <p class="gate">✅ <strong>Quality Gate:</strong> all ready scenes flattened and under the 300-page limit before bulk create.</p>
@@ -539,33 +555,34 @@
       <div class="arrow">⬇️</div>
 
       <h3 id="prod" class="phase-group"><a href="?section=prod">🏭 Prod</a></h3>
-      <div class="stage s4" id="stage4">
-        <h3><a href="?section=stage4">⚡ 4. Canva Bulk Create</a></h3>
+      <div class="stage s5" id="stage5">
+        <h3><a href="?section=stage5">⚡ 5. Canva Bulk Create</a></h3>
         <ul>
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
         </ul>
-        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 4 illustration: Canva Bulk Create" onclick="openModal(this.src)">
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 5 illustration: Canva Bulk Create" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create to export all pages as video.</p>
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
         <p class="gate">✅ <strong>Quality Gate:</strong> every page rendered as video with voiceover before manual finishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s5" id="stage5">
-        <h3><a href="?section=stage5">🧬 5. Asset Generation</a></h3>
+      <div class="stage s6" id="stage6">
+        <h3><a href="?section=stage6">🧬 6. Asset Generation</a></h3>
         <ul>
           <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
           <li>Fill gaps before manual finishing starts</li>
         </ul>
         <p class="task">☐ <strong>Task:</strong> Generate and collect any missing AI assets for scenes.</p>
-        <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites or backgrounds remain before manual finishing.</p>
+        <p class="task">☐ <strong>Task:</strong> Produce music &amp; sound effects for the scenes.</p>
+        <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites, backgrounds, music, or sound effects remain before manual finishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
       <h3 id="post" class="phase-group"><a href="?section=post">🎬 Post</a></h3>
-      <div class="stage s6" id="stage6">
-        <h3><a href="?section=stage6">✨ 6. Canva Manual Finishing</a></h3>
+      <div class="stage s7" id="stage7">
+        <h3><a href="?section=stage7">✨ 7. Canva Manual Finishing</a></h3>
         <ul>
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
@@ -576,10 +593,10 @@
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s7" id="stage7">
-        <h3><a href="?section=stage7">🚀 7. Export MP4</a></h3>
+      <div class="stage s8" id="stage8">
+        <h3><a href="?section=stage8">🚀 8. Export MP4</a></h3>
         <p>Final per-domain training video files.</p>
-        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 7 illustration: Export MP4" onclick="openModal(this.src)">
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 8 illustration: Export MP4" onclick="openModal(this.src)">
         <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
@@ -599,17 +616,18 @@
       <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">4 subtasks</div></div>
       <div class="phase" data-tasks="Build the script, images, storyboard &amp; notes in one Canva design"><div class="num" style="color:var(--accent2)">1</div>Canva Slides 🎨<div class="sub">1 subtask</div></div>
       <div class="phase" data-tasks="Review each scene in Canva Presentations and mark it &quot;ready&quot;"><div class="num" style="color:var(--accent1)">2</div>Review 🎞️<div class="sub">1 subtask</div></div>
-      <div class="phase" data-tasks="Run the export script to flatten &quot;ready&quot; scenes for Canva import"><div class="num" style="color:var(--accent4)">3</div>Export Step 📦<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Review each scene into many images that would help with animation"><div class="num" style="color:var(--accent7)">3</div>Animation Frames 🎞️<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Run the export script to flatten &quot;ready&quot; scenes for Canva import"><div class="num" style="color:var(--accent4)">4</div>Export Step 📦<div class="sub">1 subtask</div></div>
     </div>
     <h3 id="stages-prod" class="phase-group"><a href="?section=stages-prod">🏭 Prod</a></h3>
     <div class="phases">
-      <div class="phase" data-tasks="Run Canva Bulk Create to export all pages as video"><div class="num" style="color:var(--accent3)">4</div>Bulk Create ⚡<div class="sub">1 subtask</div></div>
-      <div class="phase" data-tasks="Generate and collect any missing AI assets for scenes"><div class="num" style="color:var(--accent6)">5</div>Asset Gen 🧬<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Run Canva Bulk Create to export all pages as video"><div class="num" style="color:var(--accent3)">5</div>Bulk Create ⚡<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Generate and collect any missing AI assets for scenes • Produce music &amp; sound effects for the scenes"><div class="num" style="color:var(--accent6)">6</div>Asset Gen 🧬<div class="sub">2 subtasks</div></div>
     </div>
     <h3 id="stages-post" class="phase-group"><a href="?section=stages-post">🎬 Post</a></h3>
     <div class="phases">
-      <div class="phase" data-tasks="Manually animate elements per page and generate AI voice for each"><div class="num" style="color:var(--accent5)">6</div>Manual Finish ✨<div class="sub">1 subtask</div></div>
-      <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">7</div>Export MP4 🚀<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Manually animate elements per page and generate AI voice for each"><div class="num" style="color:var(--accent5)">7</div>Manual Finish ✨<div class="sub">1 subtask</div></div>
+      <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">8</div>Export MP4 🚀<div class="sub">1 subtask</div></div>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>

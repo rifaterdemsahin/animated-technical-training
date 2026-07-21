@@ -123,11 +123,11 @@ Close the gap to create the images to be animated
 - Animation prompts to be written
 - Mark animations ✅ "ready"
 
-  ☐ **Task:** Review each scene into many images that would help with animation.
+☐ **Task:** Review each scene into many images that would help with animation.
 
 📅 **Cadence:** Week days
 
-#### 📦 3. Export Step
+#### 📦 4. Export Step
 
 Exports from the Canva Slides presentation, to import into Canva Video.
 
@@ -135,7 +135,7 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 - Embeds sprite images
 - Respects Canva's 300-page limit — batches by video if exceeded
 
-![Stage 3 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg)
+![Stage 4 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg)
 
 ☐ **Task:** Run the export script to flatten "ready" scenes for Canva import.
 
@@ -145,12 +145,12 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ### 🏭 Prod
 
-#### ⚡ 4. Canva Bulk Create
+#### ⚡ 5. Canva Bulk Create
 
 - Exports all pages as video (sprite + incoming + outgoing)
 - Voiceovers embedded inside the videos
 
-![Stage 4 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
+![Stage 5 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
 
 ☐ **Task:** Run Canva Bulk Create to export all pages as video.
 
@@ -158,18 +158,20 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
-#### 🧬 5. Asset Generation
+#### 🧬 6. Asset Generation
 
 - Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery
 - Fill gaps before manual finishing starts
 
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
-✅ **Quality Gate:** no missing sprites or backgrounds remain before manual finishing.
+☐ **Task:** Produce music & sound effects for the scenes.
+
+✅ **Quality Gate:** no missing sprites, backgrounds, music, or sound effects remain before manual finishing.
 
 ### 🎬 Post
 
-#### ✨ 6. Canva Manual Finishing
+#### ✨ 7. Canva Manual Finishing
 
 - Animate per element/page — motion path preferred over generic entrance FX
 - Generate AI voice per page from incoming/outgoing text
@@ -180,11 +182,11 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
-#### 🚀 7. Export MP4
+#### 🚀 8. Export MP4
 
 Final per-domain training video files.
 
-![Stage 7 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
+![Stage 8 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
 
 ☐ **Task:** Export the final per-domain MP4 training video files.
 
@@ -199,17 +201,18 @@ Final per-domain training video files.
 - 0. Research 🔍 — 4 subtasks (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script)
 - 1. Canva Slides 🎨 — 1 subtask (Build the script, images, storyboard & notes in one Canva design)
 - 2. Review 🎞️ — 1 subtask (Review each scene in Canva Presentations and mark it "ready")
-- 3. Export Step 📦 — 1 subtask (Run the export script to flatten "ready" scenes for Canva import)
+- 3. Add Animation Frames 🎞️ — 1 subtask (Review each scene into many images that would help with animation)
+- 4. Export Step 📦 — 1 subtask (Run the export script to flatten "ready" scenes for Canva import)
 
 ### 🏭 Prod
 
-- 4. Bulk Create ⚡ — 1 subtask (Run Canva Bulk Create to export all pages as video)
-- 5. Asset Gen 🧬 — 1 subtask (Generate and collect any missing AI assets for scenes)
+- 5. Bulk Create ⚡ — 1 subtask (Run Canva Bulk Create to export all pages as video)
+- 6. Asset Gen 🧬 — 2 subtasks (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
 
 ### 🎬 Post
 
-- 6. Manual Finish ✨ — 1 subtask (Manually animate elements per page and generate AI voice for each)
-- 7. Export MP4 🚀 — 1 subtask (Export the final per-domain MP4 training video files)
+- 7. Manual Finish ✨ — 1 subtask (Manually animate elements per page and generate AI voice for each)
+- 8. Export MP4 🚀 — 1 subtask (Export the final per-domain MP4 training video files)
 
 ## 🌐 References
 
