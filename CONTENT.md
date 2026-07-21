@@ -84,6 +84,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎯 **Confidence:** 90%
 
+📝 **Notes:** mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.
+
 ✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
@@ -111,6 +113,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎯 **Confidence:** 85%
 
+📝 **Notes:** Task: prepare before the sessions.
+
 ✅ **Quality Gate:** script, images, storyboard & notes complete for every scene before review.
 
 #### 🎞️ 2. Review Canva Presentations
@@ -133,7 +137,9 @@ Done in Canva Presentations — no separate tool.
 
 ⏱️ **Est. Time:** ~1.5 hrs/week
 
-🎯 **Confidence:** 85%
+🎯 **Confidence:** 75%
+
+📝 **Notes:** work with slides in the call for the bigger view and go to whiteboard if needed in the canva.
 
 ✅ **Quality Gate:** every scene marked ✅ ready before export.
 
@@ -155,6 +161,8 @@ Close the gap to create the images to be animated
 
 🎯 **Confidence:** 60%
 
+📝 **Notes:** use the slides and naming as a tool, use Canva MCP.
+
 #### 📦 4. Export Step
 
 Exports from the Canva Slides presentation, to import into Canva Video.
@@ -173,7 +181,9 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ⏱️ **Est. Time:** ~20 min
 
-🎯 **Confidence:** 80%
+🎯 **Confidence:** 70%
+
+📝 **Notes:** export after each video in a weekly cycle.
 
 ✅ **Quality Gate:** all ready scenes flattened and under the 300-page limit before bulk create.
 
@@ -199,6 +209,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 🎯 **Confidence:** 55%
 
+📝 **Notes:** mindmap it with Mermaid using AI and images; add Gemini and Claude for the tools.
+
 ✅ **Quality Gate:** mindmap architecture locked and matches the certification syllabus before bulk create.
 
 #### ⚡ 6. Canva Bulk Create
@@ -218,6 +230,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 🎯 **Confidence:** 75%
 
+📝 **Notes:** add tools as Canva.
+
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
 #### 🧬 7. Asset Generation
@@ -234,6 +248,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 ⏱️ **Est. Time:** ~1.5 hrs
 
 🎯 **Confidence:** 55%
+
+📝 **Notes:** Add Higgsfield as a tool here.
 
 ✅ **Quality Gate:** no missing sprites, backgrounds, music, or sound effects remain before manual finishing.
 
@@ -252,7 +268,9 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 ⏱️ **Est. Time:** ~6 hrs
 
-🎯 **Confidence:** 85%
+🎯 **Confidence:** 75%
+
+📝 **Notes:** there are issues in his skills and he needs the patience to do the manual finish.
 
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
@@ -270,7 +288,9 @@ Final per-domain training video files.
 
 ⏱️ **Est. Time:** ~20 min
 
-🎯 **Confidence:** 90%
+🎯 **Confidence:** 80%
+
+📝 **Notes:** getting unquality renders is the problem.
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
@@ -291,7 +311,9 @@ Final per-domain training video files.
 
 ⏱️ **Est. Time:** ~3 hrs (ongoing)
 
-🎯 **Confidence:** 50%
+🎯 **Confidence:** 10%
+
+📝 **Notes:** not tested — that's the risk.
 
 ✅ **Quality Gate:** gaps from the free cohort are fixed before the paywall goes live.
 
@@ -299,7 +321,7 @@ Final per-domain training video files.
 
 ⏱️ **Total estimated time:** ~25 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).
 
-🎯 **Average confidence:** 74% — lowest at stage 10 Distribution (50%, unproven paywall model), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55% (newer, less-proven steps); highest at stage 0 Research and stage 9 Export MP4 (90%, both well-worn habits).
+🎯 **Average confidence:** 66% — lowest at stage 10 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
 On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "📋 Copy All Stage Data" button at the bottom of the page copies every stage's confidence + notes to the clipboard.
 
@@ -307,9 +329,9 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 
 - 0. Research 🔍 — 5 subtasks · 90% confidence (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script; Complete the paid AI certificate)
 - 1. Canva Slides 🎨 — 1 subtask · 85% confidence (Build the script, images, storyboard & notes in one Canva design)
-- 2. Review 🎞️ — 1 subtask · 85% confidence (Review each scene in Canva Presentations and mark it "ready")
+- 2. Review 🎞️ — 1 subtask · 75% confidence (Review each scene in Canva Presentations and mark it "ready")
 - 3. Add Animation Frames 🎞️ — 1 subtask · 60% confidence (Review each scene into many images that would help with animation)
-- 4. Export Step 📦 — 1 subtask · 80% confidence (Run the export script to flatten "ready" scenes for Canva import)
+- 4. Export Step 📦 — 1 subtask · 70% confidence (Run the export script to flatten "ready" scenes for Canva import)
 
 ### 🏭 Prod
 
@@ -319,9 +341,9 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 
 ### 🎬 Post
 
-- 8. Manual Finish ✨ — 1 subtask · 85% confidence (Manually animate elements per page and generate AI voice for each)
-- 9. Export MP4 🚀 — 1 subtask · 90% confidence (Export the final per-domain MP4 training video files)
-- 10. Distribution 🔓 — 3 subtasks · 50% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
+- 8. Manual Finish ✨ — 1 subtask · 75% confidence (Manually animate elements per page and generate AI voice for each)
+- 9. Export MP4 🚀 — 1 subtask · 80% confidence (Export the final per-domain MP4 training video files)
+- 10. Distribution 🔓 — 3 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
 
 ## 🌐 References
 
