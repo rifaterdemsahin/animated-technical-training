@@ -1,6 +1,6 @@
 # 🎬 Animated Technical Training
 
-Show, don't tell. A repo-driven pipeline that turns scripts, storyboards & sprites into animated technical training videos using Canva + AI.
+Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards & sprites into animated technical training videos using Canva + AI.
 
 [📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md)
 
@@ -8,9 +8,7 @@ Show, don't tell. A repo-driven pipeline that turns scripts, storyboards & sprit
 
 **Problem:** Rapid AI progress keeps raising the skill expectations placed on people, faster than most can keep up.
 
-**How:** We need to create technical animation for the Claude AI Architect course — and cast a wide net so we can include a much wider audience.
-
-**👥 People:** people who are part of the new AI revolution that started with GPT, and are now updating their workflows to a much more powerful tool.
+**👥 Audience:** people who are part of the new AI revolution that started with chatGPT, and are now updating their workflows to a much more powerful AI tools such as claude code.
 
 **🛠️ Domain:** tools getting enabled with AI are shifting and effecting many industries not just coding.
 
@@ -18,9 +16,13 @@ Show, don't tell. A repo-driven pipeline that turns scripts, storyboards & sprit
 
 ## ✅ Solution
 
-Comics-based animated technical training, so the concepts are easier to consume.
+Comics-based animated technical training, so the concepts are easier to consume. 
+
+** Rationale :** We have seen shorter animated videos have a much higher retention.
 
 ![Comic animation sample](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/comic_animation_sample.jpeg)
+
+**How:** We need to create technical animation for the Claude AI Architect course — Collect feedback in our cohorts and take daily notes in a whiteboard, and cast a wide net so we can include a much wider audience and listen audience problems.
 
 ## 🧠 Core Principle
 
@@ -31,14 +33,14 @@ Narration and visuals must never carry the same information twice. Concept trans
 
 ## ⚖️ Half Hands-On, Half Automated
 
-Bulk export and asset generation are automated to move fast; animation timing and voice are finished manually to reach top quality — **audience retention and reach are on the line, so we can't risk low quality.**
+Bulk export and asset generation are automated to move fast; animation timing and voice are finished manually to reach top quality — **audience retention and reach are on the line, so we can't risk low quality by auto generating content that does not line up with what audience needs.**
 
-🎯 That means every scene needs to be **frame by frame mapped** — script, storyboard and animation direction locked before automation touches it, not patched after.
+🎯 That means every scene needs to be **frame by frame mapped** — whiteboard,script,slides, storyboard and animation direction locked before automation and generation touches it, not patched after.
 
 ![Animation example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg)
 ![Automated vs manual example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg)
 
-## 🔗 Pipeline
+## 🔗 Video Production Pipeline
 
 ### 🧪 Preprod
 
