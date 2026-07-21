@@ -33,6 +33,8 @@ Narration and visuals must never carry the same information twice. Concept trans
 
 ✅ **The Mute Test:** if a scene, watched with no audio, doesn't convey the concept — it isn't done.
 
+🧪 **The Subtitle Test:** watch the scene with just the subtitle showing — if the animation still makes sense on its own, that's the main animation test.
+
 ## ⚖️ Half Hands-On, Half Automated
 
 Bulk export and asset generation are automated to move fast; animation timing and voice are finished manually to reach top quality — **audience retention and reach are on the line, so we can't risk low quality by auto generating content that does not line up with what audience needs.**
