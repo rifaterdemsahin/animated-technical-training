@@ -127,6 +127,27 @@
   }
   .principle strong { color: var(--accent1); }
 
+  .section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+  }
+  .section-nav button {
+    background: rgba(148,163,184,0.15);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+  .section-nav button:hover { background: rgba(148,163,184,0.3); }
+  .section-nav button:disabled { opacity: 0.25; cursor: default; }
+  .section-nav button:disabled:hover { background: rgba(148,163,184,0.15); }
+
   .pipeline {
     display: flex;
     flex-direction: column;
@@ -274,12 +295,13 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v1.9.0</div>
+    <div class="version">v2.0.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
       <a href="MASTER_SPEC.md">📐 Master Spec</a>
       <a class="alt2" href="README.md">📄 README</a>
+      <a class="alt" href="CONTENT.md">📝 Content</a>
     </div>
   </header>
 
@@ -295,6 +317,10 @@
       <p><strong>🛠️ Domain:</strong> tools getting enabled with AI are shifting and effecting many industries not just coding.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png" alt="Problem illustration" onclick="openModal(this.src)">
     </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('problem', -1)" disabled aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('problem', 1)" aria-label="Next section">▼</button>
+    </div>
   </section>
 
   <section id="solution">
@@ -302,6 +328,10 @@
     <div class="principle">
       <p>Comics-based animated technical training, so the concepts are easier to consume.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/comic_animation_sample.jpeg" alt="Comic animation sample" onclick="openModal(this.src)">
+    </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('solution', 1)" aria-label="Next section">▼</button>
     </div>
   </section>
 
@@ -312,6 +342,10 @@
       Narration and visuals must never carry the same information twice. Concept transfer lives in the animation
       (<code>visual_action</code>); voiceover (<code>incoming</code>/<code>outgoing</code>) stays light and confirmatory.</p>
       <p>✅ <strong>The Mute Test:</strong> if a scene, watched with no audio, doesn't convey the concept — it isn't done.</p>
+    </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('core-principle', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('core-principle', 1)" aria-label="Next section">▼</button>
     </div>
   </section>
 
@@ -324,6 +358,11 @@
       <p>🎯 That means every scene needs to be <strong>frame by frame mapped</strong> — script, storyboard and
       animation direction locked before automation touches it, not patched after.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg" alt="Animation example" onclick="openModal(this.src)">
+      <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg" alt="Automated vs manual example" onclick="openModal(this.src)">
+    </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('hands-on', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('hands-on', 1)" aria-label="Next section">▼</button>
     </div>
   </section>
 
@@ -425,6 +464,10 @@
       </div>
 
     </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('pipeline', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('pipeline', 1)" aria-label="Next section">▼</button>
+    </div>
   </section>
 
   <section id="build-phases">
@@ -437,6 +480,10 @@
       <div class="phase"><div class="num">5</div>Voiceovers 🎙️</div>
       <div class="phase"><div class="num">6</div>Polish 💎</div>
     </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('build-phases', 1)" aria-label="Next section">▼</button>
+    </div>
   </section>
 
   <section id="repo-layout">
@@ -448,6 +495,10 @@ README.md             → project overview
 rationale/            → why the pipeline was designed this way
 output/               → sample MP4 outputs (cringe vs. quality)
 models/               → image-model comparison for sprite generation</pre>
+    <div class="section-nav">
+      <button onclick="scrollSection('repo-layout', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('repo-layout', 1)" aria-label="Next section">▼</button>
+    </div>
   </section>
 
   <section id="references">
@@ -465,6 +516,10 @@ models/               → image-model comparison for sprite generation</pre>
         <h3>💳 Canva AI Costs</h3>
         <p><a href="https://www.canva.com/settings/billing-and-teams" target="_blank" rel="noopener">Billing &amp; teams</a></p>
       </div>
+    </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('references', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('references', 1)" disabled aria-label="Next section">▼</button>
     </div>
   </section>
 
@@ -495,6 +550,14 @@ models/               → image-model comparison for sprite generation</pre>
   if (targetSection) {
     var el = document.getElementById(targetSection);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  var sectionOrder = ['problem', 'solution', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'repo-layout', 'references'];
+  function scrollSection(current, dir) {
+    var idx = sectionOrder.indexOf(current) + dir;
+    if (idx >= 0 && idx < sectionOrder.length) {
+      document.getElementById(sectionOrder[idx]).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 </script>
 </body>
