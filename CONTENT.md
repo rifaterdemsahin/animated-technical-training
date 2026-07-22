@@ -58,6 +58,10 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 #### 🔍 0. Research — Canva Whiteboard
 
+📥 **Input:** raw ideas, reference screenshots, external research.
+
+📤 **Output:** whiteboard trail, outline, and script draft.
+
 - Save reference images & text as they're found
 - Left to right flow — chronological research trail
 
@@ -96,6 +100,10 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
 
+📥 **Input:** outline and script draft from Research.
+
+📤 **Output:** one Canva design — script, images, storyboard & notes — per cohort session.
+
 - Script — master flow for the content
 - Images (AI-generated sprite assets)
 - Storyboard — Gemini-generated inspirational frames
@@ -129,6 +137,10 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 #### 🎞️ 2. Review Canva Presentations
 
+📥 **Input:** Canva Slides design from stage 1.
+
+📤 **Output:** scenes marked ✅ "ready" for export.
+
 Done in Canva Presentations — no separate tool.
 
 - Frame view per scene: sprite preview + incoming/outgoing + `visual_action` notes
@@ -159,6 +171,10 @@ Done in Canva Presentations — no separate tool.
 
 #### 🎞️ 3. Add Animation Frames
 
+📥 **Input:** "ready" scenes from Review.
+
+📤 **Output:** multi-frame image sets plus animation prompts, marked ✅ "ready".
+
 Close the gap to create the images to be animated
 
 - One image can be displayed in multiple images
@@ -182,6 +198,10 @@ Close the gap to create the images to be animated
 📝 **Notes:** use the slides and naming as a tool, use Canva MCP.
 
 #### 📦 4. Export Step
+
+📥 **Input:** "ready" scenes with animation frames.
+
+📤 **Output:** flattened, sprite-embedded batches ready for Canva import.
 
 Exports from the Canva Slides presentation, to import into Canva Video.
 
@@ -213,6 +233,10 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 #### 🧠 5. Mindmap Architecture
 
+📥 **Input:** course outline and script.
+
+📤 **Output:** locked mindmap of the course architecture.
+
 Diagram the course's topic architecture before bulk-rendering anything.
 
 - Map modules, dependencies, and flow across the whole course
@@ -240,6 +264,10 @@ Diagram the course's topic architecture before bulk-rendering anything.
 ✅ **Quality Gate:** mindmap architecture locked and matches the certification syllabus before bulk create.
 
 #### 🛠️ 6. Build GitHub Repo
+
+📥 **Input:** mindmap architecture and project requirements.
+
+📤 **Output:** published repo live on GitHub Pages, secrets in a Key Vault.
 
 Build and ship the production tracking repo/dashboard itself — hands-on, not automated.
 
@@ -272,6 +300,10 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 #### ⚡ 7. Canva Bulk Create
 
+📥 **Input:** flattened export batches from stage 4.
+
+📤 **Output:** rendered videos per scene, with voiceover embedded.
+
 - Exports all pages as video (sprite + incoming + outgoing)
 - Voiceovers embedded inside the videos
 
@@ -296,6 +328,10 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
 #### 🧬 8. Asset Generation
+
+📥 **Input:** bulk-created videos with gaps.
+
+📤 **Output:** missing sprites, backgrounds, music & sound effects filled in.
 
 - Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery
 - Fill gaps before manual finishing starts
@@ -322,6 +358,10 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 #### ✨ 9. Canva Manual Finishing
 
+📥 **Input:** bulk-created videos plus generated assets.
+
+📤 **Output:** fully animated, voiced scenes passing the Mute/Subtitle Test.
+
 - Animate per element/page — motion path preferred over generic entrance FX
 - Generate AI voice per page from incoming/outgoing text
 
@@ -344,6 +384,10 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
 #### 🚀 10. Export MP4
+
+📥 **Input:** finished, quality-gated scenes from Manual Finishing.
+
+📤 **Output:** final per-domain MP4 files.
 
 Final per-domain training video files.
 
@@ -368,6 +412,10 @@ Final per-domain training video files.
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
 #### 🔓 11. Distribution — Free Cohort → Paywall
+
+📥 **Input:** final per-domain MP4 files.
+
+📤 **Output:** free access for the first 100 people, live Join button paywall for everyone else.
 
 - First 100 people get the full end-to-end course for free
 - Collect feedback from that free cohort

@@ -455,7 +455,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v6.3.0</div>
+    <div class="version">v6.4.0 · Updated 2026-07-22</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -555,6 +555,8 @@
       <div class="stage s0" id="stage0">
         <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a> <button class="collapse-btn" id="toggle-stage0" onclick="toggleSection('stage0')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage0">
+        <p class="why">📥 <strong>Input:</strong> raw ideas, reference screenshots, external research.</p>
+        <p class="why">📤 <strong>Output:</strong> whiteboard trail, outline, and script draft.</p>
         <ul>
           <li>Save reference images &amp; text as they're found</li>
           <li>Left to right flow — chronological research trail</li>
@@ -583,6 +585,8 @@
       <div class="stage s1" id="stage1">
         <h3><a href="?section=stage1">🎨 1. Canva Slides — Source of Cohort Session</a> <button class="collapse-btn" id="toggle-stage1" onclick="toggleSection('stage1')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage1">
+        <p class="why">📥 <strong>Input:</strong> outline and script draft from Research.</p>
+        <p class="why">📤 <strong>Output:</strong> one Canva design — script, images, storyboard &amp; notes — per cohort session.</p>
         <ul>
           <li>Script — master flow for the content</li>
           <li>Images (AI-generated sprite assets)</li>
@@ -609,6 +613,8 @@
       <div class="stage s2" id="stage2">
         <h3><a href="?section=stage2">🎞️ 2. Review Canva Presentations</a> <button class="collapse-btn" id="toggle-stage2" onclick="toggleSection('stage2')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage2">
+        <p class="why">📥 <strong>Input:</strong> Canva Slides design from stage 1.</p>
+        <p class="why">📤 <strong>Output:</strong> scenes marked ✅ "ready" for export.</p>
         <p>Done in Canva Presentations — no separate tool.</p>
         <ul>
           <li>Frame view per scene: sprite preview + incoming/outgoing + <code>visual_action</code> notes</li>
@@ -633,6 +639,8 @@
       <div class="stage s3" id="stage3">
         <h3><a href="?section=stage3">🎞️ 3. Add Animation Frames</a> <button class="collapse-btn" id="toggle-stage3" onclick="toggleSection('stage3')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage3">
+        <p class="why">📥 <strong>Input:</strong> "ready" scenes from Review.</p>
+        <p class="why">📤 <strong>Output:</strong> multi-frame image sets plus animation prompts, marked ✅ "ready".</p>
         <p>Close the gap to create the images to be animated.</p>
         <ul>
           <li>One image can be displayed in multiple images</li>
@@ -654,6 +662,8 @@
       <div class="stage s4" id="stage4">
         <h3><a href="?section=stage4">📦 4. Export Step</a> <button class="collapse-btn" id="toggle-stage4" onclick="toggleSection('stage4')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage4">
+        <p class="why">📥 <strong>Input:</strong> "ready" scenes with animation frames.</p>
+        <p class="why">📤 <strong>Output:</strong> flattened, sprite-embedded batches ready for Canva import.</p>
         <p>Exports from the Canva Slides presentation, to import into Canva Video.</p>
         <ul>
           <li>Flattens "ready" scenes for Canva import</li>
@@ -678,6 +688,8 @@
       <div class="stage s5" id="stage5">
         <h3><a href="?section=stage5">🧠 5. Mindmap Architecture</a> <button class="collapse-btn" id="toggle-stage5" onclick="toggleSection('stage5')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage5">
+        <p class="why">📥 <strong>Input:</strong> course outline and script.</p>
+        <p class="why">📤 <strong>Output:</strong> locked mindmap of the course architecture.</p>
         <p>Diagram the course's topic architecture before bulk-rendering anything.</p>
         <ul>
           <li>Map modules, dependencies, and flow across the whole course</li>
@@ -701,6 +713,8 @@
       <div class="stage s6" id="stage6">
         <h3><a href="?section=stage6">🛠️ 6. Build GitHub Repo</a> <button class="collapse-btn" id="toggle-stage6" onclick="toggleSection('stage6')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage6">
+        <p class="why">📥 <strong>Input:</strong> mindmap architecture and project requirements.</p>
+        <p class="why">📤 <strong>Output:</strong> published repo live on GitHub Pages, secrets in a Key Vault.</p>
         <p>Build and ship the production tracking repo/dashboard itself — hands-on, not automated.</p>
         <ul>
           <li>Scaffold the repo with an AI coding tool (Claude Code, Kilo, or Gemini)</li>
@@ -727,6 +741,8 @@
       <div class="stage s7" id="stage7">
         <h3><a href="?section=stage7">⚡ 7. Canva Bulk Create</a> <button class="collapse-btn" id="toggle-stage7" onclick="toggleSection('stage7')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage7">
+        <p class="why">📥 <strong>Input:</strong> flattened export batches from stage 4.</p>
+        <p class="why">📤 <strong>Output:</strong> rendered videos per scene, with voiceover embedded.</p>
         <ul>
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
@@ -748,6 +764,8 @@
       <div class="stage s8" id="stage8">
         <h3><a href="?section=stage8">🧬 8. Asset Generation</a> <button class="collapse-btn" id="toggle-stage8" onclick="toggleSection('stage8')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage8">
+        <p class="why">📥 <strong>Input:</strong> bulk-created videos with gaps.</p>
+        <p class="why">📤 <strong>Output:</strong> missing sprites, backgrounds, music &amp; sound effects filled in.</p>
         <ul>
           <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
           <li>Fill gaps before manual finishing starts</li>
@@ -769,6 +787,8 @@
       <div class="stage s9" id="stage9">
         <h3><a href="?section=stage9">✨ 9. Canva Manual Finishing</a> <button class="collapse-btn" id="toggle-stage9" onclick="toggleSection('stage9')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage9">
+        <p class="why">📥 <strong>Input:</strong> bulk-created videos plus generated assets.</p>
+        <p class="why">📤 <strong>Output:</strong> fully animated, voiced scenes passing the Mute/Subtitle Test.</p>
         <ul>
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
@@ -789,6 +809,8 @@
       <div class="stage s10" id="stage10">
         <h3><a href="?section=stage10">🚀 10. Export MP4</a> <button class="collapse-btn" id="toggle-stage10" onclick="toggleSection('stage10')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage10">
+        <p class="why">📥 <strong>Input:</strong> finished, quality-gated scenes from Manual Finishing.</p>
+        <p class="why">📤 <strong>Output:</strong> final per-domain MP4 files.</p>
         <p>Final per-domain training video files.</p>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 10 illustration: Export MP4" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> a finished artifact is proof of mastery — for the audience, and for himself.</p>
@@ -807,6 +829,8 @@
       <div class="stage s11" id="stage11">
         <h3><a href="?section=stage11">🔓 11. Distribution — Free Cohort → Paywall</a> <button class="collapse-btn" id="toggle-stage11" onclick="toggleSection('stage11')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage11">
+        <p class="why">📥 <strong>Input:</strong> final per-domain MP4 files.</p>
+        <p class="why">📤 <strong>Output:</strong> free access for the first 100 people, live Join button paywall for everyone else.</p>
         <ul>
           <li>First 100 people get the full end-to-end course for free</li>
           <li>Collect feedback from that free cohort</li>
