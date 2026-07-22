@@ -484,6 +484,8 @@ Final per-domain training video files.
 - Generate the infographic with an AI image tool using the prompt below
 - Publish the infographic alongside the Sanity Check report
 
+![Architecture infographic](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/architecture.png)
+
 🎓 **Why it matters:** a clear architecture diagram is exactly what's expected in real system-design interviews and certification portfolios — this stage produces that artifact.
 
 ⚠️ **Risk:** a messy or incomplete diagram undersells months of work and confuses the audience it's meant to explain the pipeline to.
