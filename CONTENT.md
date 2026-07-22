@@ -78,7 +78,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⚠️ **Risk:** skipping daily research leaves gaps that surface much later, when they're expensive to fix.
 
-🧰 **Tools:** [Canva](https://www.canva.com/)
+🧰 **Tools:** [Canva](https://www.canva.com/), [Obsidian](https://obsidian.md/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
 
@@ -115,7 +115,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⚠️ **Risk:** a rushed script or storyboard locks in mistakes that compound through every later stage.
 
-🧰 **Tools:** [Canva](https://www.canva.com/)
+🧰 **Tools:** [Canva Slides](https://www.canva.com/)
 
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
 
@@ -247,7 +247,7 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 ⚠️ **Risk:** an unclear architecture means later stages build on a structure that doesn't match the certification syllabus.
 
-🧰 **Tools:** [Mermaid](https://mermaid.js.org/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/)
+🧰 **Tools:** [Mermaid](https://mermaid.js.org/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** Build the mindmap of the course architecture.
 
@@ -280,7 +280,7 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⚠️ **Risk:** committing secrets to the repo, or a broken GitHub Pages deploy, blocks everything downstream.
 
-🧰 **Tools:** [Claude Code](https://claude.com/claude-code), [Kilo](https://kilocode.ai/), [Gemini](https://gemini.google.com/), [GitHub Pages](https://pages.github.com/), [Key Vault](https://azure.microsoft.com/en-us/products/key-vault), [Fly.io](https://fly.io/)
+🧰 **Tools:** [Claude Code](https://claude.com/claude-code), [Kilo](https://kilocode.ai/), [Gemini](https://gemini.google.com/), [GitHub Pages](https://pages.github.com/), [Key Vault](https://azure.microsoft.com/en-us/products/key-vault), [Fly.io](https://fly.io/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** Scaffold and build the repo with Claude Code, Kilo, or Gemini.
 
@@ -313,7 +313,7 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⚠️ **Risk:** bulk rendering before the mindmap and repo are ready wastes render credits on content that will change.
 
-🧰 **Tools:** [Canva](https://www.canva.com/)
+🧰 **Tools:** [Canva](https://www.canva.com/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** Run Canva Bulk Create to export all pages as video.
 
@@ -340,7 +340,7 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⚠️ **Risk:** missing music, sound effects, or sprites get silently skipped and ship in the final video.
 
-🧰 **Tools:** [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations)
+🧰 **Tools:** [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
@@ -448,7 +448,7 @@ Final per-domain training video files.
 
 🎯 **Average confidence:** 64% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 1 Canva Slides now at 40%, and stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second.
 
 ### 🧪 Preprod
 
