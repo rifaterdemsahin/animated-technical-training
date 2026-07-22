@@ -70,6 +70,10 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎓 **Why it matters:** documenting research daily is the same study habit that gets him exam-ready for the certificate.
 
+🎓 **Self Learning:** daily watching videos and talking about them on WhatsApp is part of the self-learning process.
+
+⚠️ **Risk:** skipping daily research leaves gaps that surface much later, when they're expensive to fix.
+
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
@@ -101,6 +105,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎓 **Why it matters:** structuring the script and storyboard mirrors how certification content itself is organized — building it teaches the material twice.
 
+⚠️ **Risk:** a rushed script or storyboard locks in mistakes that compound through every later stage.
+
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Build the script, images, storyboard & notes in one Canva design.
@@ -115,7 +121,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⏱️ **Est. Time:** ~3 hrs/week
 
-🎯 **Confidence:** 85%
+🎯 **Confidence:** 40%
 
 📝 **Notes:** Task: prepare before the sessions.
 
@@ -132,6 +138,8 @@ Done in Canva Presentations — no separate tool.
 ![Stage 2 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/2.%20Review%20Canva%20Presentations.jpg)
 
 🎓 **Why it matters:** reviewing scenes before export is the same rigor as reviewing his own understanding before a mock exam.
+
+⚠️ **Risk:** skipping review lets broken or confusing scenes reach export undetected.
 
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
@@ -159,6 +167,8 @@ Close the gap to create the images to be animated
 
 🎓 **Why it matters:** breaking one idea into many frames forces real understanding of the mechanics, not just recognition of them.
 
+⚠️ **Risk:** too few frames leaves the animation feeling stiff or unclear on the Subtitle Test.
+
 🧰 **Tools:** [Canva](https://www.canva.com/), [Canva MCP](https://www.canva.dev/)
 
 ☐ **Task:** Review each scene into many images that would help with animation.
@@ -182,6 +192,8 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 ![Stage 4 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg)
 
 🎓 **Why it matters:** turning scattered study material into a transferable package is useful for the exam and for teaching it.
+
+⚠️ **Risk:** exceeding Canva's 300-page limit without batching corrupts or truncates the export.
 
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
@@ -208,6 +220,8 @@ Diagram the course's topic architecture before bulk-rendering anything.
 - Mark the structure ✅ "locked"
 
 🎓 **Why it matters:** mapping the course's architecture is the same exercise as mapping the certification syllabus — you can't teach a structure you haven't diagrammed.
+
+⚠️ **Risk:** an unclear architecture means later stages build on a structure that doesn't match the certification syllabus.
 
 🧰 **Tools:** [Mermaid](https://mermaid.js.org/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/)
 
@@ -236,6 +250,8 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎓 **Why it matters:** shipping this dashboard the same way he'd ship any production app is itself certification-relevant practice — the tools and workflow transfer directly.
 
+⚠️ **Risk:** committing secrets to the repo, or a broken GitHub Pages deploy, blocks everything downstream.
+
 🧰 **Tools:** [Claude Code](https://claude.com/claude-code), [Kilo](https://kilocode.ai/), [Gemini](https://gemini.google.com/), [GitHub Pages](https://pages.github.com/), [Key Vault](https://azure.microsoft.com/en-us/products/key-vault), [Fly.io](https://fly.io/)
 
 ☐ **Task:** Scaffold and build the repo with Claude Code, Kilo, or Gemini.
@@ -263,6 +279,8 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎓 **Why it matters:** seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.
 
+⚠️ **Risk:** bulk rendering before the mindmap and repo are ready wastes render credits on content that will change.
+
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Run Canva Bulk Create to export all pages as video.
@@ -283,6 +301,8 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 - Fill gaps before manual finishing starts
 
 🎓 **Why it matters:** filling in missing pieces mirrors closing his own knowledge gaps before certification day.
+
+⚠️ **Risk:** missing music, sound effects, or sprites get silently skipped and ship in the final video.
 
 🧰 **Tools:** [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations)
 
@@ -307,6 +327,8 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎓 **Why it matters:** making a concept click for someone else is the deepest test of whether he actually understands it.
 
+⚠️ **Risk:** rushed manual work fails the Mute/Subtitle Test and undermines the whole show-don't-tell principle.
+
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Manually animate elements per page and generate AI voice for each.
@@ -328,6 +350,8 @@ Final per-domain training video files.
 ![Stage 10 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
 
 🎓 **Why it matters:** a finished artifact is proof of mastery — for the audience, and for himself.
+
+⚠️ **Risk:** exporting before manual finishing passes its quality gates ships unfinished or low-quality video.
 
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
@@ -352,6 +376,8 @@ Final per-domain training video files.
 
 🎓 **Why it matters:** teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.
 
+⚠️ **Risk:** shipping the paywall before cohort feedback is incorporated burns trust with the first audience — this is the biggest untested risk in the whole pipeline (10% confidence).
+
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
 ☐ **Task:** Ship free access to the first 100 people.
@@ -372,14 +398,14 @@ Final per-domain training video files.
 
 ⏱️ **Total estimated time:** ~29 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Distribution is ongoing).
 
-🎯 **Average confidence:** 68% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 64% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 1 Canva Slides now at 40%, and stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie.
 
 ### 🧪 Preprod
 
 - 0. Research 🔍 — 5 subtasks · 90% confidence (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script; Complete the paid AI certificate)
-- 1. Canva Slides 🎨 — 1 subtask · 85% confidence (Build the script, images, storyboard & notes in one Canva design)
+- 1. Canva Slides 🎨 — 1 subtask · 40% confidence (Build the script, images, storyboard & notes in one Canva design)
 - 2. Review 🎞️ — 1 subtask · 75% confidence (Review each scene in Canva Presentations and mark it "ready")
 - 3. Add Animation Frames 🎞️ — 1 subtask · 60% confidence (Review each scene into many images that would help with animation)
 - 4. Export Step 📦 — 1 subtask · 70% confidence (Run the export script to flatten "ready" scenes for Canva import)
