@@ -32,11 +32,15 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 🎓 **The Journey:** This is Rifat Erdem Sahin's own self-learning journey — investing in paid AI certificates for himself, then packaging that experience into this animated product so the audience can leverage it too. Passing the exam is proof to himself; running cohorts collects real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that feedback, then a Join button paywall opens for everyone else.
 
+📝 **Notes:** Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.
+
 ## 🎯 Problem-Solution Fit
 
 Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating the content *is* the learning method, not a separate step after it; the certification itself is the proof that it worked.
 
 **Premise:** using this capture → organize → distill → express structure, across both live and recorded formats, increases the chances of retaining and demonstrating mastery of the material.
+
+📝 **Notes:** the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions.
 
 **Conclusion:** he would be able to pass the exam.
 
@@ -451,7 +455,7 @@ Final per-domain training video files.
 
 🎯 **Confidence:** 10%
 
-📝 **Notes:** not tested — that's the risk.
+📝 **Notes:** weekly cadence is needed to be able to build the audience. The tech changes the timeline to get the certificates, and helping the audience see the value takes time — it can take as many as 16 videos to make the join decision.
 
 ✅ **Quality Gate:** gaps from the free cohort are fixed and retention is checked before releasing new videos or turning on the paywall.
 
@@ -502,6 +506,8 @@ Final per-domain training video files.
 
 ☐ **Task:** Generate the architecture infographic using the image prompt below.
 
+🤖 **Model:** Gemini 3.5 — paste the prompt as-is; it takes the per-stage detail below and renders the labeled output directly.
+
 **Image prompt:**
 
 ```
@@ -509,14 +515,28 @@ flat vector infographic, bold clean linework, warm limited color palette (navy, 
 soft cel shading, tech-startup whiteboard aesthetic, 16:9 —
 
 a horizontal pipeline diagram flowing left to right in three labeled clusters: PREPROD, PROD, POST.
-Each of the 13 stages is a numbered rounded chip (0-12) connected by arrows, with a small icon per stage:
-0 magnifying glass (Research), 1 slide deck (Canva Slides), 2 checkmark frame (Review),
-3 filmstrip (Add Animation Frames), 4 export box (Export Step), 5 brain/mindmap (Mindmap Architecture),
-6 code repository (Build GitHub Repo), 7 lightning bolt (Canva Bulk Create), 8 DNA helix (Asset Generation),
-9 sparkle wand (Canva Manual Finishing), 10 rocket (Export MP4), 11 unlocked padlock (Distribution),
-12 clipboard/report (Sanity Check). Clean minimal number + icon labels under each chip,
-navy background, teal/amber/coral accent colors, flat vector style, no logos.
+Each of the 13 stages is a numbered rounded chip (0-12) connected by arrows. For each chip, show a small icon
+AND a short caption summarizing what actually happens in that stage, exactly as follows:
+
+0 🔍 Research — magnifying glass icon — "daily whiteboard research, screenshots, WhatsApp/Teams discussion"
+1 🎨 Canva Slides — slide deck icon — "script, sprites, storyboard & notes built into one weekly cohort deck"
+2 🎞️ Review — checkmark-frame icon — "each scene reviewed in Canva Presentations and marked ready"
+3 🎞️ Add Animation Frames — filmstrip icon — "scenes broken into multiple animation frames with prompts"
+4 📦 Export Step — export-box icon — "ready scenes flattened and batched under Canva's 300-page limit"
+5 🧠 Mindmap Architecture — brain/mindmap icon — "course architecture diagrammed and checked against the syllabus"
+6 🛠️ Build GitHub Repo — code-repository icon — "this tracking repo built with an AI coding tool, published to GitHub Pages, secrets in a Key Vault"
+7 ⚡ Canva Bulk Create — lightning-bolt icon — "every scene bulk-rendered to video with voiceover embedded"
+8 🧬 Asset Generation — DNA-helix icon — "missing sprites, backgrounds, music & sound effects generated"
+9 ✨ Canva Manual Finishing — sparkle-wand icon — "motion paths hand-animated, AI voice generated per page"
+10 🚀 Export MP4 — rocket icon — "final per-domain MP4 training files exported"
+11 🔓 Distribution — unlocked-padlock icon — "free access to first 100 people, feedback + retention checked, then paywall opens"
+12 🧾 Sanity Check — clipboard/report icon — "pros, cons, risks & mitigations written up before the next cycle"
+
+Render the icon and caption together under each numbered chip, small clean sans-serif type,
+navy background, teal/amber/coral accent colors, flat vector style, no logos, no extra decoration.
 ```
+
+On the live page, a "📋 Copy Prompt" button sits right under this prompt to copy it to the clipboard in one click.
 
 📅 **Cadence:** Once per course cycle
 
@@ -532,7 +552,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.
 
 🎯 **Average confidence:** 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
 ### 🧪 Preprod
 
@@ -542,12 +562,16 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 - 3. Add Animation Frames 🎞️ — 1 subtask · 60% confidence (Review each scene into many images that would help with animation)
 - 4. Export Step 📦 — 1 subtask · 70% confidence (Run the export script to flatten "ready" scenes for Canva import)
 
+🕳️ **Gaps:** 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Export Step — the weekly export cadence isn't automated, still a manual per-video trigger.
+
 ### 🏭 Prod
 
 - 5. Mindmap Architecture 🧠 — 2 subtasks · 55% confidence (Build the mindmap of the course architecture; Cross-check the mindmap against the certification syllabus)
 - 6. Build GitHub Repo 🛠️ — 4 subtasks · 80% confidence (Scaffold and build the repo with Claude Code, Kilo, or Gemini; Publish the site via GitHub Pages; Store secrets/credentials in a Key Vault; Stand up any backend/dynamic tooling on Fly.io)
 - 7. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
 - 8. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
+
+🕳️ **Gaps:** 5 Mindmap Architecture — no standard Mermaid template yet, each mindmap is built ad hoc. 6 Build GitHub Repo — the GitHub + DeliveryPilot template isn't documented as a reusable starting point yet. 7 Canva Bulk Create — no fallback plan if Canva Bulk Create output quality degrades. 8 Asset Generation — the Higgsfield workflow isn't integrated, asset lookup is still manual.
 
 ### 🎬 Post
 
@@ -556,6 +580,8 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 - 11. Distribution 🔓 — 4 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Check retention before releasing new videos, and increase quality accordingly; Turn on the Join button paywall)
 - 12. Sanity Check 🧾 — 1 subtask · 50% confidence (Write the sanity-check report covering pros, cons, risks, and mitigations)
 - 13. Architecture 🏛️ — 1 subtask · 50% confidence (Generate the architecture infographic using the image prompt)
+
+🕳️ **Gaps:** 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet.
 
 ## 🌐 References
 

@@ -328,6 +328,15 @@
     min-height: 50px;
   }
   .stage-notes:focus { outline: none; border-color: var(--accent2); }
+  .saved-indicator {
+    display: inline-block;
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    color: var(--accent3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .saved-indicator.show { opacity: 1; }
   .table-wrap { overflow-x: auto; margin: 0.8rem 0; }
   .tools-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
   .tools-table th, .tools-table td { padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
@@ -346,6 +355,18 @@
     transition: transform 0.15s ease;
   }
   .cookie-tools button:hover { transform: translateY(-2px); }
+  .prompt-tools { margin-top: 0.6rem; }
+  .prompt-tools button {
+    background: rgba(148,163,184,0.15);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .prompt-tools button:hover { background: rgba(148,163,184,0.3); }
   #copyStatus { display: block; margin-top: 0.6rem; font-size: 0.8rem; color: var(--accent3); min-height: 1.2em; }
   .arrow {
     text-align: center;
@@ -406,6 +427,8 @@
   .phase:nth-child(5) .num { color: var(--accent5); }
   .phase:nth-child(6) .num { color: #fb7185; }
   .phase .sub { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
+  .gap-note { margin: 0.6rem 0 0; font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+  .gap-note strong { color: var(--accent7); }
   .phase[data-tasks] { position: relative; cursor: default; }
   .phase[data-tasks]:hover { border-color: var(--accent4); }
   .phase[data-tasks]:hover::after {
@@ -501,7 +524,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-22T11:50:07Z">v7.3.0 · Updated 2026-07-22 11:50 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-22T13:13:15Z">v7.4.0 · Updated 2026-07-22 13:13 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -525,7 +548,7 @@
       are now updating their workflows to a much more powerful AI tools such as claude code.</p>
       <p><strong>🛠️ Domain:</strong> tools getting enabled with AI are shifting and effecting many industries not just coding.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png" alt="Problem illustration" onclick="openModal(this.src)">
-      <textarea id="notes-problem" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+      <textarea id="notes-problem" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('problem', -1)" disabled aria-label="Previous section">▲</button>
@@ -549,7 +572,7 @@
       leverage it too. Passing the exam is proof to himself; running <a href="?section=stage1">cohorts</a> collects
       real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that
       feedback, then a Join button paywall opens for everyone else.</p>
-      <textarea id="notes-solution" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+      <textarea id="notes-solution" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)">Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.</textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
@@ -567,7 +590,7 @@
       <p><strong>Premise:</strong> using this capture → organize → distill → express structure, across both live and
       recorded formats, increases the chances of retaining and demonstrating mastery of the material.</p>
       <p><strong>Conclusion:</strong> he would be able to pass the exam.</p>
-      <textarea id="notes-problem-solution-fit" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+      <textarea id="notes-problem-solution-fit" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)">the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions.</textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('problem-solution-fit', -1)" aria-label="Previous section">▲</button>
@@ -585,7 +608,7 @@
       <p>🧪 <strong>The Subtitle Test:</strong> watch the scene with just the subtitle showing — if the animation still
       makes sense on its own, that's the main animation test.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png" alt="Show, don't tell illustration" onclick="openModal(this.src)">
-      <textarea id="notes-core-principle" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+      <textarea id="notes-core-principle" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('core-principle', -1)" aria-label="Previous section">▲</button>
@@ -603,7 +626,7 @@
       <a href="?section=stage1">storyboard</a> and animation direction locked before automation and generation touches it, not patched after.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg" alt="Animation example" onclick="openModal(this.src)">
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg" alt="Automated vs manual example" onclick="openModal(this.src)">
-      <textarea id="notes-hands-on" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+      <textarea id="notes-hands-on" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('hands-on', -1)" aria-label="Previous section">▲</button>
@@ -640,7 +663,7 @@
         <p class="task">☐ <strong>Task:</strong> Complete the paid AI certificate — proof to himself before teaching it.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~30 min/day</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage0',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage0">90</span>% <button class="conf-btn" onclick="adjustConfidence('stage0',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage0" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.</textarea>
+        <textarea id="notes-stage0" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every research note has a source screenshot before moving to slide-building.</p>
         </div>
       </div>
@@ -668,7 +691,7 @@
         <p class="why">💡 <a href="rationale/readme.md#canva">Why one Canva design →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage1',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage1">40</span>% <button class="conf-btn" onclick="adjustConfidence('stage1',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage1" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">Task: prepare before the sessions.</textarea>
+        <textarea id="notes-stage1" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">Task: prepare before the sessions.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> script, images, storyboard &amp; notes complete for every scene before review.</p>
         </div>
       </div>
@@ -694,7 +717,7 @@
         <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage2',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage2">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage2',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage2" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">work with slides in the call for the bigger view and go to whiteboard if needed in the canva.</textarea>
+        <textarea id="notes-stage2" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">work with slides in the call for the bigger view and go to whiteboard if needed in the canva.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene marked ✅ ready before export.</p>
         </div>
       </div>
@@ -718,7 +741,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Week days</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage3',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage3">60</span>% <button class="conf-btn" onclick="adjustConfidence('stage3',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage3" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">use the slides and naming as a tool, use Canva MCP.</textarea>
+        <textarea id="notes-stage3" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">use the slides and naming as a tool, use Canva MCP.</textarea>
         </div>
       </div>
       <div class="arrow">⬇️</div>
@@ -742,7 +765,7 @@
         <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage4',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage4">70</span>% <button class="conf-btn" onclick="adjustConfidence('stage4',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage4" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">export after each video in a weekly cycle.</textarea>
+        <textarea id="notes-stage4" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">export after each video in a weekly cycle.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> all ready scenes flattened and under the 300-page limit before bulk create.</p>
         </div>
       </div>
@@ -768,7 +791,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Once per course</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~2 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage5',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage5">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage5',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage5" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">mindmap it with Mermaid using AI and images; add Gemini and Claude for the tools.</textarea>
+        <textarea id="notes-stage5" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">mindmap it with Mermaid using AI and images; add Gemini and Claude for the tools.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> mindmap architecture locked and matches the certification syllabus before bulk create.</p>
         </div>
       </div>
@@ -797,7 +820,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Once per project</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~4 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage6',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage6">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage6',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()"></textarea>
+        <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.</p>
         </div>
       </div>
@@ -820,7 +843,7 @@
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~45 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage7',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage7">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage7',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">add tools as Canva.</textarea>
+        <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">add tools as Canva.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every page rendered as video with voiceover before manual finishing.</p>
         </div>
       </div>
@@ -842,7 +865,7 @@
         <p class="task">☐ <strong>Task:</strong> Produce music &amp; sound effects for the scenes.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage8',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage8">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage8',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">Add Higgsfield as a tool here.</textarea>
+        <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">Add Higgsfield as a tool here.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites, backgrounds, music, or sound effects remain before manual finishing.</p>
         </div>
       </div>
@@ -865,7 +888,7 @@
         <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~6 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage9',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage9">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage9',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">there are issues in his skills and he needs the patience to do the manual finish.</textarea>
+        <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">there are issues in his skills and he needs the patience to do the manual finish.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene passes the <a href="?section=core-principle">Mute Test &amp; Subtitle Test</a> before export.</p>
         </div>
       </div>
@@ -885,7 +908,7 @@
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage10',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage10">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage10',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">getting unquality renders is the problem.</textarea>
+        <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">getting unquality renders is the problem.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
         </div>
       </div>
@@ -912,7 +935,7 @@
         <p class="task">☐ <strong>Task:</strong> Turn on the Join button paywall.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs (ongoing)</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage11',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage11">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage11',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage11" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">not tested — that's the risk.</textarea>
+        <textarea id="notes-stage11" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)">weekly cadence is needed to be able to build the audience. The tech changes the timeline to get the certificates, and helping the audience see the value takes time — it can take as many as 16 videos to make the join decision.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> gaps from the free cohort are fixed and retention is checked before releasing new videos or turning on the paywall.</p>
         </div>
       </div>
@@ -936,7 +959,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Once per course cycle</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage12',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage12">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage12',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage12" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()"></textarea>
+        <textarea id="notes-stage12" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> the report is written and reviewed before starting the next course cycle.</p>
         </div>
       </div>
@@ -957,21 +980,35 @@
         <p class="why">⚠️ <strong>Risk:</strong> a messy or incomplete diagram undersells months of work and confuses the audience it's meant to explain the pipeline to.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.mage.space/creations" target="_blank" rel="noopener">Mage.space</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a></p>
         <p class="task">☐ <strong>Task:</strong> Generate the architecture infographic using the image prompt below.</p>
+        <p class="why">🤖 <strong>Model:</strong> Gemini 3.5 — paste the prompt as-is; it takes the per-stage detail below and renders the labeled output directly.</p>
         <pre>flat vector infographic, bold clean linework, warm limited color palette (navy, teal, amber, coral),
 soft cel shading, tech-startup whiteboard aesthetic, 16:9 —
 
 a horizontal pipeline diagram flowing left to right in three labeled clusters: PREPROD, PROD, POST.
-Each of the 13 stages is a numbered rounded chip (0-12) connected by arrows, with a small icon per stage:
-0 magnifying glass (Research), 1 slide deck (Canva Slides), 2 checkmark frame (Review),
-3 filmstrip (Add Animation Frames), 4 export box (Export Step), 5 brain/mindmap (Mindmap Architecture),
-6 code repository (Build GitHub Repo), 7 lightning bolt (Canva Bulk Create), 8 DNA helix (Asset Generation),
-9 sparkle wand (Canva Manual Finishing), 10 rocket (Export MP4), 11 unlocked padlock (Distribution),
-12 clipboard/report (Sanity Check). Clean minimal number + icon labels under each chip,
-navy background, teal/amber/coral accent colors, flat vector style, no logos.</pre>
+Each of the 13 stages is a numbered rounded chip (0-12) connected by arrows. For each chip, show a small icon
+AND a short caption summarizing what actually happens in that stage, exactly as follows:
+
+0 🔍 Research — magnifying glass icon — "daily whiteboard research, screenshots, WhatsApp/Teams discussion"
+1 🎨 Canva Slides — slide deck icon — "script, sprites, storyboard & notes built into one weekly cohort deck"
+2 🎞️ Review — checkmark-frame icon — "each scene reviewed in Canva Presentations and marked ready"
+3 🎞️ Add Animation Frames — filmstrip icon — "scenes broken into multiple animation frames with prompts"
+4 📦 Export Step — export-box icon — "ready scenes flattened and batched under Canva's 300-page limit"
+5 🧠 Mindmap Architecture — brain/mindmap icon — "course architecture diagrammed and checked against the syllabus"
+6 🛠️ Build GitHub Repo — code-repository icon — "this tracking repo built with an AI coding tool, published to GitHub Pages, secrets in a Key Vault"
+7 ⚡ Canva Bulk Create — lightning-bolt icon — "every scene bulk-rendered to video with voiceover embedded"
+8 🧬 Asset Generation — DNA-helix icon — "missing sprites, backgrounds, music & sound effects generated"
+9 ✨ Canva Manual Finishing — sparkle-wand icon — "motion paths hand-animated, AI voice generated per page"
+10 🚀 Export MP4 — rocket icon — "final per-domain MP4 training files exported"
+11 🔓 Distribution — unlocked-padlock icon — "free access to first 100 people, feedback + retention checked, then paywall opens"
+12 🧾 Sanity Check — clipboard/report icon — "pros, cons, risks & mitigations written up before the next cycle"
+
+Render the icon and caption together under each numbered chip, small clean sans-serif type,
+navy background, teal/amber/coral accent colors, flat vector style, no logos, no extra decoration.</pre>
+        <div class="prompt-tools"><button onclick="copyPromptText(this)">📋 Copy Prompt</button></div>
         <p class="why">📅 <strong>Cadence:</strong> Once per course cycle</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1 hr</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage13',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage13">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage13',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage13" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()"></textarea>
+        <textarea id="notes-stage13" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.</p>
         </div>
       </div>
@@ -996,6 +1033,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
       <div class="phase" data-tasks="Review each scene into many images that would help with animation"><div class="num" style="color:var(--accent7)">3</div>Animation Frames 🎞️<div class="sub">1 subtask · 60%</div></div>
       <div class="phase" data-tasks="Run the export script to flatten &quot;ready&quot; scenes for Canva import"><div class="num" style="color:var(--accent4)">4</div>Export Step 📦<div class="sub">1 subtask · 70%</div></div>
     </div>
+    <p class="gap-note">🕳️ <strong>Gaps:</strong> 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Export Step — the weekly export cadence isn't automated, still a manual per-video trigger.</p>
     <h3 id="stages-prod" class="phase-group"><a href="?section=stages-prod">🏭 Prod</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Build the mindmap of the course architecture • Cross-check the mindmap against the certification syllabus"><div class="num" style="color:var(--accent9)">5</div>Mindmap Architecture 🧠<div class="sub">2 subtasks · 55%</div></div>
@@ -1003,6 +1041,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
       <div class="phase" data-tasks="Run Canva Bulk Create to export all pages as video"><div class="num" style="color:var(--accent3)">7</div>Bulk Create ⚡<div class="sub">1 subtask · 75%</div></div>
       <div class="phase" data-tasks="Generate and collect any missing AI assets for scenes • Produce music &amp; sound effects for the scenes"><div class="num" style="color:var(--accent6)">8</div>Asset Gen 🧬<div class="sub">2 subtasks · 55%</div></div>
     </div>
+    <p class="gap-note">🕳️ <strong>Gaps:</strong> 5 Mindmap Architecture — no standard Mermaid template yet, each mindmap is built ad hoc. 6 Build GitHub Repo — the GitHub + DeliveryPilot template isn't documented as a reusable starting point yet. 7 Canva Bulk Create — no fallback plan if Canva Bulk Create output quality degrades. 8 Asset Generation — the Higgsfield workflow isn't integrated, asset lookup is still manual.</p>
     <h3 id="stages-post" class="phase-group"><a href="?section=stages-post">🎬 Post</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Manually animate elements per page and generate AI voice for each"><div class="num" style="color:var(--accent5)">9</div>Manual Finish ✨<div class="sub">1 subtask · 75%</div></div>
@@ -1011,6 +1050,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
       <div class="phase" data-tasks="Write the sanity-check report covering pros, cons, risks, and mitigations"><div class="num" style="color:var(--accent11)">12</div>Sanity Check 🧾<div class="sub">1 subtask · 50%</div></div>
       <div class="phase" data-tasks="Generate the architecture infographic using the image prompt"><div class="num" style="color:var(--accent12)">13</div>Architecture 🏛️<div class="sub">1 subtask · 50%</div></div>
     </div>
+    <p class="gap-note">🕳️ <strong>Gaps:</strong> 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet.</p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
@@ -1101,7 +1141,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
       <p class="why">📋 <strong>Deliverable Note:</strong> ready to save as a clean Markdown report. Let me know if
       you want an even more compact version, column reordering, or added columns (e.g., learning curve or
       alternatives considered).</p>
-      <textarea id="notes-toolbox" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+      <textarea id="notes-toolbox" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('toolbox', -1)" aria-label="Previous section">▲</button>
@@ -1271,6 +1311,21 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
     return match ? decodeURIComponent(match[1]) : null;
   }
 
+  function showSavedIndicator(el) {
+    var badge = el.nextElementSibling;
+    if (!badge || !badge.classList.contains('saved-indicator')) {
+      badge = document.createElement('span');
+      badge.className = 'saved-indicator';
+      badge.textContent = '✓ Saved';
+      el.insertAdjacentElement('afterend', badge);
+    }
+    badge.classList.remove('show');
+    void badge.offsetWidth;
+    badge.classList.add('show');
+    clearTimeout(el._savedTimer);
+    el._savedTimer = setTimeout(function () { badge.classList.remove('show'); }, 1500);
+  }
+
   function saveStageData() {
     var data = {};
     stageIdsAll.forEach(function (id) {
@@ -1305,6 +1360,19 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
     val = Math.max(0, Math.min(100, val));
     confEl.textContent = val;
     saveStageData();
+  }
+
+  function copyPromptText(btn) {
+    var pre = btn.parentElement.previousElementSibling;
+    if (!pre) return;
+    var original = btn.textContent;
+    navigator.clipboard.writeText(pre.textContent).then(function () {
+      btn.textContent = '✅ Copied!';
+      setTimeout(function () { btn.textContent = original; }, 1500);
+    }).catch(function () {
+      btn.textContent = '⚠️ Copy failed';
+      setTimeout(function () { btn.textContent = original; }, 1500);
+    });
   }
 
   function copyStageData() {
