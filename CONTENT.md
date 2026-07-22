@@ -78,7 +78,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⚠️ **Risk:** skipping daily research leaves gaps that surface much later, when they're expensive to fix.
 
-🧰 **Tools:** [Canva](https://www.canva.com/), [Obsidian](https://obsidian.md/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
+🧰 **Tools:** [Canva](https://www.canva.com/), [Obsidian](https://obsidian.md/), Screenshots, Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
 
@@ -420,6 +420,7 @@ Final per-domain training video files.
 - First 100 people get the full end-to-end course for free
 - Collect feedback from that free cohort
 - Fix the gaps that feedback surfaces
+- Check retention before releasing new videos, and increase quality
 - Turn on the Join button paywall for everyone else
 
 🎓 **Why it matters:** teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.
@@ -432,6 +433,8 @@ Final per-domain training video files.
 
 ☐ **Task:** Fix gaps identified from cohort feedback.
 
+☐ **Task:** Check retention before releasing new videos, and increase quality accordingly.
+
 ☐ **Task:** Turn on the Join button paywall.
 
 ⏱️ **Est. Time:** ~3 hrs (ongoing)
@@ -440,13 +443,40 @@ Final per-domain training video files.
 
 📝 **Notes:** not tested — that's the risk.
 
-✅ **Quality Gate:** gaps from the free cohort are fixed before the paywall goes live.
+✅ **Quality Gate:** gaps from the free cohort are fixed and retention is checked before releasing new videos or turning on the paywall.
+
+#### 🧾 12. Sanity Check
+
+📥 **Input:** outputs from every stage — research, design, build, render, and distribution results.
+
+📤 **Output:** a written sanity-check report — does this make sense, pros, cons, risks, and mitigations.
+
+- Review the whole pipeline output holistically, not stage by stage
+- Document pros of the current approach
+- Document cons and gaps that remain
+- List risks and their mitigations
+
+🎓 **Why it matters:** a written retrospective is how real production teams turn one course into a repeatable process — and proves he can evaluate his own work critically, not just produce it.
+
+⚠️ **Risk:** skipping the sanity check means the same mistakes repeat in the next course cycle unnoticed.
+
+🧰 **Tools:** [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), [Obsidian](https://obsidian.md/)
+
+☐ **Task:** Write the sanity-check report covering pros, cons, risks, and mitigations.
+
+📅 **Cadence:** Once per course cycle
+
+⏱️ **Est. Time:** ~1.5 hrs
+
+🎯 **Confidence:** 50%
+
+✅ **Quality Gate:** the report is written and reviewed before starting the next course cycle.
 
 ## 🏗️ Stages
 
-⏱️ **Total estimated time:** ~29 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Distribution is ongoing).
+⏱️ **Total estimated time:** ~30.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check and Distribution are ongoing/once-per-cycle).
 
-🎯 **Average confidence:** 64% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 1 Canva Slides now at 40%, and stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 63% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), the new stage 12 Sanity Check (50%, unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
 On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second.
 
@@ -469,7 +499,8 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 
 - 9. Manual Finish ✨ — 1 subtask · 75% confidence (Manually animate elements per page and generate AI voice for each)
 - 10. Export MP4 🚀 — 1 subtask · 80% confidence (Export the final per-domain MP4 training video files)
-- 11. Distribution 🔓 — 3 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
+- 11. Distribution 🔓 — 4 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Check retention before releasing new videos, and increase quality accordingly; Turn on the Join button paywall)
+- 12. Sanity Check 🧾 — 1 subtask · 50% confidence (Write the sanity-check report covering pros, cons, risks, and mitigations)
 
 ## 🌐 References
 
