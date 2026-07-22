@@ -107,6 +107,30 @@
     outline: none;
   }
   .topnav-search:focus { border-color: var(--accent2); width: 180px; }
+  .topnav-item { position: relative; display: inline-flex; }
+  .topnav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.3rem;
+    flex-direction: column;
+    background: #0b1120;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.4rem;
+    gap: 0.2rem;
+    z-index: 600;
+    min-width: 130px;
+  }
+  .topnav-item:hover .topnav-dropdown { display: flex; }
+  .topnav-dropdown a {
+    white-space: nowrap;
+    background: transparent;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+  }
+  .topnav-dropdown a:hover { background: rgba(148,163,184,0.15); }
   mark.search-hit { background: rgba(251,191,36,0.35); color: inherit; border-radius: 3px; padding: 0 1px; }
   mark.search-hit.active { background: var(--accent4); color: #0f172a; }
 
@@ -117,11 +141,12 @@
   }
   section:nth-of-type(1) { background: rgba(244,114,182,0.08); }
   section:nth-of-type(2) { background: rgba(52,211,153,0.08); }
-  section:nth-of-type(3) { background: rgba(56,189,248,0.08); }
-  section:nth-of-type(4) { background: rgba(251,191,36,0.08); }
-  section:nth-of-type(5) { background: rgba(167,139,250,0.08); }
-  section:nth-of-type(6) { background: rgba(251,113,133,0.08); }
-  section:nth-of-type(7) { background: rgba(148,163,184,0.08); }
+  section:nth-of-type(3) { background: rgba(244,63,94,0.08); }
+  section:nth-of-type(4) { background: rgba(56,189,248,0.08); }
+  section:nth-of-type(5) { background: rgba(251,191,36,0.08); }
+  section:nth-of-type(6) { background: rgba(167,139,250,0.08); }
+  section:nth-of-type(7) { background: rgba(251,113,133,0.08); }
+  section:nth-of-type(8) { background: rgba(148,163,184,0.08); }
   h2 {
     font-size: 1.4rem;
     display: flex;
@@ -451,17 +476,25 @@
 <nav class="topnav">
   <a href="?section=problem">🧩 Problem</a>
   <a href="?section=solution">✅ Solution</a>
+  <a href="?section=problem-solution-fit">🎯 Fit</a>
   <a href="?section=core-principle">🧠 Core Principle</a>
   <a href="?section=hands-on">⚖️ Hands-On</a>
   <a href="?section=pipeline">🔗 Pipeline</a>
-  <a href="?section=build-phases">🏗️ Stages</a>
+  <div class="topnav-item">
+    <a href="?section=build-phases">🏗️ Stages</a>
+    <div class="topnav-dropdown">
+      <a href="?section=stages-preprod">🧪 Preprod</a>
+      <a href="?section=stages-prod">🏭 Prod</a>
+      <a href="?section=stages-post">🎬 Post</a>
+    </div>
+  </div>
   <a href="?section=references">🌐 References</a>
   <input type="search" id="pageSearch" class="topnav-search" placeholder="🔍 Search…" onkeydown="handleSearchKey(event, this.value)">
 </nav>
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-22T11:06:30Z">v7.1.1 · Updated 2026-07-22 11:06 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-22T11:28:33Z">v7.2.0 · Updated 2026-07-22 11:28 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -514,6 +547,24 @@
     <div class="section-nav">
       <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
       <button onclick="scrollSection('solution', 1)" aria-label="Next section">▼</button>
+    </div>
+  </section>
+
+  <section id="problem-solution-fit">
+    <h2><a href="?section=problem-solution-fit">🎯 Problem-Solution Fit</a> <button class="collapse-btn" id="toggle-problem-solution-fit" onclick="toggleSection('problem-solution-fit')" aria-label="Collapse section">▾</button></h2>
+    <div class="principle section-body" id="body-problem-solution-fit">
+      <p>Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way
+      he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating
+      the content <em>is</em> the learning method, not a separate step after it; the certification itself is the proof
+      that it worked.</p>
+      <p><strong>Premise:</strong> using this capture → organize → distill → express structure, across both live and
+      recorded formats, increases the chances of retaining and demonstrating mastery of the material.</p>
+      <p><strong>Conclusion:</strong> he would be able to pass the exam.</p>
+      <textarea id="notes-problem-solution-fit" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+    </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('problem-solution-fit', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('problem-solution-fit', 1)" aria-label="Next section">▼</button>
     </div>
   </section>
 
@@ -1033,7 +1084,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  var sectionOrder = ['problem', 'solution', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references'];
+  var sectionOrder = ['problem', 'solution', 'problem-solution-fit', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references'];
   function scrollSection(current, dir) {
     var idx = sectionOrder.indexOf(current) + dir;
     if (idx >= 0 && idx < sectionOrder.length) {
@@ -1112,7 +1163,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
   }
 
   var stageNames = {
-    problem: 'Problem', solution: 'Solution', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
+    problem: 'Problem', solution: 'Solution', 'problem-solution-fit': 'Problem-Solution Fit', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
     stage0: '0. Research', stage1: '1. Canva Slides', stage2: '2. Review',
     stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
     stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',

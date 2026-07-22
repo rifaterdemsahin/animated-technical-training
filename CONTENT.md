@@ -4,7 +4,7 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 [📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md) · [📝 Content](CONTENT.md) · [✏️ Edit Content](https://github.com/rifaterdemsahin/animated-technical-training/edit/main/CONTENT.md)
 
-**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references)
+**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🎯 Problem-Solution Fit](#-problem-solution-fit) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references)
 
 ## 🧩 Problem
 
@@ -31,6 +31,14 @@ Comics-based animated technical training, so the concepts are easier to consume.
 📺 **Sample:** [Tech with Nana →](https://www.youtube.com/watch?v=xo5V9g9joFs) [Info Graphics →](https://www.youtube.com/watch?v=f0aNDS_i7VQ)
 
 🎓 **The Journey:** This is Rifat Erdem Sahin's own self-learning journey — investing in paid AI certificates for himself, then packaging that experience into this animated product so the audience can leverage it too. Passing the exam is proof to himself; running cohorts collects real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that feedback, then a Join button paywall opens for everyone else.
+
+## 🎯 Problem-Solution Fit
+
+Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating the content *is* the learning method, not a separate step after it; the certification itself is the proof that it worked.
+
+**Premise:** using this capture → organize → distill → express structure, across both live and recorded formats, increases the chances of retaining and demonstrating mastery of the material.
+
+**Conclusion:** he would be able to pass the exam.
 
 ## 🧠 Core Principle
 
@@ -524,7 +532,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.
 
 🎯 **Average confidence:** 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Problem-Solution Fit, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav's "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
 ### 🧪 Preprod
 
