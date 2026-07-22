@@ -20,6 +20,7 @@
     --accent7: #fb923c;
     --accent8: #a3e635;
     --accent9: #d946ef;
+    --accent10: #14b8a6;
     --border: #334155;
   }
   * { box-sizing: border-box; }
@@ -334,16 +335,18 @@
   .s4 h3 { color: var(--accent4); }
   .s5 { border-top: 4px solid var(--accent9); }
   .s5 h3 { color: var(--accent9); }
-  .s6 { border-top: 4px solid var(--accent3); }
-  .s6 h3 { color: var(--accent3); }
-  .s7 { border-top: 4px solid var(--accent6); }
-  .s7 h3 { color: var(--accent6); }
-  .s8 { border-top: 4px solid var(--accent5); }
-  .s8 h3 { color: var(--accent5); }
-  .s9 { border-top: 4px solid #fb7185; }
-  .s9 h3 { color: #fb7185; }
-  .s10 { border-top: 4px solid var(--accent8); }
-  .s10 h3 { color: var(--accent8); }
+  .s6 { border-top: 4px solid var(--accent10); }
+  .s6 h3 { color: var(--accent10); }
+  .s7 { border-top: 4px solid var(--accent3); }
+  .s7 h3 { color: var(--accent3); }
+  .s8 { border-top: 4px solid var(--accent6); }
+  .s8 h3 { color: var(--accent6); }
+  .s9 { border-top: 4px solid var(--accent5); }
+  .s9 h3 { color: var(--accent5); }
+  .s10 { border-top: 4px solid #fb7185; }
+  .s10 h3 { color: #fb7185; }
+  .s11 { border-top: 4px solid var(--accent8); }
+  .s11 h3 { color: var(--accent8); }
 
   .phases {
     display: grid;
@@ -452,7 +455,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v5.3.0</div>
+    <div class="version">v6.0.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -526,7 +529,7 @@
   <section id="hands-on">
     <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a> <button class="collapse-btn" id="toggle-hands-on" onclick="toggleSection('hands-on')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-hands-on">
-      <p><a href="?section=stage6">Bulk export</a> and <a href="?section=stage7">asset generation</a> are automated to move fast; animation timing and voice are finished
+      <p><a href="?section=stage7">Bulk export</a> and <a href="?section=stage8">asset generation</a> are automated to move fast; animation timing and voice are finished
       manually to reach top quality — <strong>audience retention and reach are on the line, so we can't risk
       low quality by auto generating content that does not line up with what audience needs.</strong></p>
       <p>🎯 That means every scene needs to be <strong>frame by frame mapped</strong> — <a href="?section=stage0">whiteboard</a>,<a href="?section=stage1">script</a>,<a href="?section=stage1">slides</a>,
@@ -673,25 +676,48 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s6" id="stage6">
-        <h3><a href="?section=stage6">⚡ 6. Canva Bulk Create</a></h3>
+        <h3><a href="?section=stage6">🛠️ 6. Build GitHub Repo</a></h3>
+        <p>Build and ship the production tracking repo/dashboard itself — hands-on, not automated.</p>
+        <ul>
+          <li>Scaffold the repo with an AI coding tool (Claude Code, Kilo, or Gemini)</li>
+          <li>Publish it via GitHub Pages</li>
+          <li>Store secrets and credentials in a Key Vault, never in the repo</li>
+          <li>Stand up any dynamic/backend tooling on Fly.io</li>
+        </ul>
+        <p class="why">🎓 <strong>Why it matters:</strong> shipping this dashboard the same way he'd ship any production app is itself certification-relevant practice — the tools and workflow transfer directly.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a>, <a href="https://kilocode.ai/" target="_blank" rel="noopener">Kilo</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, <a href="https://azure.microsoft.com/en-us/products/key-vault" target="_blank" rel="noopener">Key Vault</a>, <a href="https://fly.io/" target="_blank" rel="noopener">Fly.io</a></p>
+        <p class="task">☐ <strong>Task:</strong> Scaffold and build the repo with Claude Code, Kilo, or Gemini.</p>
+        <p class="task">☐ <strong>Task:</strong> Publish the site via GitHub Pages.</p>
+        <p class="task">☐ <strong>Task:</strong> Store secrets/credentials in a Key Vault.</p>
+        <p class="task">☐ <strong>Task:</strong> Stand up any backend/dynamic tooling on Fly.io.</p>
+        <p class="why">📅 <strong>Cadence:</strong> Once per project</p>
+        <p class="why">⏱️ <strong>Est. Time:</strong> ~4 hrs</p>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage6',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage6">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage6',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()"></textarea>
+        <p class="gate">✅ <strong>Quality Gate:</strong> repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.</p>
+      </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s7" id="stage7">
+        <h3><a href="?section=stage7">⚡ 7. Canva Bulk Create</a></h3>
         <ul>
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
         </ul>
-        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 6 illustration: Canva Bulk Create" onclick="openModal(this.src)">
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 7 illustration: Canva Bulk Create" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create to export all pages as video.</p>
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~45 min</p>
-        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage6',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage6">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage6',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">add tools as Canva.</textarea>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage7',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage7">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage7',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">add tools as Canva.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every page rendered as video with voiceover before manual finishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s7" id="stage7">
-        <h3><a href="?section=stage7">🧬 7. Asset Generation</a></h3>
+      <div class="stage s8" id="stage8">
+        <h3><a href="?section=stage8">🧬 8. Asset Generation</a></h3>
         <ul>
           <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
           <li>Fill gaps before manual finishing starts</li>
@@ -701,15 +727,15 @@
         <p class="task">☐ <strong>Task:</strong> Generate and collect any missing AI assets for scenes.</p>
         <p class="task">☐ <strong>Task:</strong> Produce music &amp; sound effects for the scenes.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
-        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage7',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage7">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage7',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">Add Higgsfield as a tool here.</textarea>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage8',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage8">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage8',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">Add Higgsfield as a tool here.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites, backgrounds, music, or sound effects remain before manual finishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
       <h3 id="post" class="phase-group"><a href="?section=post">🎬 Post</a></h3>
-      <div class="stage s8" id="stage8">
-        <h3><a href="?section=stage8">✨ 8. Canva Manual Finishing</a></h3>
+      <div class="stage s9" id="stage9">
+        <h3><a href="?section=stage9">✨ 9. Canva Manual Finishing</a></h3>
         <ul>
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
@@ -719,29 +745,29 @@
         <p class="task">☐ <strong>Task:</strong> Manually animate elements per page and generate AI voice for each.</p>
         <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~6 hrs</p>
-        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage8',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage8">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage8',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">there are issues in his skills and he needs the patience to do the manual finish.</textarea>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage9',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage9">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage9',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">there are issues in his skills and he needs the patience to do the manual finish.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene passes the <a href="?section=core-principle">Mute Test &amp; Subtitle Test</a> before export.</p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s9" id="stage9">
-        <h3><a href="?section=stage9">🚀 9. Export MP4</a></h3>
+      <div class="stage s10" id="stage10">
+        <h3><a href="?section=stage10">🚀 10. Export MP4</a></h3>
         <p>Final per-domain training video files.</p>
-        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 9 illustration: Export MP4" onclick="openModal(this.src)">
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 10 illustration: Export MP4" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> a finished artifact is proof of mastery — for the audience, and for himself.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
-        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage9',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage9">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage9',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">getting unquality renders is the problem.</textarea>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage10',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage10">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage10',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">getting unquality renders is the problem.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
       </div>
       <div class="arrow">⬇️</div>
 
-      <div class="stage s10" id="stage10">
-        <h3><a href="?section=stage10">🔓 10. Distribution — Free Cohort → Paywall</a></h3>
+      <div class="stage s11" id="stage11">
+        <h3><a href="?section=stage11">🔓 11. Distribution — Free Cohort → Paywall</a></h3>
         <ul>
           <li>First 100 people get the full end-to-end course for free</li>
           <li>Collect feedback from that free cohort</li>
@@ -754,8 +780,8 @@
         <p class="task">☐ <strong>Task:</strong> Fix gaps identified from cohort feedback.</p>
         <p class="task">☐ <strong>Task:</strong> Turn on the Join button paywall.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs (ongoing)</p>
-        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage10',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage10">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage10',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">not tested — that's the risk.</textarea>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage11',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage11">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage11',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage11" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">not tested — that's the risk.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> gaps from the free cohort are fixed before the paywall goes live.</p>
       </div>
 
@@ -769,8 +795,8 @@
   <section id="build-phases">
     <h2><a href="?section=build-phases">🏗️ Stages</a> <button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
     <div class="section-body" id="body-build-phases">
-    <p>⏱️ <strong>Total estimated time:</strong> ~25 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).</p>
-    <p>🎯 <strong>Average confidence:</strong> 66% — lowest at stage 10 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).</p>
+    <p>⏱️ <strong>Total estimated time:</strong> ~29 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Distribution is ongoing).</p>
+    <p>🎯 <strong>Average confidence:</strong> 68% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).</p>
     <h3 id="stages-preprod" class="phase-group"><a href="?section=stages-preprod">🧪 Preprod</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script • Complete the paid AI certificate"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">5 subtasks · 90%</div></div>
@@ -782,14 +808,15 @@
     <h3 id="stages-prod" class="phase-group"><a href="?section=stages-prod">🏭 Prod</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Build the mindmap of the course architecture • Cross-check the mindmap against the certification syllabus"><div class="num" style="color:var(--accent9)">5</div>Mindmap Architecture 🧠<div class="sub">2 subtasks · 55%</div></div>
-      <div class="phase" data-tasks="Run Canva Bulk Create to export all pages as video"><div class="num" style="color:var(--accent3)">6</div>Bulk Create ⚡<div class="sub">1 subtask · 75%</div></div>
-      <div class="phase" data-tasks="Generate and collect any missing AI assets for scenes • Produce music &amp; sound effects for the scenes"><div class="num" style="color:var(--accent6)">7</div>Asset Gen 🧬<div class="sub">2 subtasks · 55%</div></div>
+      <div class="phase" data-tasks="Scaffold and build the repo with Claude Code, Kilo, or Gemini • Publish the site via GitHub Pages • Store secrets/credentials in a Key Vault • Stand up any backend/dynamic tooling on Fly.io"><div class="num" style="color:var(--accent10)">6</div>Build GitHub Repo 🛠️<div class="sub">4 subtasks · 80%</div></div>
+      <div class="phase" data-tasks="Run Canva Bulk Create to export all pages as video"><div class="num" style="color:var(--accent3)">7</div>Bulk Create ⚡<div class="sub">1 subtask · 75%</div></div>
+      <div class="phase" data-tasks="Generate and collect any missing AI assets for scenes • Produce music &amp; sound effects for the scenes"><div class="num" style="color:var(--accent6)">8</div>Asset Gen 🧬<div class="sub">2 subtasks · 55%</div></div>
     </div>
     <h3 id="stages-post" class="phase-group"><a href="?section=stages-post">🎬 Post</a></h3>
     <div class="phases">
-      <div class="phase" data-tasks="Manually animate elements per page and generate AI voice for each"><div class="num" style="color:var(--accent5)">8</div>Manual Finish ✨<div class="sub">1 subtask · 75%</div></div>
-      <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">9</div>Export MP4 🚀<div class="sub">1 subtask · 80%</div></div>
-      <div class="phase" data-tasks="Ship free access to the first 100 people • Fix gaps identified from cohort feedback • Turn on the Join button paywall"><div class="num" style="color:var(--accent8)">10</div>Distribution 🔓<div class="sub">3 subtasks · 10%</div></div>
+      <div class="phase" data-tasks="Manually animate elements per page and generate AI voice for each"><div class="num" style="color:var(--accent5)">9</div>Manual Finish ✨<div class="sub">1 subtask · 75%</div></div>
+      <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">10</div>Export MP4 🚀<div class="sub">1 subtask · 80%</div></div>
+      <div class="phase" data-tasks="Ship free access to the first 100 people • Fix gaps identified from cohort feedback • Turn on the Join button paywall"><div class="num" style="color:var(--accent8)">11</div>Distribution 🔓<div class="sub">3 subtasks · 10%</div></div>
     </div>
     </div>
     <div class="section-nav">
@@ -952,8 +979,8 @@
   var stageNames = {
     stage0: '0. Research', stage1: '1. Canva Slides', stage2: '2. Review',
     stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
-    stage6: '6. Canva Bulk Create', stage7: '7. Asset Generation', stage8: '8. Canva Manual Finishing',
-    stage9: '9. Export MP4', stage10: '10. Distribution'
+    stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',
+    stage9: '9. Canva Manual Finishing', stage10: '10. Export MP4', stage11: '11. Distribution'
   };
   var stageIdsAll = Object.keys(stageNames);
 

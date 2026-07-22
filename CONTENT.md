@@ -225,12 +225,41 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 ✅ **Quality Gate:** mindmap architecture locked and matches the certification syllabus before bulk create.
 
-#### ⚡ 6. Canva Bulk Create
+#### 🛠️ 6. Build GitHub Repo
+
+Build and ship the production tracking repo/dashboard itself — hands-on, not automated.
+
+- Scaffold the repo with an AI coding tool (Claude Code, Kilo, or Gemini)
+- Publish it via GitHub Pages
+- Store secrets and credentials in a Key Vault, never in the repo
+- Stand up any dynamic/backend tooling on Fly.io
+
+🎓 **Why it matters:** shipping this dashboard the same way he'd ship any production app is itself certification-relevant practice — the tools and workflow transfer directly.
+
+🧰 **Tools:** [Claude Code](https://claude.com/claude-code), [Kilo](https://kilocode.ai/), [Gemini](https://gemini.google.com/), [GitHub Pages](https://pages.github.com/), [Key Vault](https://azure.microsoft.com/en-us/products/key-vault), [Fly.io](https://fly.io/)
+
+☐ **Task:** Scaffold and build the repo with Claude Code, Kilo, or Gemini.
+
+☐ **Task:** Publish the site via GitHub Pages.
+
+☐ **Task:** Store secrets/credentials in a Key Vault.
+
+☐ **Task:** Stand up any backend/dynamic tooling on Fly.io.
+
+📅 **Cadence:** Once per project
+
+⏱️ **Est. Time:** ~4 hrs
+
+🎯 **Confidence:** 80%
+
+✅ **Quality Gate:** repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.
+
+#### ⚡ 7. Canva Bulk Create
 
 - Exports all pages as video (sprite + incoming + outgoing)
 - Voiceovers embedded inside the videos
 
-![Stage 6 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
+![Stage 7 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
 
 🎓 **Why it matters:** seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.
 
@@ -248,7 +277,7 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
-#### 🧬 7. Asset Generation
+#### 🧬 8. Asset Generation
 
 - Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery
 - Fill gaps before manual finishing starts
@@ -271,7 +300,7 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 ### 🎬 Post
 
-#### ✨ 8. Canva Manual Finishing
+#### ✨ 9. Canva Manual Finishing
 
 - Animate per element/page — motion path preferred over generic entrance FX
 - Generate AI voice per page from incoming/outgoing text
@@ -292,11 +321,11 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
-#### 🚀 9. Export MP4
+#### 🚀 10. Export MP4
 
 Final per-domain training video files.
 
-![Stage 9 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
+![Stage 10 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg)
 
 🎓 **Why it matters:** a finished artifact is proof of mastery — for the audience, and for himself.
 
@@ -314,7 +343,7 @@ Final per-domain training video files.
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
-#### 🔓 10. Distribution — Free Cohort → Paywall
+#### 🔓 11. Distribution — Free Cohort → Paywall
 
 - First 100 people get the full end-to-end course for free
 - Collect feedback from that free cohort
@@ -341,9 +370,9 @@ Final per-domain training video files.
 
 ## 🏗️ Stages
 
-⏱️ **Total estimated time:** ~25 hrs per course cycle (Research is ongoing/daily; Distribution is ongoing).
+⏱️ **Total estimated time:** ~29 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Distribution is ongoing).
 
-🎯 **Average confidence:** 66% — lowest at stage 10 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 7 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 68% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
 On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "🧹 Clear All Notes" button at the top of the page wipes every stage's notes (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every stage's confidence + notes to the clipboard. Every top-level section header also has a ▾/▸ collapse toggle, with the collapsed/expanded state of each section saved to its own separate cookie.
 
@@ -358,14 +387,15 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 ### 🏭 Prod
 
 - 5. Mindmap Architecture 🧠 — 2 subtasks · 55% confidence (Build the mindmap of the course architecture; Cross-check the mindmap against the certification syllabus)
-- 6. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
-- 7. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
+- 6. Build GitHub Repo 🛠️ — 4 subtasks · 80% confidence (Scaffold and build the repo with Claude Code, Kilo, or Gemini; Publish the site via GitHub Pages; Store secrets/credentials in a Key Vault; Stand up any backend/dynamic tooling on Fly.io)
+- 7. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
+- 8. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
 
 ### 🎬 Post
 
-- 8. Manual Finish ✨ — 1 subtask · 75% confidence (Manually animate elements per page and generate AI voice for each)
-- 9. Export MP4 🚀 — 1 subtask · 80% confidence (Export the final per-domain MP4 training video files)
-- 10. Distribution 🔓 — 3 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
+- 9. Manual Finish ✨ — 1 subtask · 75% confidence (Manually animate elements per page and generate AI voice for each)
+- 10. Export MP4 🚀 — 1 subtask · 80% confidence (Export the final per-domain MP4 training video files)
+- 11. Distribution 🔓 — 3 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Turn on the Join button paywall)
 
 ## 🌐 References
 
