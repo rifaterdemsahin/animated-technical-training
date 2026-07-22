@@ -455,7 +455,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v6.0.0</div>
+    <div class="version">v6.1.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -549,7 +549,8 @@
 
       <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
       <div class="stage s0" id="stage0">
-        <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a></h3>
+        <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a> <button class="collapse-btn" id="toggle-stage0" onclick="toggleSection('stage0')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage0">
         <ul>
           <li>Save reference images &amp; text as they're found</li>
           <li>Left to right flow — chronological research trail</li>
@@ -569,11 +570,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage0',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage0">90</span>% <button class="conf-btn" onclick="adjustConfidence('stage0',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage0" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every research note has a source screenshot before moving to slide-building.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s1" id="stage1">
-        <h3><a href="?section=stage1">🎨 1. Canva Slides — Source of Cohort Session</a></h3>
+        <h3><a href="?section=stage1">🎨 1. Canva Slides — Source of Cohort Session</a> <button class="collapse-btn" id="toggle-stage1" onclick="toggleSection('stage1')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage1">
         <ul>
           <li>Script — master flow for the content</li>
           <li>Images (AI-generated sprite assets)</li>
@@ -592,11 +595,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage1',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage1">85</span>% <button class="conf-btn" onclick="adjustConfidence('stage1',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage1" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">Task: prepare before the sessions.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> script, images, storyboard &amp; notes complete for every scene before review.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s2" id="stage2">
-        <h3><a href="?section=stage2">🎞️ 2. Review Canva Presentations</a></h3>
+        <h3><a href="?section=stage2">🎞️ 2. Review Canva Presentations</a> <button class="collapse-btn" id="toggle-stage2" onclick="toggleSection('stage2')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage2">
         <p>Done in Canva Presentations — no separate tool.</p>
         <ul>
           <li>Frame view per scene: sprite preview + incoming/outgoing + <code>visual_action</code> notes</li>
@@ -613,11 +618,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage2',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage2">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage2',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage2" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">work with slides in the call for the bigger view and go to whiteboard if needed in the canva.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene marked ✅ ready before export.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s3" id="stage3">
-        <h3><a href="?section=stage3">🎞️ 3. Add Animation Frames</a></h3>
+        <h3><a href="?section=stage3">🎞️ 3. Add Animation Frames</a> <button class="collapse-btn" id="toggle-stage3" onclick="toggleSection('stage3')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage3">
         <p>Close the gap to create the images to be animated.</p>
         <ul>
           <li>One image can be displayed in multiple images</li>
@@ -631,11 +638,13 @@
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage3',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage3">60</span>% <button class="conf-btn" onclick="adjustConfidence('stage3',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage3" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">use the slides and naming as a tool, use Canva MCP.</textarea>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s4" id="stage4">
-        <h3><a href="?section=stage4">📦 4. Export Step</a></h3>
+        <h3><a href="?section=stage4">📦 4. Export Step</a> <button class="collapse-btn" id="toggle-stage4" onclick="toggleSection('stage4')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage4">
         <p>Exports from the Canva Slides presentation, to import into Canva Video.</p>
         <ul>
           <li>Flattens "ready" scenes for Canva import</li>
@@ -651,12 +660,14 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage4',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage4">70</span>% <button class="conf-btn" onclick="adjustConfidence('stage4',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage4" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">export after each video in a weekly cycle.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> all ready scenes flattened and under the 300-page limit before bulk create.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <h3 id="prod" class="phase-group"><a href="?section=prod">🏭 Prod</a></h3>
       <div class="stage s5" id="stage5">
-        <h3><a href="?section=stage5">🧠 5. Mindmap Architecture</a></h3>
+        <h3><a href="?section=stage5">🧠 5. Mindmap Architecture</a> <button class="collapse-btn" id="toggle-stage5" onclick="toggleSection('stage5')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage5">
         <p>Diagram the course's topic architecture before bulk-rendering anything.</p>
         <ul>
           <li>Map modules, dependencies, and flow across the whole course</li>
@@ -672,11 +683,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage5',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage5">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage5',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage5" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">mindmap it with Mermaid using AI and images; add Gemini and Claude for the tools.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> mindmap architecture locked and matches the certification syllabus before bulk create.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s6" id="stage6">
-        <h3><a href="?section=stage6">🛠️ 6. Build GitHub Repo</a></h3>
+        <h3><a href="?section=stage6">🛠️ 6. Build GitHub Repo</a> <button class="collapse-btn" id="toggle-stage6" onclick="toggleSection('stage6')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage6">
         <p>Build and ship the production tracking repo/dashboard itself — hands-on, not automated.</p>
         <ul>
           <li>Scaffold the repo with an AI coding tool (Claude Code, Kilo, or Gemini)</li>
@@ -695,11 +708,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage6',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage6">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage6',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s7" id="stage7">
-        <h3><a href="?section=stage7">⚡ 7. Canva Bulk Create</a></h3>
+        <h3><a href="?section=stage7">⚡ 7. Canva Bulk Create</a> <button class="collapse-btn" id="toggle-stage7" onclick="toggleSection('stage7')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage7">
         <ul>
           <li>Exports all pages as video (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
@@ -713,11 +728,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage7',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage7">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage7',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">add tools as Canva.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every page rendered as video with voiceover before manual finishing.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s8" id="stage8">
-        <h3><a href="?section=stage8">🧬 8. Asset Generation</a></h3>
+        <h3><a href="?section=stage8">🧬 8. Asset Generation</a> <button class="collapse-btn" id="toggle-stage8" onclick="toggleSection('stage8')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage8">
         <ul>
           <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
           <li>Fill gaps before manual finishing starts</li>
@@ -730,12 +747,14 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage8',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage8">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage8',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">Add Higgsfield as a tool here.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites, backgrounds, music, or sound effects remain before manual finishing.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <h3 id="post" class="phase-group"><a href="?section=post">🎬 Post</a></h3>
       <div class="stage s9" id="stage9">
-        <h3><a href="?section=stage9">✨ 9. Canva Manual Finishing</a></h3>
+        <h3><a href="?section=stage9">✨ 9. Canva Manual Finishing</a> <button class="collapse-btn" id="toggle-stage9" onclick="toggleSection('stage9')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage9">
         <ul>
           <li>Animate per element/page — motion path preferred over generic entrance FX</li>
           <li>Generate AI voice per page from incoming/outgoing text</li>
@@ -748,11 +767,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage9',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage9">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage9',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">there are issues in his skills and he needs the patience to do the manual finish.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene passes the <a href="?section=core-principle">Mute Test &amp; Subtitle Test</a> before export.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s10" id="stage10">
-        <h3><a href="?section=stage10">🚀 10. Export MP4</a></h3>
+        <h3><a href="?section=stage10">🚀 10. Export MP4</a> <button class="collapse-btn" id="toggle-stage10" onclick="toggleSection('stage10')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage10">
         <p>Final per-domain training video files.</p>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/%207.%20Export%20MP4.jpg" alt="Stage 10 illustration: Export MP4" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> a finished artifact is proof of mastery — for the audience, and for himself.</p>
@@ -763,11 +784,13 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage10',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage10">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage10',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">getting unquality renders is the problem.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
+        </div>
       </div>
       <div class="arrow">⬇️</div>
 
       <div class="stage s11" id="stage11">
-        <h3><a href="?section=stage11">🔓 11. Distribution — Free Cohort → Paywall</a></h3>
+        <h3><a href="?section=stage11">🔓 11. Distribution — Free Cohort → Paywall</a> <button class="collapse-btn" id="toggle-stage11" onclick="toggleSection('stage11')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage11">
         <ul>
           <li>First 100 people get the full end-to-end course for free</li>
           <li>Collect feedback from that free cohort</li>
@@ -783,6 +806,7 @@
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage11',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage11">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage11',5)" aria-label="Increase confidence">+</button></p>
         <textarea id="notes-stage11" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()">not tested — that's the risk.</textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> gaps from the free cohort are fixed before the paywall goes live.</p>
+        </div>
       </div>
 
     </div>
@@ -1063,9 +1087,11 @@
     saveStageData();
   }
 
+  var collapsibleIds = sectionOrder.concat(stageIdsAll);
+
   function saveSectionState() {
     var data = {};
-    sectionOrder.forEach(function (id) {
+    collapsibleIds.forEach(function (id) {
       var body = document.getElementById('body-' + id);
       data[id] = body ? body.classList.contains('collapsed') : false;
     });
@@ -1077,7 +1103,7 @@
     if (!raw) return;
     var data;
     try { data = JSON.parse(raw); } catch (e) { return; }
-    sectionOrder.forEach(function (id) {
+    collapsibleIds.forEach(function (id) {
       if (!data[id]) return;
       var body = document.getElementById('body-' + id);
       var btn = document.getElementById('toggle-' + id);
