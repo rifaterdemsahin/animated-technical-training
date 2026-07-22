@@ -278,9 +278,11 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎓 **Why it matters:** shipping this dashboard the same way he'd ship any production app is itself certification-relevant practice — the tools and workflow transfer directly.
 
+📐 **Template:** GitHub + DeliveryPilot are used as the template here — a repo like this one to work on projects and self-learn what's being delivered through hands-on implementation.
+
 ⚠️ **Risk:** committing secrets to the repo, or a broken GitHub Pages deploy, blocks everything downstream.
 
-🧰 **Tools:** [Claude Code](https://claude.com/claude-code), [Kilo](https://kilocode.ai/), [Gemini](https://gemini.google.com/), [GitHub Pages](https://pages.github.com/), [Key Vault](https://azure.microsoft.com/en-us/products/key-vault), [Fly.io](https://fly.io/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
+🧰 **Tools:** [Claude Code](https://claude.com/claude-code), [Kilo](https://kilocode.ai/), [Gemini](https://gemini.google.com/), [GitHub Pages](https://pages.github.com/), DeliveryPilot, [Key Vault](https://azure.microsoft.com/en-us/products/key-vault), [Fly.io](https://fly.io/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 ☐ **Task:** Scaffold and build the repo with Claude Code, Kilo, or Gemini.
 
@@ -472,11 +474,53 @@ Final per-domain training video files.
 
 ✅ **Quality Gate:** the report is written and reviewed before starting the next course cycle.
 
+#### 🏛️ 13. Architecture
+
+📥 **Input:** the Sanity Check report and the finalized 13-stage pipeline structure.
+
+📤 **Output:** a single architecture infographic visualizing the whole pipeline.
+
+- Diagram all 13 stages, grouped into Preprod / Prod / Post
+- Generate the infographic with an AI image tool using the prompt below
+- Publish the infographic alongside the Sanity Check report
+
+🎓 **Why it matters:** a clear architecture diagram is exactly what's expected in real system-design interviews and certification portfolios — this stage produces that artifact.
+
+⚠️ **Risk:** a messy or incomplete diagram undersells months of work and confuses the audience it's meant to explain the pipeline to.
+
+🧰 **Tools:** [Mage.space](https://www.mage.space/creations), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/)
+
+☐ **Task:** Generate the architecture infographic using the image prompt below.
+
+**Image prompt:**
+
+```
+flat vector infographic, bold clean linework, warm limited color palette (navy, teal, amber, coral),
+soft cel shading, tech-startup whiteboard aesthetic, 16:9 —
+
+a horizontal pipeline diagram flowing left to right in three labeled clusters: PREPROD, PROD, POST.
+Each of the 13 stages is a numbered rounded chip (0-12) connected by arrows, with a small icon per stage:
+0 magnifying glass (Research), 1 slide deck (Canva Slides), 2 checkmark frame (Review),
+3 filmstrip (Add Animation Frames), 4 export box (Export Step), 5 brain/mindmap (Mindmap Architecture),
+6 code repository (Build GitHub Repo), 7 lightning bolt (Canva Bulk Create), 8 DNA helix (Asset Generation),
+9 sparkle wand (Canva Manual Finishing), 10 rocket (Export MP4), 11 unlocked padlock (Distribution),
+12 clipboard/report (Sanity Check). Clean minimal number + icon labels under each chip,
+navy background, teal/amber/coral accent colors, flat vector style, no logos.
+```
+
+📅 **Cadence:** Once per course cycle
+
+⏱️ **Est. Time:** ~1 hr
+
+🎯 **Confidence:** 50%
+
+✅ **Quality Gate:** the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.
+
 ## 🏗️ Stages
 
-⏱️ **Total estimated time:** ~30.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check and Distribution are ongoing/once-per-cycle).
+⏱️ **Total estimated time:** ~31.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, and Distribution are ongoing/once-per-cycle).
 
-🎯 **Average confidence:** 63% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), the new stage 12 Sanity Check (50%, unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
 On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second.
 
@@ -501,6 +545,7 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 - 10. Export MP4 🚀 — 1 subtask · 80% confidence (Export the final per-domain MP4 training video files)
 - 11. Distribution 🔓 — 4 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Check retention before releasing new videos, and increase quality accordingly; Turn on the Join button paywall)
 - 12. Sanity Check 🧾 — 1 subtask · 50% confidence (Write the sanity-check report covering pros, cons, risks, and mitigations)
+- 13. Architecture 🏛️ — 1 subtask · 50% confidence (Generate the architecture infographic using the image prompt)
 
 ## 🌐 References
 

@@ -22,6 +22,7 @@
     --accent9: #d946ef;
     --accent10: #14b8a6;
     --accent11: #6366f1;
+    --accent12: #f43f5e;
     --border: #334155;
   }
   * { box-sizing: border-box; }
@@ -350,6 +351,8 @@
   .s11 h3 { color: var(--accent8); }
   .s12 { border-top: 4px solid var(--accent11); }
   .s12 h3 { color: var(--accent11); }
+  .s13 { border-top: 4px solid var(--accent12); }
+  .s13 h3 { color: var(--accent12); }
 
   .phases {
     display: grid;
@@ -458,7 +461,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-22T10:15:00Z">v7.0.0 · Updated 2026-07-22 10:15 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-22T11:04:12Z">v7.1.0 · Updated 2026-07-22 11:04 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -726,8 +729,9 @@
           <li>Stand up any dynamic/backend tooling on Fly.io</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> shipping this dashboard the same way he'd ship any production app is itself certification-relevant practice — the tools and workflow transfer directly.</p>
+        <p class="why">📐 <strong>Template:</strong> GitHub + DeliveryPilot are used as the template here — a repo like this one to work on projects and self-learn what's being delivered through hands-on implementation.</p>
         <p class="why">⚠️ <strong>Risk:</strong> committing secrets to the repo, or a broken GitHub Pages deploy, blocks everything downstream.</p>
-        <p class="why">🧰 <strong>Tools:</strong> <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a>, <a href="https://kilocode.ai/" target="_blank" rel="noopener">Kilo</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, <a href="https://azure.microsoft.com/en-us/products/key-vault" target="_blank" rel="noopener">Key Vault</a>, <a href="https://fly.io/" target="_blank" rel="noopener">Fly.io</a>, Camera, <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Teams</a>, <a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a> (to ask questions)</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://claude.com/claude-code" target="_blank" rel="noopener">Claude Code</a>, <a href="https://kilocode.ai/" target="_blank" rel="noopener">Kilo</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, DeliveryPilot, <a href="https://azure.microsoft.com/en-us/products/key-vault" target="_blank" rel="noopener">Key Vault</a>, <a href="https://fly.io/" target="_blank" rel="noopener">Fly.io</a>, Camera, <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Teams</a>, <a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a> (to ask questions)</p>
         <p class="task">☐ <strong>Task:</strong> Scaffold and build the repo with Claude Code, Kilo, or Gemini.</p>
         <p class="task">☐ <strong>Task:</strong> Publish the site via GitHub Pages.</p>
         <p class="task">☐ <strong>Task:</strong> Store secrets/credentials in a Key Vault.</p>
@@ -878,6 +882,40 @@
         <p class="gate">✅ <strong>Quality Gate:</strong> the report is written and reviewed before starting the next course cycle.</p>
         </div>
       </div>
+      <div class="arrow">⬇️</div>
+
+      <div class="stage s13" id="stage13">
+        <h3><a href="?section=stage13">🏛️ 13. Architecture</a> <button class="collapse-btn" id="toggle-stage13" onclick="toggleSection('stage13')" aria-label="Collapse stage">▾</button></h3>
+        <div class="section-body" id="body-stage13">
+        <p class="why">📥 <strong>Input:</strong> the Sanity Check report and the finalized 13-stage pipeline structure.</p>
+        <p class="why">📤 <strong>Output:</strong> a single architecture infographic visualizing the whole pipeline.</p>
+        <ul>
+          <li>Diagram all 13 stages, grouped into Preprod / Prod / Post</li>
+          <li>Generate the infographic with an AI image tool using the prompt below</li>
+          <li>Publish the infographic alongside the Sanity Check report</li>
+        </ul>
+        <p class="why">🎓 <strong>Why it matters:</strong> a clear architecture diagram is exactly what's expected in real system-design interviews and certification portfolios — this stage produces that artifact.</p>
+        <p class="why">⚠️ <strong>Risk:</strong> a messy or incomplete diagram undersells months of work and confuses the audience it's meant to explain the pipeline to.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.mage.space/creations" target="_blank" rel="noopener">Mage.space</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a></p>
+        <p class="task">☐ <strong>Task:</strong> Generate the architecture infographic using the image prompt below.</p>
+        <pre>flat vector infographic, bold clean linework, warm limited color palette (navy, teal, amber, coral),
+soft cel shading, tech-startup whiteboard aesthetic, 16:9 —
+
+a horizontal pipeline diagram flowing left to right in three labeled clusters: PREPROD, PROD, POST.
+Each of the 13 stages is a numbered rounded chip (0-12) connected by arrows, with a small icon per stage:
+0 magnifying glass (Research), 1 slide deck (Canva Slides), 2 checkmark frame (Review),
+3 filmstrip (Add Animation Frames), 4 export box (Export Step), 5 brain/mindmap (Mindmap Architecture),
+6 code repository (Build GitHub Repo), 7 lightning bolt (Canva Bulk Create), 8 DNA helix (Asset Generation),
+9 sparkle wand (Canva Manual Finishing), 10 rocket (Export MP4), 11 unlocked padlock (Distribution),
+12 clipboard/report (Sanity Check). Clean minimal number + icon labels under each chip,
+navy background, teal/amber/coral accent colors, flat vector style, no logos.</pre>
+        <p class="why">📅 <strong>Cadence:</strong> Once per course cycle</p>
+        <p class="why">⏱️ <strong>Est. Time:</strong> ~1 hr</p>
+        <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage13',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage13">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage13',5)" aria-label="Increase confidence">+</button></p>
+        <textarea id="notes-stage13" class="stage-notes" placeholder="Notes for this stage…" oninput="saveStageData()"></textarea>
+        <p class="gate">✅ <strong>Quality Gate:</strong> the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.</p>
+        </div>
+      </div>
 
     </div>
     <div class="section-nav">
@@ -889,8 +927,8 @@
   <section id="build-phases">
     <h2><a href="?section=build-phases">🏗️ Stages</a> <button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
     <div class="section-body" id="body-build-phases">
-    <p>⏱️ <strong>Total estimated time:</strong> ~30.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check and Distribution are ongoing/once-per-cycle).</p>
-    <p>🎯 <strong>Average confidence:</strong> 63% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), the new stage 12 Sanity Check (50%, unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).</p>
+    <p>⏱️ <strong>Total estimated time:</strong> ~31.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, and Distribution are ongoing/once-per-cycle).</p>
+    <p>🎯 <strong>Average confidence:</strong> 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).</p>
     <h3 id="stages-preprod" class="phase-group"><a href="?section=stages-preprod">🧪 Preprod</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script • Complete the paid AI certificate"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">5 subtasks · 90%</div></div>
@@ -912,6 +950,7 @@
       <div class="phase" data-tasks="Export the final per-domain MP4 training video files"><div class="num" style="color:#fb7185">10</div>Export MP4 🚀<div class="sub">1 subtask · 80%</div></div>
       <div class="phase" data-tasks="Ship free access to the first 100 people • Fix gaps identified from cohort feedback • Check retention before releasing new videos, and increase quality accordingly • Turn on the Join button paywall"><div class="num" style="color:var(--accent8)">11</div>Distribution 🔓<div class="sub">4 subtasks · 10%</div></div>
       <div class="phase" data-tasks="Write the sanity-check report covering pros, cons, risks, and mitigations"><div class="num" style="color:var(--accent11)">12</div>Sanity Check 🧾<div class="sub">1 subtask · 50%</div></div>
+      <div class="phase" data-tasks="Generate the architecture infographic using the image prompt"><div class="num" style="color:var(--accent12)">13</div>Architecture 🏛️<div class="sub">1 subtask · 50%</div></div>
     </div>
     </div>
     <div class="section-nav">
@@ -1077,7 +1116,7 @@
     stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
     stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',
     stage9: '9. Canva Manual Finishing', stage10: '10. Export MP4', stage11: '11. Distribution',
-    stage12: '12. Sanity Check'
+    stage12: '12. Sanity Check', stage13: '13. Architecture'
   };
   var stageIdsAll = Object.keys(stageNames);
 
