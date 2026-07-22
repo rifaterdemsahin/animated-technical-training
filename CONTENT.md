@@ -4,7 +4,7 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 [📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md) · [📝 Content](CONTENT.md) · [✏️ Edit Content](https://github.com/rifaterdemsahin/animated-technical-training/edit/main/CONTENT.md)
 
-**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🎯 Problem-Solution Fit](#-problem-solution-fit) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references)
+**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🎯 Problem-Solution Fit](#-problem-solution-fit) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references) · [🧰 Toolbox](#-toolbox)
 
 ## 🧩 Problem
 
@@ -532,7 +532,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.
 
 🎯 **Average confidence:** 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Problem-Solution Fit, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav's "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
 ### 🧪 Preprod
 
@@ -586,6 +586,41 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 ### 🎞️ Higgsfield
 
 [higgsfield.ai](https://higgsfield.ai/)
+
+## 🧰 Toolbox
+
+**Pipeline Summary:** A lean, cost-optimized stack focused on free/local tools for most steps and selective premium AI where quality or speed justifies the cost. Emphasis on automation (scripts + APIs), minimal manual toil, and tight integration with Obsidian vault workflows.
+
+| Stage | Tool(s) | Primary Reason / Why It Earns Its Place | Cost Profile |
+|---|---|---|---|
+| Pre-Production | Obsidian | Direct script writing kills analysis paralysis | Free |
+| Capture | OBS / Native camera app | Free, reliable, already integrated & troubleshooted | Free |
+| Eye-Contact | NVIDIA Broadcast / Descript / BIGVU | Fixes talking-head gaze without teleprompter rig | Free → Paid |
+| Transcription | Local Whisper + DaVinci Resolve | Zero-cost offline + native SRT export for editing | Free |
+| Scene Segmentation | Gemini 2.0 Flash | Cheap AI judgment → structured JSON output | Very Low |
+| Batch Export | DaVinci Resolve Scripting API | Automates 20+ min of manual render queuing | Free |
+| Screenshots | ffmpeg (fps=1/10) | One-flag extraction, already a dependency | Free |
+| Voiceover (Draft) | Kokoro (self-hosted on fly.io) | $0 marginal cost for unlimited iterations | Free |
+| Voiceover (Final) | ElevenLabs | Superior voice cloning & quality | Paid (final only) |
+| Sound Effects | ElevenLabs SFX API | Best prompt-to-sound quality, short clips | Low (per-use) |
+| Music / Scoring | fal.ai (Stable Audio + Ace-Step + Minimax) | Model matched to cue length & style needs | Low |
+| Static Visuals | Grok Aurora (images) + Local SVG/Mermaid | Cheap AI for photos/illustrations; free editable diagrams | Low + Free |
+| B-Roll | Gemini Veo (in development) | Potential cheap replacement for stock footage | Low (in dev) |
+| Text Overlays | lower_thirds_gen.py (PIL) | Local template compositing, no AI needed | Free |
+| AI Editing Effects | Remotion + Gemini (TypeScript) | Code-generated effects & overlays from scene data | Free (dev) |
+| Final Assembly | DaVinci Resolve | Best-in-class color grading, audio mixing & EDL import | Free/Paid |
+
+**Key Strategic Insights**
+
+- **Cost Control:** heavy preference for local/self-hosted tools (Whisper, Kokoro, ffmpeg, PIL, SVG) for high-volume tasks. Premium APIs (ElevenLabs, fal.ai, Grok Aurora, Gemini) are used sparingly or only on final outputs.
+- **Automation Focus:** scripts and APIs handle repetitive work (scene JSON → batch renders, Remotion code gen, lower thirds). This removes manual timeline drudgery.
+- **Central Hub:** DaVinci Resolve remains the final assembly point for quality control, while upstream steps feed it clean assets and EDLs.
+- **Integration:** everything ties back to Obsidian (notes, scripts, scene data) and existing CLI skills for one-command operations.
+- **Development Status:** B-Roll (Veo) and some Remotion effects are still maturing, but the core pipeline (capture → transcript → segment → edit → grade) is production-ready.
+
+This simplified view captures the active, justified tools without the full archival context. The stack prioritizes speed of iteration, low recurring cost, and quality where it matters most (final voice, music, grading).
+
+📋 **Deliverable Note:** ready to save as a clean Markdown report. Let me know if you want an even more compact version, column reordering, or added columns (e.g., learning curve or alternatives considered).
 
 ---
 

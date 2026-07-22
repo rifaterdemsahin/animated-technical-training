@@ -108,22 +108,20 @@
   }
   .topnav-search:focus { border-color: var(--accent2); width: 180px; }
   .topnav-item { position: relative; display: inline-flex; }
+  .topnav-divider { width: 1px; align-self: stretch; background: var(--border); flex: 0 0 auto; margin: 0 0.2rem; }
   .topnav-dropdown {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    margin-top: 0.3rem;
+    position: fixed;
     flex-direction: column;
     background: #0b1120;
     border: 1px solid var(--border);
     border-radius: 10px;
     padding: 0.4rem;
     gap: 0.2rem;
-    z-index: 600;
+    z-index: 900;
     min-width: 130px;
   }
-  .topnav-item:hover .topnav-dropdown { display: flex; }
+  .topnav-dropdown.open { display: flex; }
   .topnav-dropdown a {
     white-space: nowrap;
     background: transparent;
@@ -147,6 +145,7 @@
   section:nth-of-type(6) { background: rgba(167,139,250,0.08); }
   section:nth-of-type(7) { background: rgba(251,113,133,0.08); }
   section:nth-of-type(8) { background: rgba(148,163,184,0.08); }
+  section:nth-of-type(9) { background: rgba(20,184,166,0.08); }
   h2 {
     font-size: 1.4rem;
     display: flex;
@@ -329,6 +328,11 @@
     min-height: 50px;
   }
   .stage-notes:focus { outline: none; border-color: var(--accent2); }
+  .table-wrap { overflow-x: auto; margin: 0.8rem 0; }
+  .tools-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .tools-table th, .tools-table td { padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  .tools-table th { color: var(--accent2); font-weight: 700; white-space: nowrap; }
+  .tools-table tr:hover td { background: rgba(148,163,184,0.06); }
   .cookie-tools { text-align: center; margin: 2rem 0; }
   .cookie-tools button {
     background: var(--accent2);
@@ -479,22 +483,25 @@
   <a href="?section=problem-solution-fit">🎯 Fit</a>
   <a href="?section=core-principle">🧠 Core Principle</a>
   <a href="?section=hands-on">⚖️ Hands-On</a>
+  <span class="topnav-divider"></span>
   <a href="?section=pipeline">🔗 Pipeline</a>
-  <div class="topnav-item">
+  <div class="topnav-item" id="stagesTrigger" onmouseenter="openStagesDropdown()" onmouseleave="scheduleCloseStagesDropdown()">
     <a href="?section=build-phases">🏗️ Stages</a>
-    <div class="topnav-dropdown">
-      <a href="?section=stages-preprod">🧪 Preprod</a>
-      <a href="?section=stages-prod">🏭 Prod</a>
-      <a href="?section=stages-post">🎬 Post</a>
-    </div>
   </div>
+  <span class="topnav-divider"></span>
   <a href="?section=references">🌐 References</a>
+  <a href="?section=toolbox">🧰 Toolbox</a>
   <input type="search" id="pageSearch" class="topnav-search" placeholder="🔍 Search…" onkeydown="handleSearchKey(event, this.value)">
 </nav>
+<div class="topnav-dropdown" id="stagesDropdown" onmouseenter="cancelCloseStagesDropdown()" onmouseleave="scheduleCloseStagesDropdown()">
+  <a href="?section=stages-preprod">🧪 Preprod</a>
+  <a href="?section=stages-prod">🏭 Prod</a>
+  <a href="?section=stages-post">🎬 Post</a>
+</div>
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-22T11:28:33Z">v7.2.0 · Updated 2026-07-22 11:28 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-22T11:50:07Z">v7.3.0 · Updated 2026-07-22 11:50 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -1045,7 +1052,60 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('references', -1)" aria-label="Previous section">▲</button>
-      <button onclick="scrollSection('references', 1)" disabled aria-label="Next section">▼</button>
+      <button onclick="scrollSection('references', 1)" aria-label="Next section">▼</button>
+    </div>
+  </section>
+
+  <section id="toolbox">
+    <h2><a href="?section=toolbox">🧰 Toolbox</a> <button class="collapse-btn" id="toggle-toolbox" onclick="toggleSection('toolbox')" aria-label="Collapse section">▾</button></h2>
+    <div class="principle section-body" id="body-toolbox">
+      <p><strong>Pipeline Summary:</strong> A lean, cost-optimized stack focused on free/local tools for most steps
+      and selective premium AI where quality or speed justifies the cost. Emphasis on automation (scripts + APIs),
+      minimal manual toil, and tight integration with Obsidian vault workflows.</p>
+      <div class="table-wrap">
+        <table class="tools-table">
+          <thead>
+            <tr><th>Stage</th><th>Tool(s)</th><th>Primary Reason / Why It Earns Its Place</th><th>Cost Profile</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Pre-Production</td><td>Obsidian</td><td>Direct script writing kills analysis paralysis</td><td>Free</td></tr>
+            <tr><td>Capture</td><td>OBS / Native camera app</td><td>Free, reliable, already integrated &amp; troubleshooted</td><td>Free</td></tr>
+            <tr><td>Eye-Contact</td><td>NVIDIA Broadcast / Descript / BIGVU</td><td>Fixes talking-head gaze without teleprompter rig</td><td>Free → Paid</td></tr>
+            <tr><td>Transcription</td><td>Local Whisper + DaVinci Resolve</td><td>Zero-cost offline + native SRT export for editing</td><td>Free</td></tr>
+            <tr><td>Scene Segmentation</td><td>Gemini 2.0 Flash</td><td>Cheap AI judgment → structured JSON output</td><td>Very Low</td></tr>
+            <tr><td>Batch Export</td><td>DaVinci Resolve Scripting API</td><td>Automates 20+ min of manual render queuing</td><td>Free</td></tr>
+            <tr><td>Screenshots</td><td>ffmpeg (fps=1/10)</td><td>One-flag extraction, already a dependency</td><td>Free</td></tr>
+            <tr><td>Voiceover (Draft)</td><td>Kokoro (self-hosted on fly.io)</td><td>$0 marginal cost for unlimited iterations</td><td>Free</td></tr>
+            <tr><td>Voiceover (Final)</td><td>ElevenLabs</td><td>Superior voice cloning &amp; quality</td><td>Paid (final only)</td></tr>
+            <tr><td>Sound Effects</td><td>ElevenLabs SFX API</td><td>Best prompt-to-sound quality, short clips</td><td>Low (per-use)</td></tr>
+            <tr><td>Music / Scoring</td><td>fal.ai (Stable Audio + Ace-Step + Minimax)</td><td>Model matched to cue length &amp; style needs</td><td>Low</td></tr>
+            <tr><td>Static Visuals</td><td>Grok Aurora (images) + Local SVG/Mermaid</td><td>Cheap AI for photos/illustrations; free editable diagrams</td><td>Low + Free</td></tr>
+            <tr><td>B-Roll</td><td>Gemini Veo (in development)</td><td>Potential cheap replacement for stock footage</td><td>Low (in dev)</td></tr>
+            <tr><td>Text Overlays</td><td>lower_thirds_gen.py (PIL)</td><td>Local template compositing, no AI needed</td><td>Free</td></tr>
+            <tr><td>AI Editing Effects</td><td>Remotion + Gemini (TypeScript)</td><td>Code-generated effects &amp; overlays from scene data</td><td>Free (dev)</td></tr>
+            <tr><td>Final Assembly</td><td>DaVinci Resolve</td><td>Best-in-class color grading, audio mixing &amp; EDL import</td><td>Free/Paid</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Key Strategic Insights</strong></p>
+      <ul>
+        <li><strong>Cost Control:</strong> heavy preference for local/self-hosted tools (Whisper, Kokoro, ffmpeg, PIL, SVG) for high-volume tasks. Premium APIs (ElevenLabs, fal.ai, Grok Aurora, Gemini) are used sparingly or only on final outputs.</li>
+        <li><strong>Automation Focus:</strong> scripts and APIs handle repetitive work (scene JSON → batch renders, Remotion code gen, lower thirds). This removes manual timeline drudgery.</li>
+        <li><strong>Central Hub:</strong> DaVinci Resolve remains the final assembly point for quality control, while upstream steps feed it clean assets and EDLs.</li>
+        <li><strong>Integration:</strong> everything ties back to Obsidian (notes, scripts, scene data) and existing CLI skills for one-command operations.</li>
+        <li><strong>Development Status:</strong> B-Roll (Veo) and some Remotion effects are still maturing, but the core pipeline (capture → transcript → segment → edit → grade) is production-ready.</li>
+      </ul>
+      <p>This simplified view captures the active, justified tools without the full archival context. The stack
+      prioritizes speed of iteration, low recurring cost, and quality where it matters most (final voice, music,
+      grading).</p>
+      <p class="why">📋 <strong>Deliverable Note:</strong> ready to save as a clean Markdown report. Let me know if
+      you want an even more compact version, column reordering, or added columns (e.g., learning curve or
+      alternatives considered).</p>
+      <textarea id="notes-toolbox" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
+    </div>
+    <div class="section-nav">
+      <button onclick="scrollSection('toolbox', -1)" aria-label="Previous section">▲</button>
+      <button onclick="scrollSection('toolbox', 1)" disabled aria-label="Next section">▼</button>
     </div>
   </section>
 
@@ -1084,7 +1144,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  var sectionOrder = ['problem', 'solution', 'problem-solution-fit', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references'];
+  var sectionOrder = ['problem', 'solution', 'problem-solution-fit', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references', 'toolbox'];
   function scrollSection(current, dir) {
     var idx = sectionOrder.indexOf(current) + dir;
     if (idx >= 0 && idx < sectionOrder.length) {
@@ -1162,8 +1222,32 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos.</p
     }
   }
 
+  var stagesDropdownCloseTimer;
+
+  function openStagesDropdown() {
+    clearTimeout(stagesDropdownCloseTimer);
+    var trigger = document.getElementById('stagesTrigger');
+    var dropdown = document.getElementById('stagesDropdown');
+    if (!trigger || !dropdown) return;
+    var rect = trigger.getBoundingClientRect();
+    dropdown.style.top = (rect.bottom + 6) + 'px';
+    dropdown.style.left = rect.left + 'px';
+    dropdown.classList.add('open');
+  }
+
+  function scheduleCloseStagesDropdown() {
+    stagesDropdownCloseTimer = setTimeout(function () {
+      var dropdown = document.getElementById('stagesDropdown');
+      if (dropdown) dropdown.classList.remove('open');
+    }, 200);
+  }
+
+  function cancelCloseStagesDropdown() {
+    clearTimeout(stagesDropdownCloseTimer);
+  }
+
   var stageNames = {
-    problem: 'Problem', solution: 'Solution', 'problem-solution-fit': 'Problem-Solution Fit', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
+    toolbox: 'Toolbox', problem: 'Problem', solution: 'Solution', 'problem-solution-fit': 'Problem-Solution Fit', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
     stage0: '0. Research', stage1: '1. Canva Slides', stage2: '2. Review',
     stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
     stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',
