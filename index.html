@@ -455,7 +455,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version">v6.1.0</div>
+    <div class="version">v6.2.0</div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -479,6 +479,7 @@
       are now updating their workflows to a much more powerful AI tools such as claude code.</p>
       <p><strong>🛠️ Domain:</strong> tools getting enabled with AI are shifting and effecting many industries not just coding.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png" alt="Problem illustration" onclick="openModal(this.src)">
+      <textarea id="notes-problem" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('problem', -1)" disabled aria-label="Previous section">▲</button>
@@ -502,6 +503,7 @@
       leverage it too. Passing the exam is proof to himself; running <a href="?section=stage1">cohorts</a> collects
       real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that
       feedback, then a Join button paywall opens for everyone else.</p>
+      <textarea id="notes-solution" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
@@ -519,6 +521,7 @@
       <p>🧪 <strong>The Subtitle Test:</strong> watch the scene with just the subtitle showing — if the animation still
       makes sense on its own, that's the main animation test.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png" alt="Show, don't tell illustration" onclick="openModal(this.src)">
+      <textarea id="notes-core-principle" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('core-principle', -1)" aria-label="Previous section">▲</button>
@@ -536,6 +539,7 @@
       <a href="?section=stage1">storyboard</a> and animation direction locked before automation and generation touches it, not patched after.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg" alt="Animation example" onclick="openModal(this.src)">
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg" alt="Automated vs manual example" onclick="openModal(this.src)">
+      <textarea id="notes-hands-on" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData()"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('hands-on', -1)" aria-label="Previous section">▲</button>
@@ -1001,6 +1005,7 @@
   }
 
   var stageNames = {
+    problem: 'Problem', solution: 'Solution', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
     stage0: '0. Research', stage1: '1. Canva Slides', stage2: '2. Review',
     stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
     stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',
@@ -1060,9 +1065,8 @@
     stageIdsAll.forEach(function (id) {
       var confEl = document.getElementById('conf-' + id);
       var notesEl = document.getElementById('notes-' + id);
-      var conf = confEl ? confEl.textContent : '?';
       var notes = notesEl && notesEl.value.trim() ? notesEl.value.trim() : '(no notes)';
-      lines.push(stageNames[id] + ' — ' + conf + '% confidence');
+      lines.push(stageNames[id] + (confEl ? ' — ' + confEl.textContent + '% confidence' : ''));
       lines.push('  Notes: ' + notes);
       lines.push('');
     });

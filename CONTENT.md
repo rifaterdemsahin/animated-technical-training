@@ -374,7 +374,7 @@ Final per-domain training video files.
 
 🎯 **Average confidence:** 68% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), with stage 5 Mindmap Architecture and stage 8 Asset Generation both at 55%; highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — a "🧹 Clear All Notes" button at the top of the page wipes every stage's notes (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every stage's confidence + notes to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie.
+On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie. The Problem, Solution, Core Principle, and Half Hands-On sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie.
 
 ### 🧪 Preprod
 
