@@ -429,6 +429,28 @@
   .phase .sub { font-size: 0.7rem; color: var(--muted); margin-top: 0.2rem; }
   .gap-note { margin: 0.6rem 0 0; font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
   .gap-note strong { color: var(--accent7); }
+  .confidence-bar {
+    position: relative;
+    width: 84px;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #f87171 0%, #f87171 30%, #fbbf24 30%, #fbbf24 70%, #34d399 70%, #34d399 100%);
+    flex: 0 0 auto;
+    margin-left: auto;
+  }
+  .confidence-marker {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #0f172a;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.4);
+    transition: left 0.2s ease;
+  }
   .phase[data-tasks] { position: relative; cursor: default; }
   .phase[data-tasks]:hover { border-color: var(--accent4); }
   .phase[data-tasks]:hover::after {
@@ -524,7 +546,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-22T13:13:15Z">v7.4.0 · Updated 2026-07-22 13:13 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-22T13:50:14Z">v8.0.0 · Updated 2026-07-22 13:50 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -540,7 +562,7 @@
   </div>
 
   <section id="problem">
-    <h2><a href="?section=problem">🧩 Problem</a> <button class="collapse-btn" id="toggle-problem" onclick="toggleSection('problem')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=problem">🧩 Problem</a> <div class="confidence-bar" id="bar-problem"><div class="confidence-marker" id="marker-problem"></div></div> <button class="collapse-btn" id="toggle-problem" onclick="toggleSection('problem')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-problem">
       <p><strong>Problem:</strong> Rapid AI progress keeps raising the skill expectations placed on people, faster
       than most can keep up.</p>
@@ -549,6 +571,7 @@
       <p><strong>🛠️ Domain:</strong> tools getting enabled with AI are shifting and effecting many industries not just coding.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png" alt="Problem illustration" onclick="openModal(this.src)">
       <textarea id="notes-problem" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('problem',-5)" aria-label="Decrease confidence">−</button> <span id="conf-problem">85</span>% <button class="conf-btn" onclick="adjustConfidence('problem',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('problem', -1)" disabled aria-label="Previous section">▲</button>
@@ -557,7 +580,7 @@
   </section>
 
   <section id="solution">
-    <h2><a href="?section=solution">✅ Solution</a> <button class="collapse-btn" id="toggle-solution" onclick="toggleSection('solution')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=solution">✅ Solution</a> <div class="confidence-bar" id="bar-solution"><div class="confidence-marker" id="marker-solution"></div></div> <button class="collapse-btn" id="toggle-solution" onclick="toggleSection('solution')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-solution">
       <p>Comics-based animated technical training, so the concepts are easier to consume.</p>
       <p><strong>Rationale:</strong> We have seen shorter animated videos have a much higher retention.</p>
@@ -573,6 +596,7 @@
       real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that
       feedback, then a Join button paywall opens for everyone else.</p>
       <textarea id="notes-solution" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)">Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.</textarea>
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('solution',-5)" aria-label="Decrease confidence">−</button> <span id="conf-solution">85</span>% <button class="conf-btn" onclick="adjustConfidence('solution',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('solution', -1)" aria-label="Previous section">▲</button>
@@ -581,7 +605,7 @@
   </section>
 
   <section id="problem-solution-fit">
-    <h2><a href="?section=problem-solution-fit">🎯 Problem-Solution Fit</a> <button class="collapse-btn" id="toggle-problem-solution-fit" onclick="toggleSection('problem-solution-fit')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=problem-solution-fit">🎯 Problem-Solution Fit</a> <div class="confidence-bar" id="bar-problem-solution-fit"><div class="confidence-marker" id="marker-problem-solution-fit"></div></div> <button class="collapse-btn" id="toggle-problem-solution-fit" onclick="toggleSection('problem-solution-fit')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-problem-solution-fit">
       <p>Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way
       he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating
@@ -591,6 +615,7 @@
       recorded formats, increases the chances of retaining and demonstrating mastery of the material.</p>
       <p><strong>Conclusion:</strong> he would be able to pass the exam.</p>
       <textarea id="notes-problem-solution-fit" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)">the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions.</textarea>
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('problem-solution-fit',-5)" aria-label="Decrease confidence">−</button> <span id="conf-problem-solution-fit">60</span>% <button class="conf-btn" onclick="adjustConfidence('problem-solution-fit',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('problem-solution-fit', -1)" aria-label="Previous section">▲</button>
@@ -599,7 +624,7 @@
   </section>
 
   <section id="core-principle">
-    <h2><a href="?section=core-principle">🧠 Core Principle</a> <button class="collapse-btn" id="toggle-core-principle" onclick="toggleSection('core-principle')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=core-principle">🧠 Core Principle</a> <div class="confidence-bar" id="bar-core-principle"><div class="confidence-marker" id="marker-core-principle"></div></div> <button class="collapse-btn" id="toggle-core-principle" onclick="toggleSection('core-principle')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-core-principle">
       <p><strong>Cognitive Offload — Show, Don't Tell 👁️</strong><br>
       Narration and visuals must never carry the same information twice. Concept transfer lives in the animation
@@ -609,6 +634,7 @@
       makes sense on its own, that's the main animation test.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png" alt="Show, don't tell illustration" onclick="openModal(this.src)">
       <textarea id="notes-core-principle" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('core-principle',-5)" aria-label="Decrease confidence">−</button> <span id="conf-core-principle">90</span>% <button class="conf-btn" onclick="adjustConfidence('core-principle',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('core-principle', -1)" aria-label="Previous section">▲</button>
@@ -617,7 +643,7 @@
   </section>
 
   <section id="hands-on">
-    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a> <button class="collapse-btn" id="toggle-hands-on" onclick="toggleSection('hands-on')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a> <div class="confidence-bar" id="bar-hands-on"><div class="confidence-marker" id="marker-hands-on"></div></div> <button class="collapse-btn" id="toggle-hands-on" onclick="toggleSection('hands-on')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-hands-on">
       <p><a href="?section=stage7">Bulk export</a> and <a href="?section=stage8">asset generation</a> are automated to move fast; animation timing and voice are finished
       manually to reach top quality — <strong>audience retention and reach are on the line, so we can't risk
@@ -627,6 +653,7 @@
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg" alt="Animation example" onclick="openModal(this.src)">
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg" alt="Automated vs manual example" onclick="openModal(this.src)">
       <textarea id="notes-hands-on" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('hands-on',-5)" aria-label="Decrease confidence">−</button> <span id="conf-hands-on">85</span>% <button class="conf-btn" onclick="adjustConfidence('hands-on',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('hands-on', -1)" aria-label="Previous section">▲</button>
@@ -635,12 +662,12 @@
   </section>
 
   <section id="pipeline">
-    <h2><a href="?section=pipeline">🔗 Video Production Pipeline</a> <button class="collapse-btn" id="toggle-pipeline" onclick="toggleSection('pipeline')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=pipeline">🔗 Video Production Pipeline</a> <div class="confidence-bar" id="bar-pipeline"><div class="confidence-marker" id="marker-pipeline"></div></div> <button class="collapse-btn" id="toggle-pipeline" onclick="toggleSection('pipeline')" aria-label="Collapse section">▾</button></h2>
     <div class="pipeline section-body" id="body-pipeline">
 
       <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
       <div class="stage s0" id="stage0">
-        <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a> <button class="collapse-btn" id="toggle-stage0" onclick="toggleSection('stage0')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a> <div class="confidence-bar" id="bar-stage0"><div class="confidence-marker" id="marker-stage0"></div></div> <button class="collapse-btn" id="toggle-stage0" onclick="toggleSection('stage0')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage0">
         <p class="why">📥 <strong>Input:</strong> raw ideas, reference screenshots, external research.</p>
         <p class="why">📤 <strong>Output:</strong> whiteboard trail, outline, and script draft.</p>
@@ -670,7 +697,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s1" id="stage1">
-        <h3><a href="?section=stage1">🎨 1. Canva Slides — Source of Cohort Session</a> <button class="collapse-btn" id="toggle-stage1" onclick="toggleSection('stage1')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage1">🎨 1. Canva Slides — Source of Cohort Session</a> <div class="confidence-bar" id="bar-stage1"><div class="confidence-marker" id="marker-stage1"></div></div> <button class="collapse-btn" id="toggle-stage1" onclick="toggleSection('stage1')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage1">
         <p class="why">📥 <strong>Input:</strong> outline and script draft from Research.</p>
         <p class="why">📤 <strong>Output:</strong> one Canva design — script, images, storyboard &amp; notes — per cohort session.</p>
@@ -698,7 +725,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s2" id="stage2">
-        <h3><a href="?section=stage2">🎞️ 2. Review Canva Presentations</a> <button class="collapse-btn" id="toggle-stage2" onclick="toggleSection('stage2')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage2">🎞️ 2. Review Canva Presentations</a> <div class="confidence-bar" id="bar-stage2"><div class="confidence-marker" id="marker-stage2"></div></div> <button class="collapse-btn" id="toggle-stage2" onclick="toggleSection('stage2')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage2">
         <p class="why">📥 <strong>Input:</strong> Canva Slides design from stage 1.</p>
         <p class="why">📤 <strong>Output:</strong> scenes marked ✅ "ready" for export.</p>
@@ -724,7 +751,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s3" id="stage3">
-        <h3><a href="?section=stage3">🎞️ 3. Add Animation Frames</a> <button class="collapse-btn" id="toggle-stage3" onclick="toggleSection('stage3')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage3">🎞️ 3. Add Animation Frames</a> <div class="confidence-bar" id="bar-stage3"><div class="confidence-marker" id="marker-stage3"></div></div> <button class="collapse-btn" id="toggle-stage3" onclick="toggleSection('stage3')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage3">
         <p class="why">📥 <strong>Input:</strong> "ready" scenes from Review.</p>
         <p class="why">📤 <strong>Output:</strong> multi-frame image sets plus animation prompts, marked ✅ "ready".</p>
@@ -736,7 +763,7 @@
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> breaking one idea into many frames forces real understanding of the mechanics, not just recognition of them.</p>
         <p class="why">⚠️ <strong>Risk:</strong> too few frames leaves the animation feeling stiff or unclear on the Subtitle Test.</p>
-        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a>, <a href="https://www.canva.dev/" target="_blank" rel="noopener">Canva MCP</a></p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a>, <a href="https://www.canva.dev/" target="_blank" rel="noopener">Canva MCP</a>, <a href="https://labs.google/flow" target="_blank" rel="noopener">Google Flow</a></p>
         <p class="task">☐ <strong>Task:</strong> Review each scene into many images that would help with animation.</p>
         <p class="why">📅 <strong>Cadence:</strong> Week days</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
@@ -747,7 +774,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s4" id="stage4">
-        <h3><a href="?section=stage4">📦 4. Export Step</a> <button class="collapse-btn" id="toggle-stage4" onclick="toggleSection('stage4')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage4">📦 4. Export Step</a> <div class="confidence-bar" id="bar-stage4"><div class="confidence-marker" id="marker-stage4"></div></div> <button class="collapse-btn" id="toggle-stage4" onclick="toggleSection('stage4')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage4">
         <p class="why">📥 <strong>Input:</strong> "ready" scenes with animation frames.</p>
         <p class="why">📤 <strong>Output:</strong> flattened, sprite-embedded batches ready for Canva import.</p>
@@ -773,7 +800,7 @@
 
       <h3 id="prod" class="phase-group"><a href="?section=prod">🏭 Prod</a></h3>
       <div class="stage s5" id="stage5">
-        <h3><a href="?section=stage5">🧠 5. Mindmap Architecture</a> <button class="collapse-btn" id="toggle-stage5" onclick="toggleSection('stage5')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage5">🧠 5. Mindmap Architecture</a> <div class="confidence-bar" id="bar-stage5"><div class="confidence-marker" id="marker-stage5"></div></div> <button class="collapse-btn" id="toggle-stage5" onclick="toggleSection('stage5')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage5">
         <p class="why">📥 <strong>Input:</strong> course outline and script.</p>
         <p class="why">📤 <strong>Output:</strong> locked mindmap of the course architecture.</p>
@@ -798,7 +825,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s6" id="stage6">
-        <h3><a href="?section=stage6">🛠️ 6. Build GitHub Repo</a> <button class="collapse-btn" id="toggle-stage6" onclick="toggleSection('stage6')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage6">🛠️ 6. Build GitHub Repo</a> <div class="confidence-bar" id="bar-stage6"><div class="confidence-marker" id="marker-stage6"></div></div> <button class="collapse-btn" id="toggle-stage6" onclick="toggleSection('stage6')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage6">
         <p class="why">📥 <strong>Input:</strong> mindmap architecture and project requirements.</p>
         <p class="why">📤 <strong>Output:</strong> published repo live on GitHub Pages, secrets in a Key Vault.</p>
@@ -827,7 +854,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s7" id="stage7">
-        <h3><a href="?section=stage7">⚡ 7. Canva Bulk Create</a> <button class="collapse-btn" id="toggle-stage7" onclick="toggleSection('stage7')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage7">⚡ 7. Canva Bulk Create</a> <div class="confidence-bar" id="bar-stage7"><div class="confidence-marker" id="marker-stage7"></div></div> <button class="collapse-btn" id="toggle-stage7" onclick="toggleSection('stage7')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage7">
         <p class="why">📥 <strong>Input:</strong> flattened export batches from stage 4.</p>
         <p class="why">📤 <strong>Output:</strong> rendered videos per scene, with voiceover embedded.</p>
@@ -850,7 +877,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s8" id="stage8">
-        <h3><a href="?section=stage8">🧬 8. Asset Generation</a> <button class="collapse-btn" id="toggle-stage8" onclick="toggleSection('stage8')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage8">🧬 8. Asset Generation</a> <div class="confidence-bar" id="bar-stage8"><div class="confidence-marker" id="marker-stage8"></div></div> <button class="collapse-btn" id="toggle-stage8" onclick="toggleSection('stage8')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage8">
         <p class="why">📥 <strong>Input:</strong> bulk-created videos with gaps.</p>
         <p class="why">📤 <strong>Output:</strong> missing sprites, backgrounds, music &amp; sound effects filled in.</p>
@@ -873,7 +900,7 @@
 
       <h3 id="post" class="phase-group"><a href="?section=post">🎬 Post</a></h3>
       <div class="stage s9" id="stage9">
-        <h3><a href="?section=stage9">✨ 9. Canva Manual Finishing</a> <button class="collapse-btn" id="toggle-stage9" onclick="toggleSection('stage9')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage9">✨ 9. Canva Manual Finishing</a> <div class="confidence-bar" id="bar-stage9"><div class="confidence-marker" id="marker-stage9"></div></div> <button class="collapse-btn" id="toggle-stage9" onclick="toggleSection('stage9')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage9">
         <p class="why">📥 <strong>Input:</strong> bulk-created videos plus generated assets.</p>
         <p class="why">📤 <strong>Output:</strong> fully animated, voiced scenes passing the Mute/Subtitle Test.</p>
@@ -895,7 +922,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s10" id="stage10">
-        <h3><a href="?section=stage10">🚀 10. Export MP4</a> <button class="collapse-btn" id="toggle-stage10" onclick="toggleSection('stage10')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage10">🚀 10. Export MP4</a> <div class="confidence-bar" id="bar-stage10"><div class="confidence-marker" id="marker-stage10"></div></div> <button class="collapse-btn" id="toggle-stage10" onclick="toggleSection('stage10')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage10">
         <p class="why">📥 <strong>Input:</strong> finished, quality-gated scenes from Manual Finishing.</p>
         <p class="why">📤 <strong>Output:</strong> final per-domain MP4 files.</p>
@@ -915,7 +942,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s11" id="stage11">
-        <h3><a href="?section=stage11">🔓 11. Distribution — Free Cohort → Paywall</a> <button class="collapse-btn" id="toggle-stage11" onclick="toggleSection('stage11')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage11">🔓 11. Distribution — Free Cohort → Paywall</a> <div class="confidence-bar" id="bar-stage11"><div class="confidence-marker" id="marker-stage11"></div></div> <button class="collapse-btn" id="toggle-stage11" onclick="toggleSection('stage11')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage11">
         <p class="why">📥 <strong>Input:</strong> final per-domain MP4 files.</p>
         <p class="why">📤 <strong>Output:</strong> free access for the first 100 people, live Join button paywall for everyone else.</p>
@@ -942,7 +969,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s12" id="stage12">
-        <h3><a href="?section=stage12">🧾 12. Sanity Check</a> <button class="collapse-btn" id="toggle-stage12" onclick="toggleSection('stage12')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage12">🧾 12. Sanity Check</a> <div class="confidence-bar" id="bar-stage12"><div class="confidence-marker" id="marker-stage12"></div></div> <button class="collapse-btn" id="toggle-stage12" onclick="toggleSection('stage12')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage12">
         <p class="why">📥 <strong>Input:</strong> outputs from every stage — research, design, build, render, and distribution results.</p>
         <p class="why">📤 <strong>Output:</strong> a written sanity-check report — does this make sense, pros, cons, risks, and mitigations.</p>
@@ -966,7 +993,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s13" id="stage13">
-        <h3><a href="?section=stage13">🏛️ 13. Architecture</a> <button class="collapse-btn" id="toggle-stage13" onclick="toggleSection('stage13')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage13">🏛️ 13. Architecture</a> <div class="confidence-bar" id="bar-stage13"><div class="confidence-marker" id="marker-stage13"></div></div> <button class="collapse-btn" id="toggle-stage13" onclick="toggleSection('stage13')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage13">
         <p class="why">📥 <strong>Input:</strong> the Sanity Check report and the finalized 13-stage pipeline structure.</p>
         <p class="why">📤 <strong>Output:</strong> a single architecture infographic visualizing the whole pipeline.</p>
@@ -1013,6 +1040,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
         </div>
       </div>
 
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('pipeline',-5)" aria-label="Decrease confidence">−</button> <span id="conf-pipeline">65</span>% <button class="conf-btn" onclick="adjustConfidence('pipeline',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('pipeline', -1)" aria-label="Previous section">▲</button>
@@ -1021,7 +1049,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   </section>
 
   <section id="build-phases">
-    <h2><a href="?section=build-phases">🏗️ Stages</a> <button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=build-phases">🏗️ Stages</a> <div class="confidence-bar" id="bar-build-phases"><div class="confidence-marker" id="marker-build-phases"></div></div> <button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
     <div class="section-body" id="body-build-phases">
     <p>⏱️ <strong>Total estimated time:</strong> ~31.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, and Distribution are ongoing/once-per-cycle).</p>
     <p>🎯 <strong>Average confidence:</strong> 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).</p>
@@ -1051,6 +1079,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       <div class="phase" data-tasks="Generate the architecture infographic using the image prompt"><div class="num" style="color:var(--accent12)">13</div>Architecture 🏛️<div class="sub">1 subtask · 50%</div></div>
     </div>
     <p class="gap-note">🕳️ <strong>Gaps:</strong> 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet.</p>
+    <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('build-phases',-5)" aria-label="Decrease confidence">−</button> <span id="conf-build-phases">65</span>% <button class="conf-btn" onclick="adjustConfidence('build-phases',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
@@ -1059,7 +1088,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   </section>
 
   <section id="references">
-    <h2><a href="?section=references">🌐 References</a> <button class="collapse-btn" id="toggle-references" onclick="toggleSection('references')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=references">🌐 References</a> <div class="confidence-bar" id="bar-references"><div class="confidence-marker" id="marker-references"></div></div> <button class="collapse-btn" id="toggle-references" onclick="toggleSection('references')" aria-label="Collapse section">▾</button></h2>
     <div class="grid2 section-body" id="body-references">
       <div class="card" id="ref-manual-animation">
         <h3><a href="?section=ref-manual-animation">🖌️ Manual Animation</a></h3>
@@ -1090,6 +1119,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
         <p><a href="https://higgsfield.ai/" target="_blank" rel="noopener">higgsfield.ai</a></p>
       </div>
     </div>
+    <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('references',-5)" aria-label="Decrease confidence">−</button> <span id="conf-references">90</span>% <button class="conf-btn" onclick="adjustConfidence('references',5)" aria-label="Increase confidence">+</button></p>
     <div class="section-nav">
       <button onclick="scrollSection('references', -1)" aria-label="Previous section">▲</button>
       <button onclick="scrollSection('references', 1)" aria-label="Next section">▼</button>
@@ -1097,7 +1127,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   </section>
 
   <section id="toolbox">
-    <h2><a href="?section=toolbox">🧰 Toolbox</a> <button class="collapse-btn" id="toggle-toolbox" onclick="toggleSection('toolbox')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=toolbox">🧰 Toolbox</a> <div class="confidence-bar" id="bar-toolbox"><div class="confidence-marker" id="marker-toolbox"></div></div> <button class="collapse-btn" id="toggle-toolbox" onclick="toggleSection('toolbox')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-toolbox">
       <p><strong>Pipeline Summary:</strong> A lean, cost-optimized stack focused on free/local tools for most steps
       and selective premium AI where quality or speed justifies the cost. Emphasis on automation (scripts + APIs),
@@ -1142,6 +1172,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       you want an even more compact version, column reordering, or added columns (e.g., learning curve or
       alternatives considered).</p>
       <textarea id="notes-toolbox" class="stage-notes" placeholder="Notes for this section…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('toolbox',-5)" aria-label="Decrease confidence">−</button> <span id="conf-toolbox">60</span>% <button class="conf-btn" onclick="adjustConfidence('toolbox',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('toolbox', -1)" aria-label="Previous section">▲</button>
@@ -1288,6 +1319,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
 
   var stageNames = {
     toolbox: 'Toolbox', problem: 'Problem', solution: 'Solution', 'problem-solution-fit': 'Problem-Solution Fit', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
+    pipeline: 'Pipeline (overall)', 'build-phases': 'Stages (overall)', references: 'References',
     stage0: '0. Research', stage1: '1. Canva Slides', stage2: '2. Review',
     stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
     stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',
@@ -1353,12 +1385,26 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     });
   }
 
+  function updateConfidenceBar(id) {
+    var confEl = document.getElementById('conf-' + id);
+    var marker = document.getElementById('marker-' + id);
+    if (!confEl || !marker) return;
+    var val = parseInt(confEl.textContent, 10);
+    if (isNaN(val)) return;
+    marker.style.left = val + '%';
+  }
+
+  function refreshAllConfidenceBars() {
+    stageIdsAll.forEach(updateConfidenceBar);
+  }
+
   function adjustConfidence(id, delta) {
     var confEl = document.getElementById('conf-' + id);
     if (!confEl) return;
     var val = (parseInt(confEl.textContent, 10) || 0) + delta;
     val = Math.max(0, Math.min(100, val));
     confEl.textContent = val;
+    updateConfidenceBar(id);
     saveStageData();
   }
 
@@ -1443,6 +1489,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   loadSectionState();
 
   loadStageData();
+  refreshAllConfidenceBars();
 
   function updateAgoText() {
     var badge = document.getElementById('versionBadge');

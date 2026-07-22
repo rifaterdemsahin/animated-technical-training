@@ -16,6 +16,8 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 ![Problem illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png)
 
+🎯 **Confidence:** 65%
+
 ## ✅ Solution
 
 Comics-based animated technical training, so the concepts are easier to consume. 
@@ -34,6 +36,8 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 📝 **Notes:** Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.
 
+🎯 **Confidence:** 85%
+
 ## 🎯 Problem-Solution Fit
 
 Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating the content *is* the learning method, not a separate step after it; the certification itself is the proof that it worked.
@@ -41,6 +45,8 @@ Rifat Erdem Sahin's multi-media learning style — combining live sessions and r
 **Premise:** using this capture → organize → distill → express structure, across both live and recorded formats, increases the chances of retaining and demonstrating mastery of the material.
 
 📝 **Notes:** the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions.
+
+🎯 **Confidence:** 60%
 
 **Conclusion:** he would be able to pass the exam.
 
@@ -55,6 +61,8 @@ Narration and visuals must never carry the same information twice. Concept trans
 
 ![Show, don't tell illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png)
 
+🎯 **Confidence:** 90%
+
 ## ⚖️ Half Hands-On, Half Automated
 
 Bulk export and asset generation are automated to move fast; animation timing and voice are finished manually to reach top quality — **audience retention and reach are on the line, so we can't risk low quality by auto generating content that does not line up with what audience needs.**
@@ -63,6 +71,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ![Animation example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg)
 ![Automated vs manual example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg)
+
+🎯 **Confidence:** 85%
 
 ## 🔗 Video Production Pipeline
 
@@ -197,7 +207,7 @@ Close the gap to create the images to be animated
 
 ⚠️ **Risk:** too few frames leaves the animation feeling stiff or unclear on the Subtitle Test.
 
-🧰 **Tools:** [Canva](https://www.canva.com/), [Canva MCP](https://www.canva.dev/)
+🧰 **Tools:** [Canva](https://www.canva.com/), [Canva MCP](https://www.canva.dev/), [Google Flow](https://labs.google/flow)
 
 ☐ **Task:** Review each scene into many images that would help with animation.
 
@@ -546,13 +556,15 @@ On the live page, a "📋 Copy Prompt" button sits right under this prompt to co
 
 ✅ **Quality Gate:** the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.
 
+🎯 **Pipeline overall confidence:** 65%
+
 ## 🏗️ Stages
 
 ⏱️ **Total estimated time:** ~31.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, and Distribution are ongoing/once-per-cycle).
 
 🎯 **Average confidence:** 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, each stage's confidence score has +/− buttons and a notes text box, both saved to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (no confidence score, since that only applies to pipeline stages). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
+On the live page, every collapsible panel — all 9 top-level sections plus all 14 pipeline stages — has a confidence score with +/− buttons, and its header shows a small red→yellow→green gradient bar with a marker at that score, so you can scan overall confidence at a glance without opening anything. Confidence scores and notes text boxes both save to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (Pipeline, Stages, and References get the confidence score only, no notes box). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
 ### 🧪 Preprod
 
@@ -583,6 +595,8 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 
 🕳️ **Gaps:** 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet.
 
+🎯 **Stages overall confidence:** 65%
+
 ## 🌐 References
 
 ### 🖌️ Manual Animation
@@ -612,6 +626,8 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 ### 🎞️ Higgsfield
 
 [higgsfield.ai](https://higgsfield.ai/)
+
+🎯 **Confidence:** 90%
 
 ## 🧰 Toolbox
 
@@ -647,6 +663,8 @@ On the live page, each stage's confidence score has +/− buttons and a notes te
 This simplified view captures the active, justified tools without the full archival context. The stack prioritizes speed of iteration, low recurring cost, and quality where it matters most (final voice, music, grading).
 
 📋 **Deliverable Note:** ready to save as a clean Markdown report. Let me know if you want an even more compact version, column reordering, or added columns (e.g., learning curve or alternatives considered).
+
+🎯 **Confidence:** 60%
 
 ---
 
