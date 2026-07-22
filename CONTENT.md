@@ -42,6 +42,9 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating the content *is* the learning method, not a separate step after it; the certification itself is the proof that it worked.
 
+![Storyboard: tech learning journey 1](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/Storyboard_tech_learning_journey_1.jpeg)
+![Storyboard: tech learning journey 2](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/Storyboard_tech_learning_journey_2.jpeg)
+
 **Premise:** using this capture → organize → distill → express structure, across both live and recorded formats, increases the chances of retaining and demonstrating mastery of the material.
 
 📝 **Notes:** the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions.
@@ -448,6 +451,8 @@ Final per-domain training video files.
 - Turn on the Join button paywall for everyone else
 
 🎓 **Why it matters:** teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.
+
+🔁 **Flywheel:** companies pay for the exam, and exam takers get a scheduled date — so they need to study. The flywheel starts turning from the business side as a requirement: the payment and the deadline for the certification exam are what motivate candidates to actually learn.
 
 ⚠️ **Risk:** shipping the paywall before cohort feedback is incorporated burns trust with the first audience — this is the biggest untested risk in the whole pipeline (10% confidence).
 
