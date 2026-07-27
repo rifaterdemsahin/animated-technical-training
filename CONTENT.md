@@ -105,6 +105,10 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🧰 **Tools:** [Canva](https://www.canva.com/), [Obsidian](https://obsidian.md/), Screenshots, Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
+🧪 **Google Flow Community Tools:**
+
+- 🗂️ [GridCraft](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: arranges uploaded screenshots into clean, adjustable grid layouts — handy for turning a day's whiteboard captures into an organized contact sheet.
+
 ☐ **Task:** [Create the Canva course folder structure →](https://www.canva.com/folder/FAHMZK9u-JE)
 
 ☐ **Task:** Daily — add new screenshots and tasks to the whiteboard.
@@ -211,6 +215,10 @@ Close the gap to create the images to be animated
 ⚠️ **Risk:** too few frames leaves the animation feeling stiff or unclear on the Subtitle Test.
 
 🧰 **Tools:** [Canva](https://www.canva.com/), [Canva MCP](https://www.canva.dev/), [Google Flow](https://labs.google/flow)
+
+🧪 **Google Flow Community Tools:**
+
+- 🖥️ [RETRO-TERM 80](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: a brutalist terminal effect with magnetic distortion — an optional stylistic treatment for frames that need a tech/code aesthetic.
 
 ☐ **Task:** Review each scene into many images that would help with animation.
 
@@ -369,6 +377,16 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🧰 **Tools:** [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
+🧪 **Google Flow Community Tools:**
+
+- 🎭 [Character Persona Generator](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: generates 22+ consistent portraits of the same character from one reference image, solving cross-scene sprite consistency.
+- 😊 [Emote Crafter Pro](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: a sprite engine with a Plutchik emotion wheel and emote grid, for expressive character variations without redrawing from scratch.
+- 📚 [Manga Architect Pro](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: generates comic-panel layouts and reusable saved characters — a direct match for the comics-based training format.
+- 🎨 [Lumina Filter Studio](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: real-time image filters with intensity controls, for quick visual polish on generated assets.
+- 💡 [LuzRelighting](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: click where you want the light source, relights the scene — keeps mood/lighting consistent across sprites.
+- 🏷️ [Vector Sticker Studio](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: turns any image into a clean die-cut sticker with smart cutout — good for isolating sprite art.
+- ✍️ [Text Effect](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: generates stylized text renders from a sample image, for on-scene labels and titles.
+
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
 ☐ **Task:** Produce music & sound effects for the scenes.
@@ -397,6 +415,10 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 ⚠️ **Risk:** rushed manual work fails the Mute/Subtitle Test and undermines the whole show-don't-tell principle.
 
 🧰 **Tools:** [Canva](https://www.canva.com/)
+
+🧪 **Google Flow Community Tools:**
+
+- 📝 [AI Subtitle Generator](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: auto-transcribes speech into timed, punctuated subtitles and exports SRT — directly supports the Subtitle Test without hand-timing captions.
 
 ☐ **Task:** Manually animate elements per page and generate AI voice for each.
 
@@ -457,6 +479,10 @@ Final per-domain training video files.
 ⚠️ **Risk:** shipping the paywall before cohort feedback is incorporated burns trust with the first audience — this is the biggest untested risk in the whole pipeline (10% confidence).
 
 🧰 **Tools:** [Canva](https://www.canva.com/)
+
+🧪 **Google Flow Community Tools:**
+
+- 🖼️ [Brand Carousel Builder](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: creates high-fidelity branded slide carousels for social media — useful for promoting the free cohort and the paywall launch.
 
 ☐ **Task:** Ship free access to the first 100 people.
 
