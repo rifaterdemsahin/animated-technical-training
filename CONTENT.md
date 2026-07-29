@@ -16,7 +16,9 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 ![Problem illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png)
 
-🎯 **Confidence:** 65%
+📝 **Notes:** 👥 Audience: people who are part of the new AI revolution that started with chatGPT, and are now updating their workflows to a much more powerful AI tools such as claude code. Most people are left behind dont have the basics for the necessary tech training and unable to connect the dots.
+
+🎯 **Confidence:** 75%
 
 ## ✅ Solution
 
@@ -34,9 +36,11 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 🎓 **The Journey:** This is Rifat Erdem Sahin's own self-learning journey — investing in paid AI certificates for himself, then packaging that experience into this animated product so the audience can leverage it too. Passing the exam is proof to himself; running cohorts collects real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that feedback, then a Join button paywall opens for everyone else.
 
-📝 **Notes:** Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.
+📝 **Notes:** Update: Comics-based animated technical training, so the concepts are easier to consume. As the complexity rises we can entertain and keep people engaged.
 
-🎯 **Confidence:** 85%
+Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.
+
+🎯 **Confidence:** 65%
 
 ## 🎯 Problem-Solution Fit
 
@@ -47,7 +51,7 @@ Rifat Erdem Sahin's multi-media learning style — combining live sessions and r
 
 **Premise:** using this capture → organize → distill → express structure, across both live and recorded formats, increases the chances of retaining and demonstrating mastery of the material.
 
-📝 **Notes:** the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions.
+📝 **Notes:** the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions. The main focus is people learning the self learning tactic which Erdem uses to pass the certification exam with high scores. These are proctored and respected exams where the employers care using them as a filter.
 
 🎯 **Confidence:** 60%
 
@@ -64,7 +68,9 @@ Narration and visuals must never carry the same information twice. Concept trans
 
 ![Show, don't tell illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png)
 
-🎯 **Confidence:** 90%
+📝 **Notes:** The animations would be the main focus for the production and we would use the first frame last frame interpolation over the Google Flow tool. To have fun we would use the https://rifaterdemsahin.github.io/roger-rabbit/ like visual to have fun during the production process and keep the audience engaged.
+
+🎯 **Confidence:** 65%
 
 ## ⚖️ Half Hands-On, Half Automated
 
@@ -74,6 +80,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ![Animation example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg)
 ![Automated vs manual example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg)
+
+📝 **Notes:** we would use canva slides to capture and google flow project to animate and canva folders to organize the necessary content to be distilled for production. I would capture during the day to the slides. Go over the slides in the cohorts and convert them to whiteboards when ever they are needed.
 
 🎯 **Confidence:** 85%
 
@@ -123,7 +131,7 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎯 **Confidence:** 90%
 
-📝 **Notes:** mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.
+📝 **Notes:** Whiteboards are moving after the 1.Slides swapping their places. .mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.
 
 ✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
 
@@ -158,9 +166,9 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ⏱️ **Est. Time:** ~3 hrs/week
 
-🎯 **Confidence:** 40%
+🎯 **Confidence:** 85%
 
-📝 **Notes:** Task: prepare before the sessions.
+📝 **Notes:** Update: Initial stage, The capture is done here. after creating the slides they are used in cohorts and they can have whiteboards.Task : prepare before the sessions. Mark when they are processed.
 
 ✅ **Quality Gate:** script, images, storyboard & notes complete for every scene before review.
 
@@ -194,7 +202,7 @@ Done in Canva Presentations — no separate tool.
 
 🎯 **Confidence:** 75%
 
-📝 **Notes:** work with slides in the call for the bigger view and go to whiteboard if needed in the canva.
+📝 **Notes:** Update  🎞️ 2. Review Canva Presentations > 🎞️ 2. Review Canva Presentations in Cohorts, work with slides in the call for the bigger view and go to whiteboard if needed in the canva. Update the quality Gate: Collecting feedback from audience.
 
 ✅ **Quality Gate:** every scene marked ✅ ready before export.
 
@@ -228,7 +236,7 @@ Close the gap to create the images to be animated
 
 🎯 **Confidence:** 60%
 
-📝 **Notes:** use the slides and naming as a tool, use Canva MCP.
+📝 **Notes:** For Arolls: use the slides and nameing as a tool use canva mcp. Tool to create animations https://rifaterdemsahin.github.io/roger-rabbit/ For the animations collect the first and last frames
 
 #### 📦 4. Export Step
 
@@ -256,9 +264,9 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 
 ⏱️ **Est. Time:** ~20 min
 
-🎯 **Confidence:** 70%
+🎯 **Confidence:** 30%
 
-📝 **Notes:** export after each video in a weekly cycle.
+📝 **Notes:** export after each video in a weekly cycle. Use canva tools and links to coordinate the necessary bits and pieces. Hold it in the canva course folder. Export only starts when there is enough feedback collected to be able to pass the course for the course takers. Name this stage : 📦 4. Export Step >  Capture Complete
 
 ✅ **Quality Gate:** all ready scenes flattened and under the 300-page limit before bulk create.
 
@@ -292,7 +300,7 @@ Diagram the course's topic architecture before bulk-rendering anything.
 
 🎯 **Confidence:** 55%
 
-📝 **Notes:** mindmap it with Mermaid using AI and images; add Gemini and Claude for the tools.
+📝 **Notes:** Move this stage before the 4.Export step. When this mindmapping stage is completed it is time to start the export it means we have captured all the related content. mindmap it with mermaid using the ai and images, add gemini and claude for the tools
 
 ✅ **Quality Gate:** mindmap architecture locked and matches the certification syllabus before bulk create.
 
@@ -329,7 +337,9 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⏱️ **Est. Time:** ~4 hrs
 
-🎯 **Confidence:** 80%
+🎯 **Confidence:** 55%
+
+📝 **Notes:** add tools as canva. mention the repo is ready for the students to fork and build it.
 
 ✅ **Quality Gate:** repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.
 
@@ -356,9 +366,9 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⏱️ **Est. Time:** ~45 min
 
-🎯 **Confidence:** 75%
+🎯 **Confidence:** 50%
 
-📝 **Notes:** add tools as Canva.
+📝 **Notes:** Add the higgsfield as a tool here,Add the google flow tool to here
 
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
@@ -393,9 +403,9 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⏱️ **Est. Time:** ~1.5 hrs
 
-🎯 **Confidence:** 55%
+🎯 **Confidence:** 75%
 
-📝 **Notes:** Add Higgsfield as a tool here.
+📝 **Notes:** there are issues in my skills and i need the patience to do the manual finish. Move this before 7.Bulk Create
 
 ✅ **Quality Gate:** no missing sprites, backgrounds, music, or sound effects remain before manual finishing.
 
@@ -426,9 +436,9 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 ⏱️ **Est. Time:** ~6 hrs
 
-🎯 **Confidence:** 75%
+🎯 **Confidence:** 80%
 
-📝 **Notes:** there are issues in his skills and he needs the patience to do the manual finish.
+📝 **Notes:** getting the unquality ones are the problem
 
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
@@ -454,9 +464,9 @@ Final per-domain training video files.
 
 ⏱️ **Est. Time:** ~20 min
 
-🎯 **Confidence:** 80%
+🎯 **Confidence:** 10%
 
-📝 **Notes:** getting unquality renders is the problem.
+📝 **Notes:** not tested is the risk
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
@@ -496,7 +506,7 @@ Final per-domain training video files.
 
 🎯 **Confidence:** 10%
 
-📝 **Notes:** weekly cadence is needed to be able to build the audience. The tech changes the timeline to get the certificates, and helping the audience see the value takes time — it can take as many as 16 videos to make the join decision.
+📝 **Notes:** weekly cadence is needed to be able to build the audience. The tech changes the timeline to get the certificates, and helping the audience see the value takes time — it can take as many as 16 videos to make the join decision. Focus on building repo for artifacts and create the videos from those artifacts and always have footage to be able to create new weekly videos.
 
 ✅ **Quality Gate:** gaps from the free cohort are fixed and retention is checked before releasing new videos or turning on the paywall.
 
@@ -524,6 +534,8 @@ Final per-domain training video files.
 ⏱️ **Est. Time:** ~1.5 hrs
 
 🎯 **Confidence:** 50%
+
+📝 **Notes:** sanity check for each stage and each video before taking it online.
 
 ✅ **Quality Gate:** the report is written and reviewed before starting the next course cycle.
 
@@ -585,41 +597,43 @@ On the live page, a "📋 Copy Prompt" button sits right under this prompt to co
 
 🎯 **Confidence:** 50%
 
+📝 **Notes:** Add a section 14.Archielogy Mention we are exploring and going into different experiments and not letting the architecture to stop the release cycle which is the main thing to help us continously learn.
+
 ✅ **Quality Gate:** the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.
 
-🎯 **Pipeline overall confidence:** 65%
+🎯 **Pipeline overall confidence:** 35%
 
 ## 🏗️ Stages
 
 ⏱️ **Total estimated time:** ~31.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, and Distribution are ongoing/once-per-cycle).
 
-🎯 **Average confidence:** 62% — lowest at stage 11 Distribution (10%, untested paywall model — the biggest risk in the whole pipeline), followed by stage 1 Canva Slides (40%), stage 12 Sanity Check and stage 13 Architecture (50% each, both unproven), and stage 5 Mindmap Architecture / stage 8 Asset Generation (55% each); highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 55% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Export Step (30%), stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
 On the live page, every collapsible panel — all 9 top-level sections plus all 14 pipeline stages — has a confidence score with +/− buttons, and its header shows a small red→yellow→green gradient bar with a marker at that score, so you can scan overall confidence at a glance without opening anything. Confidence scores and notes text boxes both save to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (Pipeline, Stages, and References get the confidence score only, no notes box). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
 ### 🧪 Preprod
 
 - 0. Research 🔍 — 5 subtasks · 90% confidence (Create the Canva course folder structure; Daily — add new screenshots and tasks to the whiteboard; Generate outline; Generate script; Complete the paid AI certificate)
-- 1. Canva Slides 🎨 — 1 subtask · 40% confidence (Build the script, images, storyboard & notes in one Canva design)
+- 1. Canva Slides 🎨 — 1 subtask · 85% confidence (Build the script, images, storyboard & notes in one Canva design)
 - 2. Review 🎞️ — 1 subtask · 75% confidence (Review each scene in Canva Presentations and mark it "ready")
 - 3. Add Animation Frames 🎞️ — 1 subtask · 60% confidence (Review each scene into many images that would help with animation)
-- 4. Export Step 📦 — 1 subtask · 70% confidence (Run the export script to flatten "ready" scenes for Canva import)
+- 4. Export Step 📦 — 1 subtask · 30% confidence (Run the export script to flatten "ready" scenes for Canva import)
 
 🕳️ **Gaps:** 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Export Step — the weekly export cadence isn't automated, still a manual per-video trigger.
 
 ### 🏭 Prod
 
 - 5. Mindmap Architecture 🧠 — 2 subtasks · 55% confidence (Build the mindmap of the course architecture; Cross-check the mindmap against the certification syllabus)
-- 6. Build GitHub Repo 🛠️ — 4 subtasks · 80% confidence (Scaffold and build the repo with Claude Code, Kilo, or Gemini; Publish the site via GitHub Pages; Store secrets/credentials in a Key Vault; Stand up any backend/dynamic tooling on Fly.io)
-- 7. Bulk Create ⚡ — 1 subtask · 75% confidence (Run Canva Bulk Create to export all pages as video)
-- 8. Asset Gen 🧬 — 2 subtasks · 55% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
+- 6. Build GitHub Repo 🛠️ — 4 subtasks · 55% confidence (Scaffold and build the repo with Claude Code, Kilo, or Gemini; Publish the site via GitHub Pages; Store secrets/credentials in a Key Vault; Stand up any backend/dynamic tooling on Fly.io)
+- 7. Bulk Create ⚡ — 1 subtask · 50% confidence (Run Canva Bulk Create to export all pages as video)
+- 8. Asset Gen 🧬 — 2 subtasks · 75% confidence (Generate and collect any missing AI assets for scenes; Produce music & sound effects for the scenes)
 
 🕳️ **Gaps:** 5 Mindmap Architecture — no standard Mermaid template yet, each mindmap is built ad hoc. 6 Build GitHub Repo — the GitHub + DeliveryPilot template isn't documented as a reusable starting point yet. 7 Canva Bulk Create — no fallback plan if Canva Bulk Create output quality degrades. 8 Asset Generation — the Higgsfield workflow isn't integrated, asset lookup is still manual.
 
 ### 🎬 Post
 
-- 9. Manual Finish ✨ — 1 subtask · 75% confidence (Manually animate elements per page and generate AI voice for each)
-- 10. Export MP4 🚀 — 1 subtask · 80% confidence (Export the final per-domain MP4 training video files)
+- 9. Manual Finish ✨ — 1 subtask · 80% confidence (Manually animate elements per page and generate AI voice for each)
+- 10. Export MP4 🚀 — 1 subtask · 10% confidence (Export the final per-domain MP4 training video files)
 - 11. Distribution 🔓 — 4 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Check retention before releasing new videos, and increase quality accordingly; Turn on the Join button paywall)
 - 12. Sanity Check 🧾 — 1 subtask · 50% confidence (Write the sanity-check report covering pros, cons, risks, and mitigations)
 - 13. Architecture 🏛️ — 1 subtask · 50% confidence (Generate the architecture infographic using the image prompt)
@@ -695,7 +709,9 @@ This simplified view captures the active, justified tools without the full archi
 
 📋 **Deliverable Note:** ready to save as a clean Markdown report. Let me know if you want an even more compact version, column reordering, or added columns (e.g., learning curve or alternatives considered).
 
-🎯 **Confidence:** 60%
+📝 **Notes:** continously exploring and adding new tools which is the fun part of creative process
+
+🎯 **Confidence:** 40%
 
 ---
 
