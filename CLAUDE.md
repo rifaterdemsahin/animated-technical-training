@@ -91,11 +91,35 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   `bar-<id>`/`marker-<id>` markup and are added to `stageNames`.
 - **Maturity List** (`<div class="overall-feedback">` containing
   `#maturityTable`, near the bottom): a live, JS-generated table of every id
-  in `stageNames` that has a confidence value, sorted ascending (riskiest
-  first), each row tagged with a tier by `maturityTier(val)` (🔴 ≤25 / 🟠
-  ≤50 / 🟡 ≤75 / 🟢 else) and a "what to do" recommendation.
-  `renderMaturityList()` rebuilds `#maturityTableBody` on load and on every
-  `adjustConfidence()` call — it's derived, never hand-edited.
+  in `stageNames` that has a confidence value, each row tagged with a tier by
+  `maturityTier(val)` (🔴 ≤25 / 🟠 ≤50 / 🟡 ≤75 / 🟢 else) and a "what to do"
+  recommendation, plus a `.maturity-note-input` text field. Sortable by
+  clicking the "Section / Stage" or "Confidence" `<th class="sortable">`
+  (`setMaturitySort(key)` flips `maturitySort {key, dir}` and re-renders;
+  default is confidence ascending). The note input is NOT separate storage —
+  `onMaturityNoteInput()` writes straight into that row's real
+  `notes-<id>` element and calls `saveStageData()`, so it's just an
+  alternate editor for the same cookie-backed note (two-way: editing the
+  section's own textarea also re-renders the row via `renderMaturityList()`,
+  wired into every notes textarea's `oninput`). Because of this, **every**
+  id in `stageNames` needs a real `notes-<id>` element somewhere in the DOM
+  — including `pipeline`, `build-phases`, and `references`, which now carry
+  one too (previously they had confidence only). `renderMaturityList()`
+  rebuilds `#maturityTableBody` on load, on every `adjustConfidence()` call,
+  and on every notes textarea's `oninput` — it's fully derived, never
+  hand-edited, and values are HTML-escaped via `escapeHtml()` before being
+  injected through `innerHTML`.
+- **Section reorder**: each top-level section's `<h2>` has "⬆"/"⬇"
+  `.reorder-btn` buttons calling `moveSection(id, ±1)`, which swaps entries
+  in the mutable `sectionOrder` array (seeded from `defaultSectionOrder` —
+  keep both in sync if the section list ever changes) and physically moves
+  the `<section>` DOM node via `applySectionOrder()` (inserts before the
+  Maturity List's `.overall-feedback` div, the anchor for "first non-section
+  sibling after Toolbox"). Persists to the `sectionOrderState` cookie via
+  `saveSectionOrder()`/`loadSectionOrder()`. When `sectionOrder` differs from
+  `defaultSectionOrder`, `copyStageData()` prepends a task line spelling out
+  the custom order, so pasting the copy output to an agent carries the
+  reorder request through to an actual `index.html` edit.
 - **Per-section state**: every section/stage has a `<textarea id="notes-<id>">`
   and a confidence `%` with `−`/`+` buttons (`adjustConfidence(id, delta)`).
   Both notes and confidence are persisted client-side in a single cookie

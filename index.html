@@ -172,6 +172,18 @@
   }
   .collapse-btn:hover { background: rgba(148,163,184,0.15); color: var(--text); }
   .section-body.collapsed { display: none; }
+  .reorder-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    border-radius: 6px;
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  .reorder-btn:hover { background: rgba(148,163,184,0.15); color: var(--text); }
 
   .thumb {
     width: 130px;
@@ -343,6 +355,21 @@
   .tools-table th, .tools-table td { padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
   .tools-table th { color: var(--accent2); font-weight: 700; white-space: nowrap; }
   .tools-table tr:hover td { background: rgba(148,163,184,0.06); }
+  .tools-table th.sortable { cursor: pointer; user-select: none; }
+  .tools-table th.sortable:hover { color: var(--text); }
+  .sort-arrow { font-size: 0.7em; opacity: 0.8; }
+  .maturity-note-input {
+    width: 100%;
+    min-width: 160px;
+    background: rgba(148,163,184,0.08);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 0.35rem 0.55rem;
+    font-size: 0.8rem;
+    font-family: inherit;
+  }
+  .maturity-note-input:focus { outline: none; border-color: var(--accent2); }
   .cookie-tools { text-align: center; margin: 2rem 0; }
   .cookie-tools button {
     background: var(--accent2);
@@ -648,7 +675,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-29T04:22:58Z">v8.5.0 · Updated 2026-07-29 04:22 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-29T04:46:57Z">v8.6.0 · Updated 2026-07-29 04:46 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -665,7 +692,7 @@
   </div>
 
   <section id="problem">
-    <h2><a href="?section=problem">🧩 Problem</a> <div class="confidence-bar" id="bar-problem"><div class="confidence-marker" id="marker-problem"></div></div><span class="confidence-pct" id="pct-problem"></span> <button class="collapse-btn" id="toggle-problem" onclick="toggleSection('problem')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=problem">🧩 Problem</a> <div class="confidence-bar" id="bar-problem"><div class="confidence-marker" id="marker-problem"></div></div><span class="confidence-pct" id="pct-problem"></span> <button class="reorder-btn" onclick="moveSection('problem',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('problem',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-problem" onclick="toggleSection('problem')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-problem">
       <p><strong>Problem:</strong> Rapid AI progress keeps raising the skill expectations placed on people, faster
       than most can keep up.</p>
@@ -673,7 +700,7 @@
       are now updating their workflows to a much more powerful AI tools such as claude code.</p>
       <p><strong>🛠️ Domain:</strong> tools getting enabled with AI are shifting and effecting many industries not just coding.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png" alt="Problem illustration" onclick="openModal(this.src)">
-      <textarea id="notes-problem" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <textarea id="notes-problem" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('problem',-5)" aria-label="Decrease confidence">−</button> <span id="conf-problem">75</span>% <button class="conf-btn" onclick="adjustConfidence('problem',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
@@ -683,7 +710,7 @@
   </section>
 
   <section id="solution">
-    <h2><a href="?section=solution">✅ Solution</a> <div class="confidence-bar" id="bar-solution"><div class="confidence-marker" id="marker-solution"></div></div><span class="confidence-pct" id="pct-solution"></span> <button class="collapse-btn" id="toggle-solution" onclick="toggleSection('solution')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=solution">✅ Solution</a> <div class="confidence-bar" id="bar-solution"><div class="confidence-marker" id="marker-solution"></div></div><span class="confidence-pct" id="pct-solution"></span> <button class="reorder-btn" onclick="moveSection('solution',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('solution',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-solution" onclick="toggleSection('solution')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-solution">
       <p>Comics-based animated technical training, so the concepts are easier to consume.</p>
       <p><strong>Rationale:</strong> We have seen shorter animated videos have a much higher retention.</p>
@@ -698,7 +725,7 @@
       leverage it too. Passing the exam is proof to himself; running <a href="?section=stage1">cohorts</a> collects
       real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that
       feedback, then a Join button paywall opens for everyone else.</p>
-      <textarea id="notes-solution" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <textarea id="notes-solution" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('solution',-5)" aria-label="Decrease confidence">−</button> <span id="conf-solution">65</span>% <button class="conf-btn" onclick="adjustConfidence('solution',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
@@ -708,7 +735,7 @@
   </section>
 
   <section id="problem-solution-fit">
-    <h2><a href="?section=problem-solution-fit">🎯 Problem-Solution Fit</a> <div class="confidence-bar" id="bar-problem-solution-fit"><div class="confidence-marker" id="marker-problem-solution-fit"></div></div><span class="confidence-pct" id="pct-problem-solution-fit"></span> <button class="collapse-btn" id="toggle-problem-solution-fit" onclick="toggleSection('problem-solution-fit')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=problem-solution-fit">🎯 Problem-Solution Fit</a> <div class="confidence-bar" id="bar-problem-solution-fit"><div class="confidence-marker" id="marker-problem-solution-fit"></div></div><span class="confidence-pct" id="pct-problem-solution-fit"></span> <button class="reorder-btn" onclick="moveSection('problem-solution-fit',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('problem-solution-fit',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-problem-solution-fit" onclick="toggleSection('problem-solution-fit')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-problem-solution-fit">
       <p>Rifat Erdem Sahin's multi-media learning style — combining live sessions and recorded content — is the way
       he captures, organizes, distills, and expresses what he's learning on the way to the certification. Creating
@@ -724,7 +751,7 @@
       sprites, footage) and the tooling that turns that raw material into the next release on a repeatable cadence.
       Reaching product-market fit means that cadence, not any single video: enough weekly releases for a cohort to
       notice, join, give feedback, and convert before the paywall opens (see <a href="?section=stage11">Distribution</a>).</p>
-      <textarea id="notes-problem-solution-fit" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <textarea id="notes-problem-solution-fit" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('problem-solution-fit',-5)" aria-label="Decrease confidence">−</button> <span id="conf-problem-solution-fit">60</span>% <button class="conf-btn" onclick="adjustConfidence('problem-solution-fit',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
@@ -734,7 +761,7 @@
   </section>
 
   <section id="core-principle">
-    <h2><a href="?section=core-principle">🧠 Core Principle</a> <div class="confidence-bar" id="bar-core-principle"><div class="confidence-marker" id="marker-core-principle"></div></div><span class="confidence-pct" id="pct-core-principle"></span> <button class="collapse-btn" id="toggle-core-principle" onclick="toggleSection('core-principle')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=core-principle">🧠 Core Principle</a> <div class="confidence-bar" id="bar-core-principle"><div class="confidence-marker" id="marker-core-principle"></div></div><span class="confidence-pct" id="pct-core-principle"></span> <button class="reorder-btn" onclick="moveSection('core-principle',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('core-principle',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-core-principle" onclick="toggleSection('core-principle')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-core-principle">
       <p><strong>Cognitive Offload — Show, Don't Tell 👁️</strong><br>
       Narration and visuals must never carry the same information twice. Concept transfer lives in the animation
@@ -743,7 +770,7 @@
       <p>🧪 <strong>The Subtitle Test:</strong> watch the scene with just the subtitle showing — if the animation still
       makes sense on its own, that's the main animation test.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png" alt="Show, don't tell illustration" onclick="openModal(this.src)">
-      <textarea id="notes-core-principle" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <textarea id="notes-core-principle" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('core-principle',-5)" aria-label="Decrease confidence">−</button> <span id="conf-core-principle">65</span>% <button class="conf-btn" onclick="adjustConfidence('core-principle',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
@@ -753,7 +780,7 @@
   </section>
 
   <section id="hands-on">
-    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a> <div class="confidence-bar" id="bar-hands-on"><div class="confidence-marker" id="marker-hands-on"></div></div><span class="confidence-pct" id="pct-hands-on"></span> <button class="collapse-btn" id="toggle-hands-on" onclick="toggleSection('hands-on')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=hands-on">⚖️ Half Hands-On, Half Automated</a> <div class="confidence-bar" id="bar-hands-on"><div class="confidence-marker" id="marker-hands-on"></div></div><span class="confidence-pct" id="pct-hands-on"></span> <button class="reorder-btn" onclick="moveSection('hands-on',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('hands-on',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-hands-on" onclick="toggleSection('hands-on')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-hands-on">
       <p><a href="?section=stage7">Bulk export</a> and <a href="?section=stage8">asset generation</a> are automated to move fast; animation timing and voice are finished
       manually to reach top quality — <strong>audience retention and reach are on the line, so we can't risk
@@ -762,7 +789,7 @@
       <a href="?section=stage1">storyboard</a> and animation direction locked before automation and generation touches it, not patched after.</p>
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg" alt="Animation example" onclick="openModal(this.src)">
       <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg" alt="Automated vs manual example" onclick="openModal(this.src)">
-      <textarea id="notes-hands-on" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <textarea id="notes-hands-on" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('hands-on',-5)" aria-label="Decrease confidence">−</button> <span id="conf-hands-on">85</span>% <button class="conf-btn" onclick="adjustConfidence('hands-on',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
@@ -772,7 +799,7 @@
   </section>
 
   <section id="pipeline">
-    <h2><a href="?section=pipeline">🔗 Video Production Pipeline</a> <div class="confidence-bar" id="bar-pipeline"><div class="confidence-marker" id="marker-pipeline"></div></div><span class="confidence-pct" id="pct-pipeline"></span> <button class="collapse-btn" id="toggle-pipeline" onclick="toggleSection('pipeline')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=pipeline">🔗 Video Production Pipeline</a> <div class="confidence-bar" id="bar-pipeline"><div class="confidence-marker" id="marker-pipeline"></div></div><span class="confidence-pct" id="pct-pipeline"></span> <button class="reorder-btn" onclick="moveSection('pipeline',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('pipeline',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-pipeline" onclick="toggleSection('pipeline')" aria-label="Collapse section">▾</button></h2>
     <div class="pipeline section-body" id="body-pipeline">
 
       <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
@@ -804,7 +831,7 @@
         <p class="task">☐ <strong>Task:</strong> Complete the paid AI certificate — proof to himself before teaching it.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~30 min/day</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage0',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage0">90</span>% <button class="conf-btn" onclick="adjustConfidence('stage0',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage0" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage0" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every research note has a source screenshot before moving to slide-building.</p>
         </div>
       </div>
@@ -832,7 +859,7 @@
         <p class="why">💡 <a href="rationale/readme.md#canva">Why one Canva design →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage1',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage1">85</span>% <button class="conf-btn" onclick="adjustConfidence('stage1',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage1" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage1" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> script, images, storyboard &amp; notes complete for every scene before review.</p>
         </div>
       </div>
@@ -858,7 +885,7 @@
         <p class="why">💡 <a href="rationale/readme.md#carousel">Why review before export →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage2',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage2">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage2',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage2" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage2" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene marked ✅ ready before export.</p>
         </div>
       </div>
@@ -886,7 +913,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Week days</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage3',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage3">60</span>% <button class="conf-btn" onclick="adjustConfidence('stage3',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage3" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage3" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         </div>
       </div>
       <div class="arrow">⬇️</div>
@@ -910,7 +937,7 @@
         <p class="why">💡 <a href="rationale/readme.md#export">Why flatten &amp; batch →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage4',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage4">30</span>% <button class="conf-btn" onclick="adjustConfidence('stage4',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage4" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage4" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> all ready scenes flattened and under the 300-page limit before bulk create.</p>
         </div>
       </div>
@@ -936,7 +963,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Once per course</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~2 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage5',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage5">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage5',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage5" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage5" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> mindmap architecture locked and matches the certification syllabus before bulk create.</p>
         </div>
       </div>
@@ -965,7 +992,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Once per project</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~4 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage6',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage6">55</span>% <button class="conf-btn" onclick="adjustConfidence('stage6',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage6" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.</p>
         </div>
       </div>
@@ -988,7 +1015,7 @@
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~45 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage7',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage7">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage7',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage7" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every page rendered as video with voiceover before manual finishing.</p>
         </div>
       </div>
@@ -1020,7 +1047,7 @@
         <p class="task">☐ <strong>Task:</strong> Produce music &amp; sound effects for the scenes.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage8',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage8">75</span>% <button class="conf-btn" onclick="adjustConfidence('stage8',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage8" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> no missing sprites, backgrounds, music, or sound effects remain before manual finishing.</p>
         </div>
       </div>
@@ -1047,7 +1074,7 @@
         <p class="why">💡 <a href="rationale/readme.md#manual-finishing">Why manual, not automated →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~6 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage9',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage9">80</span>% <button class="conf-btn" onclick="adjustConfidence('stage9',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage9" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> every scene passes the <a href="?section=core-principle">Mute Test &amp; Subtitle Test</a> before export.</p>
         </div>
       </div>
@@ -1067,7 +1094,7 @@
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage10',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage10">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage10',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage10" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> final MP4 reviewed per domain before publishing.</p>
         </div>
       </div>
@@ -1099,7 +1126,7 @@
         <p class="task">☐ <strong>Task:</strong> Turn on the Join button paywall.</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~3 hrs (ongoing)</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage11',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage11">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage11',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage11" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage11" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> gaps from the free cohort are fixed and retention is checked before releasing new videos or turning on the paywall.</p>
         </div>
       </div>
@@ -1123,7 +1150,7 @@
         <p class="why">📅 <strong>Cadence:</strong> Once per course cycle</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage12',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage12">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage12',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage12" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage12" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> the report is written and reviewed before starting the next course cycle.</p>
         </div>
       </div>
@@ -1172,7 +1199,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
         <p class="why">📅 <strong>Cadence:</strong> Once per course cycle</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1 hr</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage13',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage13">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage13',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage13" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage13" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.</p>
         </div>
       </div>
@@ -1194,12 +1221,13 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
         <p class="why">📅 <strong>Cadence:</strong> Ongoing, in parallel with every cycle</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~30 min/week</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage14',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage14">40</span>% <button class="conf-btn" onclick="adjustConfidence('stage14',5)" aria-label="Increase confidence">+</button></p>
-        <textarea id="notes-stage14" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+        <textarea id="notes-stage14" class="stage-notes" placeholder="Notes for this stage (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
         <p class="gate">✅ <strong>Quality Gate:</strong> nothing in this stage ever delays a scheduled release; anything not promoted by the end of the cycle gets archived, not carried over as a blocker.</p>
         </div>
       </div>
 
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('pipeline',-5)" aria-label="Decrease confidence">−</button> <span id="conf-pipeline">35</span>% <button class="conf-btn" onclick="adjustConfidence('pipeline',5)" aria-label="Increase confidence">+</button></p>
+      <textarea id="notes-pipeline" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('pipeline', -1)" aria-label="Previous section">▲</button>
@@ -1208,7 +1236,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   </section>
 
   <section id="build-phases">
-    <h2><a href="?section=build-phases">🏗️ Stages</a> <div class="confidence-bar" id="bar-build-phases"><div class="confidence-marker" id="marker-build-phases"></div></div><span class="confidence-pct" id="pct-build-phases"></span> <button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=build-phases">🏗️ Stages</a> <div class="confidence-bar" id="bar-build-phases"><div class="confidence-marker" id="marker-build-phases"></div></div><span class="confidence-pct" id="pct-build-phases"></span> <button class="reorder-btn" onclick="moveSection('build-phases',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('build-phases',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
     <div class="section-body" id="body-build-phases">
     <p>⏱️ <strong>Total estimated time:</strong> ~33.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, Archielogy, and Distribution are ongoing/once-per-cycle).</p>
     <p>🎯 <strong>Average confidence:</strong> 54% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Export Step (30%) and the brand-new stage 14 Archielogy (40%), then stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).</p>
@@ -1240,6 +1268,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     </div>
     <p class="gap-note">🕳️ <strong>Gaps:</strong> 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet. 14 Archielogy — brand new, no experiment log exists yet to prove the promote/discard habit actually sticks.</p>
     <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('build-phases',-5)" aria-label="Decrease confidence">−</button> <span id="conf-build-phases">65</span>% <button class="conf-btn" onclick="adjustConfidence('build-phases',5)" aria-label="Increase confidence">+</button></p>
+      <textarea id="notes-build-phases" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
     </div>
     <div class="section-nav">
       <button onclick="scrollSection('build-phases', -1)" aria-label="Previous section">▲</button>
@@ -1248,7 +1277,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   </section>
 
   <section id="references">
-    <h2><a href="?section=references">🌐 References</a> <div class="confidence-bar" id="bar-references"><div class="confidence-marker" id="marker-references"></div></div><span class="confidence-pct" id="pct-references"></span> <button class="collapse-btn" id="toggle-references" onclick="toggleSection('references')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=references">🌐 References</a> <div class="confidence-bar" id="bar-references"><div class="confidence-marker" id="marker-references"></div></div><span class="confidence-pct" id="pct-references"></span> <button class="reorder-btn" onclick="moveSection('references',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('references',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-references" onclick="toggleSection('references')" aria-label="Collapse section">▾</button></h2>
     <div class="grid2 section-body" id="body-references">
       <div class="card" id="ref-manual-animation">
         <h3><a href="?section=ref-manual-animation">🖌️ Manual Animation</a></h3>
@@ -1280,6 +1309,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       </div>
     </div>
     <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('references',-5)" aria-label="Decrease confidence">−</button> <span id="conf-references">90</span>% <button class="conf-btn" onclick="adjustConfidence('references',5)" aria-label="Increase confidence">+</button></p>
+    <textarea id="notes-references" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
     <div class="section-nav">
       <button onclick="scrollSection('references', -1)" aria-label="Previous section">▲</button>
       <button onclick="scrollSection('references', 1)" aria-label="Next section">▼</button>
@@ -1287,7 +1317,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   </section>
 
   <section id="toolbox">
-    <h2><a href="?section=toolbox">🧰 Toolbox</a> <div class="confidence-bar" id="bar-toolbox"><div class="confidence-marker" id="marker-toolbox"></div></div><span class="confidence-pct" id="pct-toolbox"></span> <button class="collapse-btn" id="toggle-toolbox" onclick="toggleSection('toolbox')" aria-label="Collapse section">▾</button></h2>
+    <h2><a href="?section=toolbox">🧰 Toolbox</a> <div class="confidence-bar" id="bar-toolbox"><div class="confidence-marker" id="marker-toolbox"></div></div><span class="confidence-pct" id="pct-toolbox"></span> <button class="reorder-btn" onclick="moveSection('toolbox',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('toolbox',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-toolbox" onclick="toggleSection('toolbox')" aria-label="Collapse section">▾</button></h2>
     <div class="principle section-body" id="body-toolbox">
       <p><strong>Pipeline Summary:</strong> A lean, cost-optimized stack focused on free/local tools for most steps
       and selective premium AI where quality or speed justifies the cost. Emphasis on automation (scripts + APIs),
@@ -1331,7 +1361,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       <p class="why">📋 <strong>Deliverable Note:</strong> ready to save as a clean Markdown report. Let me know if
       you want an even more compact version, column reordering, or added columns (e.g., learning curve or
       alternatives considered).</p>
-      <textarea id="notes-toolbox" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+      <textarea id="notes-toolbox" class="stage-notes" placeholder="Notes for this section (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
       <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('toolbox',-5)" aria-label="Decrease confidence">−</button> <span id="conf-toolbox">40</span>% <button class="conf-btn" onclick="adjustConfidence('toolbox',5)" aria-label="Increase confidence">+</button></p>
     </div>
     <div class="section-nav">
@@ -1342,11 +1372,16 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
 
   <div class="overall-feedback">
     <h2>🧭 Maturity List</h2>
-    <p class="why">Every section and stage, ranked by confidence — lowest (riskiest) first — with a suggested next action. Updates live as confidence scores change.</p>
+    <p class="why">Every section and stage, ranked by confidence — lowest (riskiest) first — with a suggested next action. Click a column header to sort. Notes here save to the same browser-only cookie as the section notes above.</p>
     <div class="table-wrap">
       <table class="tools-table" id="maturityTable">
         <thead>
-          <tr><th>Section / Stage</th><th>Confidence</th><th>What to do</th></tr>
+          <tr>
+            <th class="sortable" onclick="setMaturitySort('name')">Section / Stage <span class="sort-arrow" id="sortArrow-name"></span></th>
+            <th class="sortable" onclick="setMaturitySort('val')">Confidence <span class="sort-arrow" id="sortArrow-val"></span></th>
+            <th>What to do</th>
+            <th>Note</th>
+          </tr>
         </thead>
         <tbody id="maturityTableBody"></tbody>
       </table>
@@ -1356,7 +1391,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   <div class="overall-feedback">
     <h2>📣 Overall Feedback</h2>
     <p class="why">General feedback on the whole page — not tied to any single section or stage.</p>
-    <textarea id="notes-overall-feedback" class="stage-notes" placeholder="Overall feedback on the whole page (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this)"></textarea>
+    <textarea id="notes-overall-feedback" class="stage-notes" placeholder="Overall feedback on the whole page (saved only in your browser)…" oninput="saveStageData(); showSavedIndicator(this); renderMaturityList()"></textarea>
   </div>
 
   <div class="cookie-tools">
@@ -1394,12 +1429,49 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  var sectionOrder = ['problem', 'solution', 'problem-solution-fit', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references', 'toolbox'];
+  var defaultSectionOrder = ['problem', 'solution', 'problem-solution-fit', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references', 'toolbox'];
+  var sectionOrder = defaultSectionOrder.slice();
   function scrollSection(current, dir) {
     var idx = sectionOrder.indexOf(current) + dir;
     if (idx >= 0 && idx < sectionOrder.length) {
       document.getElementById(sectionOrder[idx]).scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  function applySectionOrder(order) {
+    var wrap = document.querySelector('.wrap');
+    var anchor = document.querySelector('.wrap > .overall-feedback');
+    if (!wrap || !anchor) return;
+    order.forEach(function (id) {
+      var sec = document.getElementById(id);
+      if (sec && sec.parentElement === wrap) wrap.insertBefore(sec, anchor);
+    });
+  }
+
+  function saveSectionOrder() {
+    setCookie('sectionOrderState', JSON.stringify(sectionOrder), 365);
+  }
+
+  function loadSectionOrder() {
+    var raw = getCookie('sectionOrderState');
+    if (!raw) return;
+    var saved;
+    try { saved = JSON.parse(raw); } catch (e) { return; }
+    if (!Array.isArray(saved) || saved.length !== sectionOrder.length) return;
+    if (!saved.every(function (id) { return sectionOrder.indexOf(id) !== -1; })) return;
+    sectionOrder = saved;
+    applySectionOrder(sectionOrder);
+  }
+
+  function moveSection(id, dir) {
+    var idx = sectionOrder.indexOf(id);
+    var newIdx = idx + dir;
+    if (idx === -1 || newIdx < 0 || newIdx >= sectionOrder.length) return;
+    var tmp = sectionOrder[idx];
+    sectionOrder[idx] = sectionOrder[newIdx];
+    sectionOrder[newIdx] = tmp;
+    applySectionOrder(sectionOrder);
+    saveSectionOrder();
   }
 
   var searchMarks = [];
@@ -1598,6 +1670,40 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     return { emoji: '🟢', label: 'Solid', action: 'keep as is — revisit only if something breaks.' };
   }
 
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  var maturitySort = { key: 'val', dir: 'asc' };
+
+  function setMaturitySort(key) {
+    if (maturitySort.key === key) {
+      maturitySort.dir = maturitySort.dir === 'asc' ? 'desc' : 'asc';
+    } else {
+      maturitySort.key = key;
+      maturitySort.dir = 'asc';
+    }
+    renderMaturityList();
+  }
+
+  function updateMaturitySortArrows() {
+    ['name', 'val'].forEach(function (key) {
+      var el = document.getElementById('sortArrow-' + key);
+      if (!el) return;
+      el.textContent = maturitySort.key === key ? (maturitySort.dir === 'asc' ? '▲' : '▼') : '';
+    });
+  }
+
+  function onMaturityNoteInput(inputEl) {
+    var id = inputEl.getAttribute('data-id');
+    var notesEl = document.getElementById('notes-' + id);
+    if (notesEl) notesEl.value = inputEl.value;
+    saveStageData();
+    showSavedIndicator(inputEl);
+  }
+
   function renderMaturityList() {
     var body = document.getElementById('maturityTableBody');
     if (!body) return;
@@ -1607,15 +1713,24 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       if (!confEl) return;
       var val = parseInt(confEl.textContent, 10);
       if (isNaN(val)) return;
-      rows.push({ id: id, name: stageNames[id], val: val });
+      var notesEl = document.getElementById('notes-' + id);
+      rows.push({ id: id, name: stageNames[id], val: val, note: notesEl ? notesEl.value : '' });
     });
-    rows.sort(function (a, b) { return a.val - b.val; });
+    rows.sort(function (a, b) {
+      var av = maturitySort.key === 'name' ? a.name.toLowerCase() : a.val;
+      var bv = maturitySort.key === 'name' ? b.name.toLowerCase() : b.val;
+      if (av < bv) return maturitySort.dir === 'asc' ? -1 : 1;
+      if (av > bv) return maturitySort.dir === 'asc' ? 1 : -1;
+      return 0;
+    });
     body.innerHTML = rows.map(function (r) {
       var tier = maturityTier(r.val);
-      return '<tr><td><a href="?section=' + r.id + '">' + r.name + '</a></td>' +
+      return '<tr><td><a href="?section=' + r.id + '">' + escapeHtml(r.name) + '</a></td>' +
         '<td>' + tier.emoji + ' ' + r.val + '%</td>' +
-        '<td>' + tier.label + ' — ' + tier.action + '</td></tr>';
+        '<td>' + tier.label + ' — ' + tier.action + '</td>' +
+        '<td><input type="text" class="maturity-note-input" data-id="' + r.id + '" value="' + escapeHtml(r.note) + '" placeholder="Note (saved only in your browser)…" oninput="onMaturityNoteInput(this)"></td></tr>';
     }).join('');
+    updateMaturitySortArrows();
   }
 
   function copyPromptText(btn) {
@@ -1639,6 +1754,11 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       'Claude-like coding/LLM agent (e.g. Claude Code) and ask it to implement the tasks below.',
       ''
     ];
+    if (JSON.stringify(sectionOrder) !== JSON.stringify(defaultSectionOrder)) {
+      lines.push('Section order (top-level sections, reordered in the browser via ⬆/⬇ — reorder the matching <section> elements in index.html to match):');
+      lines.push('  ' + sectionOrder.map(function (id) { return stageNames[id]; }).join(' → '));
+      lines.push('');
+    }
     stageIdsAll.forEach(function (id) {
       var confEl = document.getElementById('conf-' + id);
       var notesEl = document.getElementById('notes-' + id);
@@ -1666,6 +1786,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       if (notesEl) notesEl.value = '';
     });
     deleteCookie('pipelineStageData');
+    renderMaturityList();
   }
 
   var collapsibleIds = sectionOrder.concat(stageIdsAll);
@@ -1731,6 +1852,8 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     if (!btn) return;
     btn.textContent = areAllCollapsed() ? '📂 Expand All' : '🗂️ Collapse All';
   }
+
+  loadSectionOrder();
 
   loadSectionState();
   updateCollapseAllButton();
