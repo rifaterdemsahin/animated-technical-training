@@ -93,10 +93,13 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   `#maturityTable`, near the bottom): a live, JS-generated table of every id
   in `stageNames` that has a confidence value, each row tagged with a tier by
   `maturityTier(val)` (🔴 ≤25 / 🟠 ≤50 / 🟡 ≤75 / 🟢 else) and a "what to do"
-  recommendation, plus a `.maturity-note-input` text field. Sortable by
-  clicking the "Section / Stage" or "Confidence" `<th class="sortable">`
-  (`setMaturitySort(key)` flips `maturitySort {key, dir}` and re-renders;
-  default is confidence ascending). The note input is NOT separate storage —
+  recommendation, plus a `.maturity-note-input` text field and a leading "#"
+  order-index column from `getOrderIndex(id)` (top-level sections: 1-based
+  position in `sectionOrder`; stages: their own fixed number parsed from the
+  id, e.g. `stage3` → `3`). Sortable by clicking the "#", "Section / Stage",
+  or "Confidence" `<th class="sortable">` (`setMaturitySort(key)` flips
+  `maturitySort {key, dir}` and re-renders; default is confidence ascending).
+  The note input is NOT separate storage —
   `onMaturityNoteInput()` writes straight into that row's real
   `notes-<id>` element and calls `saveStageData()`, so it's just an
   alternate editor for the same cookie-backed note (two-way: editing the
@@ -109,13 +112,17 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   and on every notes textarea's `oninput` — it's fully derived, never
   hand-edited, and values are HTML-escaped via `escapeHtml()` before being
   injected through `innerHTML`.
-- **Section reorder**: each top-level section's `<h2>` has "⬆"/"⬇"
+- **Section reorder**: each top-level section's `<h2>` has a numbered
+  `<span class="order-badge" id="order-<id>">` (e.g. Problem shows `1`,
+  matching its position) right before the title link, plus "⬆"/"⬇"
   `.reorder-btn` buttons calling `moveSection(id, ±1)`, which swaps entries
   in the mutable `sectionOrder` array (seeded from `defaultSectionOrder` —
   keep both in sync if the section list ever changes) and physically moves
   the `<section>` DOM node via `applySectionOrder()` (inserts before the
   Maturity List's `.overall-feedback` div, the anchor for "first non-section
-  sibling after Toolbox"). Persists to the `sectionOrderState` cookie via
+  sibling after Toolbox" — and also calls `updateOrderBadges()` +
+  `renderMaturityList()` so the badges and the Maturity List's "#" column
+  stay live). Persists to the `sectionOrderState` cookie via
   `saveSectionOrder()`/`loadSectionOrder()`. When `sectionOrder` differs from
   `defaultSectionOrder`, `copyStageData()` prepends a task line spelling out
   the custom order, so pasting the copy output to an agent carries the
