@@ -686,6 +686,22 @@
   @media (max-width: 1150px) {
     .right-rail { display: none; }
   }
+  .right-embed {
+    position: fixed;
+    top: 90px;
+    right: 14px;
+    width: 200px;
+    z-index: 390;
+  }
+  .canva-caption {
+    display: block;
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+  @media (max-width: 1150px) {
+    .right-embed { display: none; }
+  }
 
   .overall-feedback {
     background: var(--card);
@@ -757,8 +773,17 @@
 </nav>
 <nav class="right-rail" aria-label="External references">
   <a href="https://claude.ai/code/artifact/ae698ab1-93dc-4940-83d8-3e05177283d4" target="_blank" rel="noopener" data-tip="Dashboard layout design (Claude artifact)" aria-label="Open Dashboard layout design artifact">🖥️</a>
-  <a href="https://canva.link/13vc3o4z6mgj2zw" target="_blank" rel="noopener" data-tip="Canva design" aria-label="Open Canva design">🎨</a>
 </nav>
+<div class="right-embed">
+  <div style="position: relative; width: 100%; height: 0; padding-top: 250.0000%;
+   padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+   border-radius: 8px; will-change: transform;">
+    <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+      src="https://www.canva.com/design/DAHQxbWbf0A/ntOxysFK-sNXq6qG0UDV2A/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+    </iframe>
+  </div>
+  <a href="https://www.canva.com/design/DAHQxbWbf0A/ntOxysFK-sNXq6qG0UDV2A/view?utm_content=DAHQxbWbf0A&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="canva-caption">Infographic - Video Production Pipeline</a> by Rifat Erdem Sahin
+</div>
 <nav class="topnav">
   <a href="?section=problem">🧩 Problem</a>
   <a href="?section=solution">✅ Solution</a>
@@ -783,7 +808,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-29T22:05:17Z">v8.10.0 · Updated 2026-07-29 22:05 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-29T22:34:14Z">v8.11.0 · Updated 2026-07-29 22:34 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -1462,7 +1487,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
             <tr><td>Screenshots</td><td>ffmpeg (fps=1/10)</td><td>One-flag extraction, already a dependency</td><td>Free</td></tr>
             <tr><td>Voiceover (Draft)</td><td>Kokoro (self-hosted on fly.io)</td><td>$0 marginal cost for unlimited iterations</td><td>Free</td></tr>
             <tr><td>Voiceover (Final)</td><td>ElevenLabs</td><td>Superior voice cloning &amp; quality</td><td>Paid (final only)</td></tr>
-            <tr><td>Sound Effects</td><td>ElevenLabs SFX API</td><td>Best prompt-to-sound quality, short clips</td><td>Low (per-use)</td></tr>
+            <tr><td>Sound Effects</td><td>ElevenLabs SFX API, <a href="https://wavespeed.ai/audio-generator" target="_blank" rel="noopener">Wavespeed.ai</a></td><td>Best prompt-to-sound quality, short clips</td><td>Low (per-use)</td></tr>
             <tr><td>Music / Scoring</td><td>fal.ai (Stable Audio + Ace-Step + Minimax)</td><td>Model matched to cue length &amp; style needs</td><td>Low</td></tr>
             <tr><td>Static Visuals</td><td>Grok Aurora (images) + Local SVG/Mermaid</td><td>Cheap AI for photos/illustrations; free editable diagrams</td><td>Low + Free</td></tr>
             <tr><td>B-Roll</td><td>Gemini Veo (in development)</td><td>Potential cheap replacement for stock footage</td><td>Low (in dev)</td></tr>

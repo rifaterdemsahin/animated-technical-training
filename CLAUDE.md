@@ -73,10 +73,18 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
 - **Right external-links rail** (`<nav class="right-rail">`, immediately
   after `.stage-rail`): same fixed-pill/tooltip pattern as `.stage-rail`
   but mirrored to the right edge (tooltip flips to open leftward via
-  `.right-rail a:hover::after`/`::before`) and its `<a>` targets are plain
-  external URLs (`target="_blank" rel="noopener"`), not `?section=` links —
-  currently the "Dashboard layout design" Claude artifact and a Canva
-  design. Also hidden below `max-width: 1150px`.
+  `.right-rail a:hover::after`/`::before`); currently one icon linking out
+  to the "Dashboard layout design" Claude artifact (`target="_blank"
+  rel="noopener"`, not a `?section=` link). Hidden below `max-width: 1150px`.
+- **Right embed** (`.right-embed`, fixed `top: 90px; right: 14px`,
+  immediately after `.right-rail`): a real, visible Canva embed (the
+  "Infographic - Video Production Pipeline" design) via Canva's standard
+  responsive-iframe snippet — keep that inner markup (the `padding-top:
+  250%` wrapper div's inline styles and the iframe's `src`/attributes)
+  byte-for-byte as Canva generates it; only the outer `.right-embed`
+  positioning and the `.canva-caption` link styling are ours to touch. The
+  attribution link+byline below the iframe is required by Canva's embed
+  terms — never remove it. Also hidden below `max-width: 1150px`.
 - **Collapse All**: `#collapseAllBtn` in `.cookie-tools` calls
   `toggleAllSections()`, which flips every section/stage between collapsed
   and expanded via `setAllCollapsed()`/`areAllCollapsed()` and persists
