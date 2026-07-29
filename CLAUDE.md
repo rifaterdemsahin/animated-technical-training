@@ -54,12 +54,48 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   `#toolbox`): every section/stage heading follows the same pattern —
   `<h2>`/`<h3>` with a deep-link (`?section=<id>`), a `.confidence-bar` +
   `.confidence-marker`, and a collapse `<button>` wired to `toggleSection(id)`.
-- **Pipeline stages** (`#pipeline` section, `.stage.s0`..`.s13`, `id="stage0"`..
-  `id="stage13"`): 14 numbered stages (Research → Canva Slides → Review →
+- **Pipeline stages** (`#pipeline` section, `.stage.s0`..`.s14`, `id="stage0"`..
+  `id="stage14"`): 15 numbered stages (Research → Canva Slides → Review →
   Add Animation Frames → Export → Mindmap Architecture → Build GitHub Repo →
   Bulk Create → Asset Generation → Manual Finishing → Export MP4 →
-  Distribution → Sanity Check → Architecture). Each stage has the same
+  Distribution → Sanity Check → Architecture → Archielogy). Stage 14
+  (Archielogy) is an ongoing, parallel "continuous exploration" stage — it
+  must never block a scheduled release; that's its whole reason for being
+  separate from the locked 0-13 pipeline. Each stage has the same
   confidence-bar/collapse/notes-textarea structure as top-level sections.
+- **Left stage-jump rail** (`<nav class="stage-rail">`, right after `<body>`):
+  fixed vertical strip of emoji links, one per pipeline stage 0-14, each with
+  a `data-tip` attribute rendered as a CSS hover tooltip (see `.stage-rail
+  a:hover::after`). Uses the same `?section=<id>` + on-load
+  `scrollIntoView` pattern as the top nav — no separate JS wiring needed when
+  adding a stage, just add the `<a>`. Hidden below `max-width: 1150px` so it
+  never overlaps the centered `.wrap` content.
+- **Collapse All**: `#collapseAllBtn` in `.cookie-tools` calls
+  `toggleAllSections()`, which flips every section/stage between collapsed
+  and expanded via `setAllCollapsed()`/`areAllCollapsed()` and persists
+  through the same `sectionCollapseState` cookie as individual toggles.
+- **Overall Feedback**: a page-wide `<textarea id="notes-overall-feedback">`
+  near the bottom (above the copy button), included in `stageNames` like any
+  other id so save/load/copy pick it up automatically. Same cookie-only rule
+  applies — ships empty in source.
+- **Copy Stage Data button** (`copyStageData()`): copies confidence + notes
+  for every id in `stageNames`, framed explicitly as a task list for a
+  Claude-like coding/LLM agent to act on (each note becomes a "Task for
+  agent:" line, with a preamble explaining the intended use) — not just a
+  plain data dump.
+- **Confidence % next to each bar**: every `.confidence-bar` header is
+  followed by a `<span class="confidence-pct" id="pct-<id>">`, kept in sync
+  by `updateConfidenceBar(id)` (same function that positions the marker) —
+  so the number is visible without expanding the section. New
+  sections/stages get this automatically as long as they follow the standard
+  `bar-<id>`/`marker-<id>` markup and are added to `stageNames`.
+- **Maturity List** (`<div class="overall-feedback">` containing
+  `#maturityTable`, near the bottom): a live, JS-generated table of every id
+  in `stageNames` that has a confidence value, sorted ascending (riskiest
+  first), each row tagged with a tier by `maturityTier(val)` (🔴 ≤25 / 🟠
+  ≤50 / 🟡 ≤75 / 🟢 else) and a "what to do" recommendation.
+  `renderMaturityList()` rebuilds `#maturityTableBody` on load and on every
+  `adjustConfidence()` call — it's derived, never hand-edited.
 - **Per-section state**: every section/stage has a `<textarea id="notes-<id>">`
   and a confidence `%` with `−`/`+` buttons (`adjustConfidence(id, delta)`).
   Both notes and confidence are persisted client-side in a single cookie

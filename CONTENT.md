@@ -4,7 +4,7 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 [📐 Master Spec](MASTER_SPEC.md) · [📄 README](README.md) · [📝 Content](CONTENT.md) · [✏️ Edit Content](https://github.com/rifaterdemsahin/animated-technical-training/edit/main/CONTENT.md)
 
-**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🎯 Problem-Solution Fit](#-problem-solution-fit) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references) · [🧰 Toolbox](#-toolbox)
+**On this page:** [🧩 Problem](#-problem) · [✅ Solution](#-solution) · [🎯 Problem-Solution Fit](#-problem-solution-fit) · [🧠 Core Principle](#-core-principle) · [⚖️ Half Hands-On, Half Automated](#%EF%B8%8F-half-hands-on-half-automated) · [🔗 Video Production Pipeline](#-video-production-pipeline) · [🏗️ Stages](#%EF%B8%8F-stages) · [🌐 References](#-references) · [🧰 Toolbox](#-toolbox) · [🧭 Maturity List](#-maturity-list) · [📣 Overall Feedback](#-overall-feedback)
 
 ## 🧩 Problem
 
@@ -48,6 +48,8 @@ Rifat Erdem Sahin's multi-media learning style — combining live sessions and r
 🎯 **Confidence:** 60%
 
 **Conclusion:** he would be able to pass the exam.
+
+🔁 **Content Flywheel:** the fit only proves out with a repo and tooling that can keep producing content, not a one-off video — this GitHub repo is both the artifact store (research, scripts, sprites, footage) and the tooling that turns that raw material into the next release on a repeatable cadence. Reaching product-market fit means that cadence, not any single video: enough weekly releases for a cohort to notice, join, give feedback, and convert before the paywall opens (see stage 11 Distribution).
 
 ## 🧠 Core Principle
 
@@ -561,15 +563,41 @@ On the live page, a "📋 Copy Prompt" button sits right under this prompt to co
 
 ✅ **Quality Gate:** the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.
 
+#### 🔬 14. Archielogy — Continuous Exploration
+
+📥 **Input:** open questions, new tools, and stray ideas surfaced while working any other stage.
+
+📤 **Output:** a running log of experiments tried, and a short list of what's worth promoting into the locked pipeline (stages 0-13) next cycle.
+
+- Try new tools/techniques off to the side, without touching the locked 0-13 pipeline
+- Log what worked, what didn't, and why
+- Promote validated experiments into a numbered stage in a future cycle; discard the rest
+
+🎓 **Why it matters:** we are exploring and going into different experiments — that's what keeps the whole practice a continuous-learning loop instead of a one-time build.
+
+⚠️ **Risk:** letting exploration block a scheduled release — this stage must never stop the release cycle, that's the whole point of keeping it separate from stages 0-13.
+
+🧰 **Tools:** whatever's being evaluated that week — [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), [Canva](https://www.canva.com/), or anything new worth a spike
+
+☐ **Task:** Keep a running list of experiments tried each cycle, noting what got promoted vs. discarded.
+
+📅 **Cadence:** Ongoing, in parallel with every cycle
+
+⏱️ **Est. Time:** ~30 min/week
+
+🎯 **Confidence:** 40%
+
+✅ **Quality Gate:** nothing in this stage ever delays a scheduled release; anything not promoted by the end of the cycle gets archived, not carried over as a blocker.
+
 🎯 **Pipeline overall confidence:** 35%
 
 ## 🏗️ Stages
 
-⏱️ **Total estimated time:** ~31.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, and Distribution are ongoing/once-per-cycle).
+⏱️ **Total estimated time:** ~33.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, Archielogy, and Distribution are ongoing/once-per-cycle).
 
-🎯 **Average confidence:** 55% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Export Step (30%), stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 54% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Export Step (30%) and the brand-new stage 14 Archielogy (40%), then stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
-On the live page, every collapsible panel — all 9 top-level sections plus all 14 pipeline stages — has a confidence score with +/− buttons, and its header shows a small red→yellow→green gradient bar with a marker at that score, so you can scan overall confidence at a glance without opening anything. Confidence scores and notes text boxes both save to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (Pipeline, Stages, and References get the confidence score only, no notes box). A "🧹 Clear All Notes" button at the top of the page wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and a "📋 Copy All Stage Data" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
+On the live page, every collapsible panel — all 9 top-level sections plus all 15 pipeline stages — has a confidence score with +/− buttons, and its header shows a small red→yellow→green gradient bar with a marker at that score, plus the percentage itself printed right next to the bar, so you can scan overall confidence at a glance without opening anything. Confidence scores and notes text boxes both save to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. The Problem, Solution, Problem-Solution Fit, Core Principle, Half Hands-On, and Toolbox sections also each get a notes text box (Pipeline, Stages, and References get the confidence score only, no notes box), and a page-wide "📣 Overall Feedback" text box sits near the bottom for feedback that isn't tied to any one section. A "🧹 Clear All Notes" button and a "🗂️ Collapse All" / "📂 Expand All" toggle sit at the top of the page — Clear All Notes wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), and Collapse All flips every section and stage between collapsed and expanded in one click. A "📋 Copy Stage Data as AI Agent Tasks" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard, explicitly framed as a task list meant to be pasted into a Claude-like coding/LLM agent to act on. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. A fixed vertical rail on the left edge of the page lists every stage (0-14) as an emoji with a hover tooltip, jumping straight to that stage; it hides on narrow viewports. The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
 ### 🧪 Preprod
 
@@ -597,8 +625,9 @@ On the live page, every collapsible panel — all 9 top-level sections plus all 
 - 11. Distribution 🔓 — 4 subtasks · 10% confidence (Ship free access to the first 100 people; Fix gaps identified from cohort feedback; Check retention before releasing new videos, and increase quality accordingly; Turn on the Join button paywall)
 - 12. Sanity Check 🧾 — 1 subtask · 50% confidence (Write the sanity-check report covering pros, cons, risks, and mitigations)
 - 13. Architecture 🏛️ — 1 subtask · 50% confidence (Generate the architecture infographic using the image prompt)
+- 14. Archielogy 🔬 — 1 subtask · 40% confidence (Keep a running list of experiments tried each cycle, noting what got promoted vs. discarded)
 
-🕳️ **Gaps:** 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet.
+🕳️ **Gaps:** 9 Manual Finishing — a manual-animation skill/patience gap, acknowledged directly in the stage notes. 10 Export MP4 — no formal quality-control checkpoint, unquality renders still slip through. 11 Distribution — the whole distribution/paywall flow is completely untested end-to-end (10% confidence, the biggest gap in the pipeline). 12 Sanity Check — no report template exists yet, the process itself hasn't run once. 13 Architecture — the detailed prompt just got rewritten and hasn't been validated against real Gemini 3.5 output yet. 14 Archielogy — brand new, no experiment log exists yet to prove the promote/discard habit actually sticks.
 
 🎯 **Stages overall confidence:** 65%
 
@@ -670,6 +699,41 @@ This simplified view captures the active, justified tools without the full archi
 📋 **Deliverable Note:** ready to save as a clean Markdown report. Let me know if you want an even more compact version, column reordering, or added columns (e.g., learning curve or alternatives considered).
 
 🎯 **Confidence:** 40%
+
+## 🧭 Maturity List
+
+Every section and stage, ranked by confidence — lowest (riskiest) first — with a suggested next action. On the live page this table is generated by JS and updates live as confidence scores change; the snapshot below reflects the current defaults.
+
+| Section / Stage | Confidence | What to do |
+|---|---|---|
+| 10. Export MP4 | 🔴 10% | High risk — needs a real test before relying on it. |
+| 11. Distribution | 🔴 10% | High risk — needs a real test before relying on it. |
+| 4. Export Step | 🟠 30% | Unproven — validate or de-risk this before it blocks something downstream. |
+| Pipeline (overall) | 🟠 35% | Unproven — validate or de-risk this before it blocks something downstream. |
+| Toolbox | 🟠 40% | Unproven — validate or de-risk this before it blocks something downstream. |
+| 14. Archielogy | 🟠 40% | Unproven — validate or de-risk this before it blocks something downstream. |
+| 7. Canva Bulk Create | 🟠 50% | Unproven — validate or de-risk this before it blocks something downstream. |
+| 12. Sanity Check | 🟠 50% | Unproven — validate or de-risk this before it blocks something downstream. |
+| 13. Architecture | 🟠 50% | Unproven — validate or de-risk this before it blocks something downstream. |
+| 5. Mindmap Architecture | 🟡 55% | Workable — tighten the rough edges when there's time. |
+| 6. Build GitHub Repo | 🟡 55% | Workable — tighten the rough edges when there's time. |
+| Problem-Solution Fit | 🟡 60% | Workable — tighten the rough edges when there's time. |
+| 3. Add Animation Frames | 🟡 60% | Workable — tighten the rough edges when there's time. |
+| Solution | 🟡 65% | Workable — tighten the rough edges when there's time. |
+| Core Principle | 🟡 65% | Workable — tighten the rough edges when there's time. |
+| Stages (overall) | 🟡 65% | Workable — tighten the rough edges when there's time. |
+| Problem | 🟡 75% | Workable — tighten the rough edges when there's time. |
+| 2. Review | 🟡 75% | Workable — tighten the rough edges when there's time. |
+| 8. Asset Generation | 🟡 75% | Workable — tighten the rough edges when there's time. |
+| 9. Canva Manual Finishing | 🟢 80% | Solid — keep as is, revisit only if something breaks. |
+| Half Hands-On, Half Automated | 🟢 85% | Solid — keep as is, revisit only if something breaks. |
+| 1. Canva Slides | 🟢 85% | Solid — keep as is, revisit only if something breaks. |
+| 0. Research | 🟢 90% | Solid — keep as is, revisit only if something breaks. |
+| References | 🟢 90% | Solid — keep as is, revisit only if something breaks. |
+
+## 📣 Overall Feedback
+
+General feedback on the whole page — not tied to any single section or stage. Saved only in your browser (see [🏗️ Stages](#%EF%B8%8F-stages) above for how the cookie-only notes system works).
 
 ---
 
