@@ -226,6 +226,33 @@
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
   }
+  .cookie-modal { cursor: default; }
+  .cookie-modal-content {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    max-width: 720px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    cursor: default;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  }
+  .cookie-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .cookie-modal-header h3 { margin: 0; }
+  #cookieModalContent {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 0.8rem;
+    max-height: 55vh;
+    overflow-y: auto;
+  }
 
   .principle {
     background: var(--card);
@@ -688,7 +715,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-29T04:53:44Z">v8.7.0 · Updated 2026-07-29 04:53 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-29T05:00:01Z">v8.8.0 · Updated 2026-07-29 05:00 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -702,6 +729,7 @@
   <div class="cookie-tools">
     <button onclick="clearAllNotes()">🧹 Clear All Notes</button>
     <button id="collapseAllBtn" onclick="toggleAllSections()">🗂️ Collapse All</button>
+    <button onclick="showCookieModal()">🍪 View Cookie Data</button>
   </div>
 
   <section id="problem">
@@ -1425,6 +1453,18 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   <img id="imgModalImg" src="" alt="Whiteboard notes — full size">
 </div>
 
+<div id="cookieModal" class="modal cookie-modal" onclick="if (event.target === this) closeCookieModal()">
+  <div class="cookie-modal-content">
+    <div class="cookie-modal-header">
+      <h3>🍪 Cookie Data</h3>
+      <button class="collapse-btn" onclick="closeCookieModal()" aria-label="Close">✕</button>
+    </div>
+    <p class="why">Everything this page has saved in your browser — nothing is sent anywhere else.</p>
+    <pre id="cookieModalContent"></pre>
+    <div class="prompt-tools"><button onclick="copyCookieModalContent(this)">📋 Copy</button></div>
+  </div>
+</div>
+
 <script>
   function openModal(src) {
     document.getElementById('imgModalImg').src = src;
@@ -1433,8 +1473,47 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   function closeModal() {
     document.getElementById('imgModal').classList.remove('open');
   }
+
+  function getAllCookiesData() {
+    var data = {};
+    if (!document.cookie) return data;
+    document.cookie.split('; ').forEach(function (pair) {
+      var idx = pair.indexOf('=');
+      if (idx === -1) return;
+      var name = pair.slice(0, idx);
+      var raw = decodeURIComponent(pair.slice(idx + 1));
+      try { data[name] = JSON.parse(raw); } catch (e) { data[name] = raw; }
+    });
+    return data;
+  }
+
+  function showCookieModal() {
+    var data = getAllCookiesData();
+    var pre = document.getElementById('cookieModalContent');
+    pre.textContent = Object.keys(data).length
+      ? JSON.stringify(data, null, 2)
+      : '(no cookies saved yet — try adjusting a confidence score or typing a note)';
+    document.getElementById('cookieModal').classList.add('open');
+  }
+
+  function closeCookieModal() {
+    document.getElementById('cookieModal').classList.remove('open');
+  }
+
+  function copyCookieModalContent(btn) {
+    var pre = document.getElementById('cookieModalContent');
+    var original = btn.textContent;
+    navigator.clipboard.writeText(pre.textContent).then(function () {
+      btn.textContent = '✅ Copied!';
+      setTimeout(function () { btn.textContent = original; }, 1500);
+    }).catch(function () {
+      btn.textContent = '⚠️ Copy failed';
+      setTimeout(function () { btn.textContent = original; }, 1500);
+    });
+  }
+
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') { closeModal(); closeCookieModal(); }
   });
 
   var targetSection = new URLSearchParams(window.location.search).get('section');

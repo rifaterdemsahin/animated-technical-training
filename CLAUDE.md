@@ -127,6 +127,15 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   `defaultSectionOrder`, `copyStageData()` prepends a task line spelling out
   the custom order, so pasting the copy output to an agent carries the
   reorder request through to an actual `index.html` edit.
+- **Cookie Data modal** (`#cookieModal`, a second `.modal` reusing the same
+  overlay class as the image lightbox `#imgModal` but with its own
+  `.cookie-modal-content` card instead of `.modal img`): "🍪 View Cookie
+  Data" in `.cookie-tools` calls `showCookieModal()`, which reads every
+  cookie generically via `getAllCookiesData()` (splits `document.cookie`,
+  JSON-parses each value where possible) and pretty-prints the result into
+  `#cookieModalContent`. Not hardcoded to specific cookie names — any future
+  cookie shows up automatically. Closes via the ✕ button, clicking the
+  overlay, or Escape (shared `keydown` handler also closes `#imgModal`).
 - **Per-section state**: every section/stage has a `<textarea id="notes-<id>">`
   and a confidence `%` with `−`/`+` buttons (`adjustConfidence(id, delta)`).
   Both notes and confidence are persisted client-side in a single cookie
