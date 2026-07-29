@@ -16,8 +16,6 @@ Show, don't tell. A repo-driven video production pipeline that turns scripts, st
 
 ![Problem illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/problem.png)
 
-📝 **Notes:** 👥 Audience: people who are part of the new AI revolution that started with chatGPT, and are now updating their workflows to a much more powerful AI tools such as claude code. Most people are left behind dont have the basics for the necessary tech training and unable to connect the dots.
-
 🎯 **Confidence:** 75%
 
 ## ✅ Solution
@@ -36,10 +34,6 @@ Comics-based animated technical training, so the concepts are easier to consume.
 
 🎓 **The Journey:** This is Rifat Erdem Sahin's own self-learning journey — investing in paid AI certificates for himself, then packaging that experience into this animated product so the audience can leverage it too. Passing the exam is proof to himself; running cohorts collects real feedback, which flows into a free end-to-end course for the first 100 people. Gaps get fixed from that feedback, then a Join button paywall opens for everyone else.
 
-📝 **Notes:** Update: Comics-based animated technical training, so the concepts are easier to consume. As the complexity rises we can entertain and keep people engaged.
-
-Risk: Even non-certified professionals implementing half-baked solutions can harm production systems. For the beginners to be relevant in the industry they need to be included in the self-learning structure where they can be onboarded in a fast-shifting job market.
-
 🎯 **Confidence:** 65%
 
 ## 🎯 Problem-Solution Fit
@@ -50,8 +44,6 @@ Rifat Erdem Sahin's multi-media learning style — combining live sessions and r
 ![Storyboard: tech learning journey 2](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/Storyboard_tech_learning_journey_2.jpeg)
 
 **Premise:** using this capture → organize → distill → express structure, across both live and recorded formats, increases the chances of retaining and demonstrating mastery of the material.
-
-📝 **Notes:** the animated videos are the way to simplify and reduce the context and focus on what people need to learn, which comes from the feedback from the cohort sessions. The main focus is people learning the self learning tactic which Erdem uses to pass the certification exam with high scores. These are proctored and respected exams where the employers care using them as a filter.
 
 🎯 **Confidence:** 60%
 
@@ -68,8 +60,6 @@ Narration and visuals must never carry the same information twice. Concept trans
 
 ![Show, don't tell illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/show_tell.png)
 
-📝 **Notes:** The animations would be the main focus for the production and we would use the first frame last frame interpolation over the Google Flow tool. To have fun we would use the https://rifaterdemsahin.github.io/roger-rabbit/ like visual to have fun during the production process and keep the audience engaged.
-
 🎯 **Confidence:** 65%
 
 ## ⚖️ Half Hands-On, Half Automated
@@ -80,8 +70,6 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ![Animation example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/animation.jpg)
 ![Automated vs manual example](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/automated_manual.jpg)
-
-📝 **Notes:** we would use canva slides to capture and google flow project to animate and canva folders to organize the necessary content to be distilled for production. I would capture during the day to the slides. Go over the slides in the cohorts and convert them to whiteboards when ever they are needed.
 
 🎯 **Confidence:** 85%
 
@@ -131,8 +119,6 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎯 **Confidence:** 90%
 
-📝 **Notes:** Whiteboards are moving after the 1.Slides swapping their places. .mention the outline and the script is the draft for self learning start at the core share the experience and collect the feedback.
-
 ✅ **Quality Gate:** every research note has a source screenshot before moving to slide-building.
 
 #### 🎨 1. Canva Slides — Source of Cohort Session
@@ -168,8 +154,6 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 🎯 **Confidence:** 85%
 
-📝 **Notes:** Update: Initial stage, The capture is done here. after creating the slides they are used in cohorts and they can have whiteboards.Task : prepare before the sessions. Mark when they are processed.
-
 ✅ **Quality Gate:** script, images, storyboard & notes complete for every scene before review.
 
 #### 🎞️ 2. Review Canva Presentations
@@ -201,8 +185,6 @@ Done in Canva Presentations — no separate tool.
 ⏱️ **Est. Time:** ~1.5 hrs/week
 
 🎯 **Confidence:** 75%
-
-📝 **Notes:** Update  🎞️ 2. Review Canva Presentations > 🎞️ 2. Review Canva Presentations in Cohorts, work with slides in the call for the bigger view and go to whiteboard if needed in the canva. Update the quality Gate: Collecting feedback from audience.
 
 ✅ **Quality Gate:** every scene marked ✅ ready before export.
 
@@ -236,8 +218,6 @@ Close the gap to create the images to be animated
 
 🎯 **Confidence:** 60%
 
-📝 **Notes:** For Arolls: use the slides and nameing as a tool use canva mcp. Tool to create animations https://rifaterdemsahin.github.io/roger-rabbit/ For the animations collect the first and last frames
-
 #### 📦 4. Export Step
 
 📥 **Input:** "ready" scenes with animation frames.
@@ -265,8 +245,6 @@ Exports from the Canva Slides presentation, to import into Canva Video.
 ⏱️ **Est. Time:** ~20 min
 
 🎯 **Confidence:** 30%
-
-📝 **Notes:** export after each video in a weekly cycle. Use canva tools and links to coordinate the necessary bits and pieces. Hold it in the canva course folder. Export only starts when there is enough feedback collected to be able to pass the course for the course takers. Name this stage : 📦 4. Export Step >  Capture Complete
 
 ✅ **Quality Gate:** all ready scenes flattened and under the 300-page limit before bulk create.
 
@@ -299,8 +277,6 @@ Diagram the course's topic architecture before bulk-rendering anything.
 ⏱️ **Est. Time:** ~2 hrs
 
 🎯 **Confidence:** 55%
-
-📝 **Notes:** Move this stage before the 4.Export step. When this mindmapping stage is completed it is time to start the export it means we have captured all the related content. mindmap it with mermaid using the ai and images, add gemini and claude for the tools
 
 ✅ **Quality Gate:** mindmap architecture locked and matches the certification syllabus before bulk create.
 
@@ -339,8 +315,6 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎯 **Confidence:** 55%
 
-📝 **Notes:** add tools as canva. mention the repo is ready for the students to fork and build it.
-
 ✅ **Quality Gate:** repo builds clean, publishes to GitHub Pages, and no secrets ever land in the repo before moving on.
 
 #### ⚡ 7. Canva Bulk Create
@@ -367,8 +341,6 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 ⏱️ **Est. Time:** ~45 min
 
 🎯 **Confidence:** 50%
-
-📝 **Notes:** Add the higgsfield as a tool here,Add the google flow tool to here
 
 ✅ **Quality Gate:** every page rendered as video with voiceover before manual finishing.
 
@@ -405,8 +377,6 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎯 **Confidence:** 75%
 
-📝 **Notes:** there are issues in my skills and i need the patience to do the manual finish. Move this before 7.Bulk Create
-
 ✅ **Quality Gate:** no missing sprites, backgrounds, music, or sound effects remain before manual finishing.
 
 ### 🎬 Post
@@ -438,8 +408,6 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 🎯 **Confidence:** 80%
 
-📝 **Notes:** getting the unquality ones are the problem
-
 ✅ **Quality Gate:** every scene passes the [Mute Test & Subtitle Test](#-core-principle) before export.
 
 #### 🚀 10. Export MP4
@@ -465,8 +433,6 @@ Final per-domain training video files.
 ⏱️ **Est. Time:** ~20 min
 
 🎯 **Confidence:** 10%
-
-📝 **Notes:** not tested is the risk
 
 ✅ **Quality Gate:** final MP4 reviewed per domain before publishing.
 
@@ -506,8 +472,6 @@ Final per-domain training video files.
 
 🎯 **Confidence:** 10%
 
-📝 **Notes:** weekly cadence is needed to be able to build the audience. The tech changes the timeline to get the certificates, and helping the audience see the value takes time — it can take as many as 16 videos to make the join decision. Focus on building repo for artifacts and create the videos from those artifacts and always have footage to be able to create new weekly videos.
-
 ✅ **Quality Gate:** gaps from the free cohort are fixed and retention is checked before releasing new videos or turning on the paywall.
 
 #### 🧾 12. Sanity Check
@@ -534,8 +498,6 @@ Final per-domain training video files.
 ⏱️ **Est. Time:** ~1.5 hrs
 
 🎯 **Confidence:** 50%
-
-📝 **Notes:** sanity check for each stage and each video before taking it online.
 
 ✅ **Quality Gate:** the report is written and reviewed before starting the next course cycle.
 
@@ -596,8 +558,6 @@ On the live page, a "📋 Copy Prompt" button sits right under this prompt to co
 ⏱️ **Est. Time:** ~1 hr
 
 🎯 **Confidence:** 50%
-
-📝 **Notes:** Add a section 14.Archielogy Mention we are exploring and going into different experiments and not letting the architecture to stop the release cycle which is the main thing to help us continously learn.
 
 ✅ **Quality Gate:** the infographic accurately shows all 13 stages and their Preprod/Prod/Post groups before publishing.
 
@@ -708,8 +668,6 @@ On the live page, every collapsible panel — all 9 top-level sections plus all 
 This simplified view captures the active, justified tools without the full archival context. The stack prioritizes speed of iteration, low recurring cost, and quality where it matters most (final voice, music, grading).
 
 📋 **Deliverable Note:** ready to save as a clean Markdown report. Let me know if you want an even more compact version, column reordering, or added columns (e.g., learning curve or alternatives considered).
-
-📝 **Notes:** continously exploring and adding new tools which is the fun part of creative process
 
 🎯 **Confidence:** 40%
 
