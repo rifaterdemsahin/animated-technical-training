@@ -77,6 +77,8 @@ Bulk export and asset generation are automated to move fast; animation timing an
 
 ## 🔗 Video Production Pipeline
 
+⚠️ **Bloat risk:** this pipeline has grown past what one person can carry stage by stage. The fix is Catalog Management (stage 4) — a single place that tracks what's captured and what's still needed — so the pipeline's actual job stays simple: be able to create the videos, not just document the process of trying to.
+
 ### 🧪 Preprod
 
 #### 🔍 0. Research — Canva Whiteboard
@@ -220,7 +222,7 @@ Close the gap to create the images to be animated
 
 🎯 **Confidence:** 60%
 
-#### 📦 4. Export Step
+#### 📦 4. Catalog Management
 
 📥 **Input:** "ready" scenes with animation frames.
 
@@ -325,18 +327,18 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 📤 **Output:** rendered videos per scene, with voiceover embedded.
 
-- Exports all pages as video (sprite + incoming + outgoing)
+- Exports only the pages needed for the video actually being made — not everything in the batch (sprite + incoming + outgoing)
 - Voiceovers embedded inside the videos
 
 ![Stage 7 illustration](https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg)
 
 🎓 **Why it matters:** seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.
 
-⚠️ **Risk:** bulk rendering before the mindmap and repo are ready wastes render credits on content that will change.
+⚠️ **Risk:** bulk rendering before the mindmap and repo are ready wastes render credits on content that will change; rendering more than the video actually needs wastes them too.
 
 🧰 **Tools:** [Canva](https://www.canva.com/), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
-☐ **Task:** Run Canva Bulk Create to export all pages as video.
+☐ **Task:** Run Canva Bulk Create scoped to the parts needed for the video being created, not the whole catalog.
 
 💡 [Why bulk create →](rationale/readme.md#bulk-create)
 
@@ -354,12 +356,13 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 
 - Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery
 - Fill gaps before manual finishing starts
+- The repo of assets itself is built via [Canva MCP](https://github.com/rifaterdemsahin/canva-mcp/blob/main/4_Formula/canva_course_artifacts.md) — an AI-coordinated workflow, not a manual folder
 
 🎓 **Why it matters:** filling in missing pieces mirrors closing his own knowledge gaps before certification day.
 
 ⚠️ **Risk:** missing music, sound effects, or sprites get silently skipped and ship in the final video.
 
-🧰 **Tools:** [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
+🧰 **Tools:** [Canva MCP](https://github.com/rifaterdemsahin/canva-mcp/blob/main/4_Formula/canva_course_artifacts.md), [Higgsfield](https://higgsfield.ai/), [Mage.space](https://www.mage.space/creations), Camera, [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software), [WhatsApp](https://www.whatsapp.com/) (to ask questions)
 
 🧪 **Google Flow Community Tools:**
 
@@ -370,6 +373,7 @@ Build and ship the production tracking repo/dashboard itself — hands-on, not a
 - 💡 [LuzRelighting](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: click where you want the light source, relights the scene — keeps mood/lighting consistent across sprites.
 - 🏷️ [Vector Sticker Studio](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: turns any image into a clean die-cut sticker with smart cutout — good for isolating sprite art.
 - ✍️ [Text Effect](https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools) — why: generates stylized text renders from a sample image, for on-scene labels and titles.
+- 🎵 [Google Music](https://youtu.be/QEE3CMtmEfk) — why: Google's AI music generation tool, for scoring and soundtrack generation.
 
 ☐ **Task:** Generate and collect any missing AI assets for scenes.
 
@@ -430,6 +434,8 @@ Final per-domain training video files.
 
 ☐ **Task:** Export the final per-domain MP4 training video files.
 
+☐ **Task:** Add this stage to the master mindmap from stage 5 — an exported MP4 that isn't mapped there is invisible to the rest of the course architecture.
+
 💡 [Why per-domain files →](rationale/readme.md#export-mp4)
 
 ⏱️ **Est. Time:** ~20 min
@@ -455,6 +461,8 @@ Final per-domain training video files.
 🔁 **Flywheel:** companies pay for the exam, and exam takers get a scheduled date — so they need to study. The flywheel starts turning from the business side as a requirement: the payment and the deadline for the certification exam are what motivate candidates to actually learn.
 
 ⚠️ **Risk:** shipping the paywall before cohort feedback is incorporated burns trust with the first audience — this is the biggest untested risk in the whole pipeline (10% confidence).
+
+⚠️ **Risk:** the architecture (stage 13) is bloating this stage — the weekly cadence can't wait on it. Each week's release needs to refer directly to the repo and be buildable from it, not from a heavier architecture pass.
 
 🧰 **Tools:** [Canva](https://www.canva.com/)
 
@@ -482,7 +490,8 @@ Final per-domain training video files.
 
 📤 **Output:** a written sanity-check report — does this make sense, pros, cons, risks, and mitigations.
 
-- Review the whole pipeline output holistically, not stage by stage
+- Review the whole pipeline output holistically — overall sanity
+- Review each finished video individually before it ships — per-video sanity; both levels matter, neither replaces the other
 - Document pros of the current approach
 - Document cons and gaps that remain
 - List risks and their mitigations
@@ -491,9 +500,13 @@ Final per-domain training video files.
 
 ⚠️ **Risk:** skipping the sanity check means the same mistakes repeat in the next course cycle unnoticed.
 
-🧰 **Tools:** [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), [Obsidian](https://obsidian.md/)
+🤖 **Repo update:** the same MCP + AI workflow that coordinates assets in stage 8 is used here too — update the repo, commit, and push as part of closing out the sanity check.
+
+🧰 **Tools:** [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), [Obsidian](https://obsidian.md/), [Canva MCP](https://github.com/rifaterdemsahin/canva-mcp/blob/main/4_Formula/canva_course_artifacts.md)
 
 ☐ **Task:** Write the sanity-check report covering pros, cons, risks, and mitigations.
+
+☐ **Task:** Update the repo, commit, and push via the Canva MCP + AI workflow.
 
 📅 **Cadence:** Once per course cycle
 
@@ -539,7 +552,7 @@ AND a short caption summarizing what actually happens in that stage, exactly as 
 1 🎨 Canva Slides — slide deck icon — "script, sprites, storyboard & notes built into one weekly cohort deck"
 2 🎞️ Review — checkmark-frame icon — "each scene reviewed in Canva Presentations and marked ready"
 3 🎞️ Add Animation Frames — filmstrip icon — "scenes broken into multiple animation frames with prompts"
-4 📦 Export Step — export-box icon — "ready scenes flattened and batched under Canva's 300-page limit"
+4 📦 Catalog Management — export-box icon — "ready scenes flattened and batched under Canva's 300-page limit"
 5 🧠 Mindmap Architecture — brain/mindmap icon — "course architecture diagrammed and checked against the syllabus"
 6 🛠️ Build GitHub Repo — code-repository icon — "this tracking repo built with an AI coding tool, published to GitHub Pages, secrets in a Key Vault"
 7 ⚡ Canva Bulk Create — lightning-bolt icon — "every scene bulk-rendered to video with voiceover embedded"
@@ -575,6 +588,8 @@ On the live page, a "📋 Copy Prompt" button sits right under this prompt to co
 
 🎓 **Why it matters:** we are exploring and going into different experiments — that's what keeps the whole practice a continuous-learning loop instead of a one-time build.
 
+🧭 **Goal:** the main goal is to serve others while doing self learning — service by discovery. Every experiment here is judged by whether it helps someone else learn faster, not just by whether it's interesting.
+
 ⚠️ **Risk:** letting exploration block a scheduled release — this stage must never stop the release cycle, that's the whole point of keeping it separate from stages 0-13.
 
 🧰 **Tools:** whatever's being evaluated that week — [Claude](https://claude.ai/), [Gemini](https://gemini.google.com/), [Canva](https://www.canva.com/), or anything new worth a spike
@@ -595,7 +610,7 @@ On the live page, a "📋 Copy Prompt" button sits right under this prompt to co
 
 ⏱️ **Total estimated time:** ~33.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, Archielogy, and Distribution are ongoing/once-per-cycle).
 
-🎯 **Average confidence:** 54% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Export Step (30%) and the brand-new stage 14 Archielogy (40%), then stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).
+🎯 **Average confidence:** 54% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Catalog Management (30%) and the brand-new stage 14 Archielogy (40%), then stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).
 
 On the live page, every collapsible panel — all 9 top-level sections plus all 15 pipeline stages — has a confidence score with +/− buttons, and its header shows a small red→yellow→green gradient bar with a marker at that score, plus the percentage itself printed right next to the bar, so you can scan overall confidence at a glance without opening anything. Confidence scores and notes text boxes both save to a browser cookie — typing into any notes box shows a brief "✓ Saved" indicator confirming it persisted. Every one of the 9 top-level sections and 15 pipeline stages gets a notes text box, plus a page-wide "📣 Overall Feedback" text box near the bottom for feedback that isn't tied to any one section. Each top-level section header also has "⬆"/"⬇" buttons to reorder that section relative to the others — the custom order saves to its own cookie and survives reloads; if you reorder sections and then use the copy button below, the clipboard output includes an extra task line telling an AI agent the new desired section order, so the change can be fed back into `index.html` itself. A "🧹 Clear All Notes" button, a "🗂️ Collapse All" / "📂 Expand All" toggle, and a "🍪 View Cookie Data" button sit at the top of the page — Clear All Notes wipes every notes box across the whole page and deletes the underlying cookie entirely (with a confirmation prompt), Collapse All flips every section and stage between collapsed and expanded in one click, and View Cookie Data opens a popup showing the exact, pretty-printed contents of every cookie the page has saved in your browser (with its own Copy button), so nothing about what's stored locally is hidden. A "📋 Copy Stage Data as AI Agent Tasks" button at the bottom copies every notes box (plus stage confidence, where it applies) to the clipboard, explicitly framed as a task list meant to be pasted into a Claude-like coding/LLM agent to act on. Every top-level section header, and every individual pipeline stage inside the Video Production Pipeline section, has a ▾/▸ collapse toggle — collapsed/expanded state for all of them saves to its own separate cookie. A fixed vertical rail on the left edge of the page lists every stage (0-14) as an emoji with a hover tooltip, jumping straight to that stage; it hides on narrow viewports. The Maturity List table (below Toolbox) is sortable by clicking its "Section / Stage" or "Confidence" column headers, and each row has its own note field — writing there saves to the exact same cookie as that section's own notes box (the two stay in sync in both directions). The version badge at the top shows the exact update date/time plus a live-ticking "X ago" relative timestamp that updates every second. The top nav mirrors the page's actual default order (Problem → ... → References → Toolbox), grouped into "why" sections, the pipeline, and reference material with dividers between groups; the "🏗️ Stages" item has a hover submenu jumping straight to the Preprod, Prod, or Post group.
 
@@ -605,9 +620,9 @@ On the live page, every collapsible panel — all 9 top-level sections plus all 
 - 1. Canva Slides 🎨 — 1 subtask · 85% confidence (Build the script, images, storyboard & notes in one Canva design)
 - 2. Review 🎞️ — 1 subtask · 75% confidence (Review each scene in Canva Presentations and mark it "ready")
 - 3. Add Animation Frames 🎞️ — 1 subtask · 60% confidence (Review each scene into many images that would help with animation)
-- 4. Export Step 📦 — 1 subtask · 30% confidence (Run the export script to flatten "ready" scenes for Canva import)
+- 4. Catalog Management 📦 — 1 subtask · 30% confidence (Run the export script to flatten "ready" scenes for Canva import)
 
-🕳️ **Gaps:** 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Export Step — the weekly export cadence isn't automated, still a manual per-video trigger.
+🕳️ **Gaps:** 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Catalog Management — the weekly export cadence isn't automated, still a manual per-video trigger.
 
 ### 🏭 Prod
 
@@ -667,6 +682,8 @@ On the live page, every collapsible panel — all 9 top-level sections plus all 
 
 **Pipeline Summary:** A lean, cost-optimized stack focused on free/local tools for most steps and selective premium AI where quality or speed justifies the cost. Emphasis on automation (scripts + APIs), minimal manual toil, and tight integration with Obsidian vault workflows.
 
+⚠️ **Scope limit:** this toolbox is exploration, not the goal — it needs to stay bounded after the production process is locked in. Tools should never outrank production itself; what actually matters more is what the audience gets out of the finished video, not how many tools were used to make it.
+
 | Stage | Tool(s) | Primary Reason / Why It Earns Its Place | Cost Profile |
 |---|---|---|---|
 | Pre-Production | Obsidian | Direct script writing kills analysis paralysis | Free |
@@ -708,7 +725,7 @@ Every section and stage, ranked by confidence — lowest (riskiest) first — wi
 |---|---|---|---|
 | 10 | 10. Export MP4 | 🔴 10% | High risk — needs a real test before relying on it. |
 | 11 | 11. Distribution | 🔴 10% | High risk — needs a real test before relying on it. |
-| 4 | 4. Export Step | 🟠 30% | Unproven — validate or de-risk this before it blocks something downstream. |
+| 4 | 4. Catalog Management | 🟠 30% | Unproven — validate or de-risk this before it blocks something downstream. |
 | 6 | Pipeline (overall) | 🟠 35% | Unproven — validate or de-risk this before it blocks something downstream. |
 | 9 | Toolbox | 🟠 40% | Unproven — validate or de-risk this before it blocks something downstream. |
 | 14 | 14. Archielogy | 🟠 40% | Unproven — validate or de-risk this before it blocks something downstream. |

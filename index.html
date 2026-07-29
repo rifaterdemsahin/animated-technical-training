@@ -398,6 +398,9 @@
   .tools-table th.sortable { cursor: pointer; user-select: none; }
   .tools-table th.sortable:hover { color: var(--text); }
   .sort-arrow { font-size: 0.7em; opacity: 0.8; }
+  .maturity-order-cell { display: flex; align-items: center; gap: 0.3rem; white-space: nowrap; }
+  .maturity-order-cell span { min-width: 1.4em; text-align: center; font-weight: 700; }
+  .maturity-order-cell .reorder-btn { width: 18px; height: 18px; font-size: 0.6rem; }
   .maturity-note-input {
     width: 100%;
     min-width: 160px;
@@ -679,7 +682,7 @@
   <a href="?section=stage1" data-tip="1. Canva Slides" aria-label="Jump to stage 1: Canva Slides">🎨</a>
   <a href="?section=stage2" data-tip="2. Review" aria-label="Jump to stage 2: Review">🎞️</a>
   <a href="?section=stage3" data-tip="3. Add Animation Frames" aria-label="Jump to stage 3: Add Animation Frames">🎞️</a>
-  <a href="?section=stage4" data-tip="4. Export Step" aria-label="Jump to stage 4: Export Step">📦</a>
+  <a href="?section=stage4" data-tip="4. Catalog Management" aria-label="Jump to stage 4: Catalog Management">📦</a>
   <a href="?section=stage5" data-tip="5. Mindmap Architecture" aria-label="Jump to stage 5: Mindmap Architecture">🧠</a>
   <a href="?section=stage6" data-tip="6. Build GitHub Repo" aria-label="Jump to stage 6: Build GitHub Repo">🛠️</a>
   <a href="?section=stage7" data-tip="7. Canva Bulk Create" aria-label="Jump to stage 7: Canva Bulk Create">⚡</a>
@@ -715,7 +718,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-29T05:00:01Z">v8.8.0 · Updated 2026-07-29 05:00 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-29T06:34:22Z">v8.9.0 · Updated 2026-07-29 06:34 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
@@ -843,6 +846,11 @@
     <h2><span class="order-badge" id="order-pipeline">6</span> <a href="?section=pipeline">🔗 Video Production Pipeline</a> <div class="confidence-bar" id="bar-pipeline"><div class="confidence-marker" id="marker-pipeline"></div></div><span class="confidence-pct" id="pct-pipeline"></span> <button class="reorder-btn" onclick="moveSection('pipeline',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('pipeline',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-pipeline" onclick="toggleSection('pipeline')" aria-label="Collapse section">▾</button></h2>
     <div class="pipeline section-body" id="body-pipeline">
 
+      <p class="why">⚠️ <strong>Bloat risk:</strong> this pipeline has grown past what one person can carry stage by
+      stage. The fix is Catalog Management (stage 4) — a single place that tracks what's captured and what's still
+      needed — so the pipeline's actual job stays simple: be able to create the videos, not just document the
+      process of trying to.</p>
+
       <h3 id="preprod" class="phase-group"><a href="?section=preprod">🧪 Preprod</a></h3>
       <div class="stage s0" id="stage0">
         <h3><a href="?section=stage0">🔍 0. Research — Canva Whiteboard</a> <div class="confidence-bar" id="bar-stage0"><div class="confidence-marker" id="marker-stage0"></div></div><span class="confidence-pct" id="pct-stage0"></span> <button class="collapse-btn" id="toggle-stage0" onclick="toggleSection('stage0')" aria-label="Collapse stage">▾</button></h3>
@@ -960,7 +968,7 @@
       <div class="arrow">⬇️</div>
 
       <div class="stage s4" id="stage4">
-        <h3><a href="?section=stage4">📦 4. Export Step</a> <div class="confidence-bar" id="bar-stage4"><div class="confidence-marker" id="marker-stage4"></div></div><span class="confidence-pct" id="pct-stage4"></span> <button class="collapse-btn" id="toggle-stage4" onclick="toggleSection('stage4')" aria-label="Collapse stage">▾</button></h3>
+        <h3><a href="?section=stage4">📦 4. Catalog Management</a> <div class="confidence-bar" id="bar-stage4"><div class="confidence-marker" id="marker-stage4"></div></div><span class="confidence-pct" id="pct-stage4"></span> <button class="collapse-btn" id="toggle-stage4" onclick="toggleSection('stage4')" aria-label="Collapse stage">▾</button></h3>
         <div class="section-body" id="body-stage4">
         <p class="why">📥 <strong>Input:</strong> "ready" scenes with animation frames.</p>
         <p class="why">📤 <strong>Output:</strong> flattened, sprite-embedded batches ready for Canva import.</p>
@@ -970,7 +978,7 @@
           <li>Embeds sprite images</li>
           <li>Respects Canva's 300-page limit — batches by video if exceeded</li>
         </ul>
-        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg" alt="Stage 4 illustration: Export Step" onclick="openModal(this.src)">
+        <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/3.%20Export%20Step.jpg" alt="Stage 4 illustration: Catalog Management" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> turning scattered study material into a transferable package is useful for the exam and for teaching it.</p>
         <p class="why">⚠️ <strong>Risk:</strong> exceeding Canva's 300-page limit without batching corrupts or truncates the export.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
@@ -1045,14 +1053,14 @@
         <p class="why">📥 <strong>Input:</strong> flattened export batches from stage 4.</p>
         <p class="why">📤 <strong>Output:</strong> rendered videos per scene, with voiceover embedded.</p>
         <ul>
-          <li>Exports all pages as video (sprite + incoming + outgoing)</li>
+          <li>Exports only the pages needed for the video actually being made — not everything in the batch (sprite + incoming + outgoing)</li>
           <li>Voiceovers embedded inside the videos</li>
         </ul>
         <img class="thumb" src="https://raw.githubusercontent.com/rifaterdemsahin/animated-technical-training/main/3_Simulations/4.%20Canva%20Bulk%20Create.jpg" alt="Stage 7 illustration: Canva Bulk Create" onclick="openModal(this.src)">
         <p class="why">🎓 <strong>Why it matters:</strong> seeing the whole course rendered at once reveals gaps in his own understanding before the exam does.</p>
-        <p class="why">⚠️ <strong>Risk:</strong> bulk rendering before the mindmap and repo are ready wastes render credits on content that will change.</p>
+        <p class="why">⚠️ <strong>Risk:</strong> bulk rendering before the mindmap and repo are ready wastes render credits on content that will change; rendering more than the video actually needs wastes them too.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a>, Camera, <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Teams</a>, <a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a> (to ask questions)</p>
-        <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create to export all pages as video.</p>
+        <p class="task">☐ <strong>Task:</strong> Run Canva Bulk Create scoped to the parts needed for the video being created, not the whole catalog.</p>
         <p class="why">💡 <a href="rationale/readme.md#bulk-create">Why bulk create →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~45 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage7',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage7">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage7',5)" aria-label="Increase confidence">+</button></p>
@@ -1070,10 +1078,11 @@
         <ul>
           <li>Generate any AI assets still missing after bulk create — sprites, backgrounds, extra imagery</li>
           <li>Fill gaps before manual finishing starts</li>
+          <li>The repo of assets itself is built via <a href="https://github.com/rifaterdemsahin/canva-mcp/blob/main/4_Formula/canva_course_artifacts.md" target="_blank" rel="noopener">Canva MCP</a> — an AI-coordinated workflow, not a manual folder</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> filling in missing pieces mirrors closing his own knowledge gaps before certification day.</p>
         <p class="why">⚠️ <strong>Risk:</strong> missing music, sound effects, or sprites get silently skipped and ship in the final video.</p>
-        <p class="why">🧰 <strong>Tools:</strong> <a href="https://higgsfield.ai/" target="_blank" rel="noopener">Higgsfield</a>, <a href="https://www.mage.space/creations" target="_blank" rel="noopener">Mage.space</a>, Camera, <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Teams</a>, <a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a> (to ask questions)</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://github.com/rifaterdemsahin/canva-mcp/blob/main/4_Formula/canva_course_artifacts.md" target="_blank" rel="noopener">Canva MCP</a>, <a href="https://higgsfield.ai/" target="_blank" rel="noopener">Higgsfield</a>, <a href="https://www.mage.space/creations" target="_blank" rel="noopener">Mage.space</a>, Camera, <a href="https://www.microsoft.com/en-us/microsoft-teams/group-chat-software" target="_blank" rel="noopener">Teams</a>, <a href="https://www.whatsapp.com/" target="_blank" rel="noopener">WhatsApp</a> (to ask questions)</p>
         <p class="why">🧪 <strong>Google Flow Community Tools:</strong></p>
         <ul>
           <li>🎭 <a href="https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools" target="_blank" rel="noopener">Character Persona Generator</a> — why: generates 22+ consistent portraits of the same character from one reference image, solving cross-scene sprite consistency.</li>
@@ -1083,6 +1092,7 @@
           <li>💡 <a href="https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools" target="_blank" rel="noopener">LuzRelighting</a> — why: click where you want the light source, relights the scene — keeps mood/lighting consistent across sprites.</li>
           <li>🏷️ <a href="https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools" target="_blank" rel="noopener">Vector Sticker Studio</a> — why: turns any image into a clean die-cut sticker with smart cutout — good for isolating sprite art.</li>
           <li>✍️ <a href="https://labs.google/fx/tools/flow/project/47c537b5-d7fc-4492-b78b-8446b5877303/tools" target="_blank" rel="noopener">Text Effect</a> — why: generates stylized text renders from a sample image, for on-scene labels and titles.</li>
+          <li>🎵 <a href="https://youtu.be/QEE3CMtmEfk" target="_blank" rel="noopener">Google Music</a> — why: Google's AI music generation tool, for scoring and soundtrack generation.</li>
         </ul>
         <p class="task">☐ <strong>Task:</strong> Generate and collect any missing AI assets for scenes.</p>
         <p class="task">☐ <strong>Task:</strong> Produce music &amp; sound effects for the scenes.</p>
@@ -1132,6 +1142,7 @@
         <p class="why">⚠️ <strong>Risk:</strong> exporting before manual finishing passes its quality gates ships unfinished or low-quality video.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="task">☐ <strong>Task:</strong> Export the final per-domain MP4 training video files.</p>
+        <p class="task">☐ <strong>Task:</strong> Add this stage to the master mindmap from <a href="?section=stage5">stage 5</a> — an exported MP4 that isn't mapped there is invisible to the rest of the course architecture.</p>
         <p class="why">💡 <a href="rationale/readme.md#export-mp4">Why per-domain files →</a></p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~20 min</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage10',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage10">10</span>% <button class="conf-btn" onclick="adjustConfidence('stage10',5)" aria-label="Increase confidence">+</button></p>
@@ -1156,6 +1167,7 @@
         <p class="why">🎓 <strong>Why it matters:</strong> teaching 100 people for free and collecting their confusion is the real final exam — it's harder to fool a live cohort than a multiple-choice test.</p>
         <p class="why">🔁 <strong>Flywheel:</strong> companies pay for the exam, and exam takers get a scheduled date — so they need to study. The flywheel starts turning from the business side as a requirement: the payment and the deadline for the certification exam are what motivate candidates to actually learn.</p>
         <p class="why">⚠️ <strong>Risk:</strong> shipping the paywall before cohort feedback is incorporated burns trust with the first audience — this is the biggest untested risk in the whole pipeline (10% confidence).</p>
+        <p class="why">⚠️ <strong>Risk:</strong> the architecture (<a href="?section=stage13">stage 13</a>) is bloating this stage — the weekly cadence can't wait on it. Each week's release needs to refer directly to the <a href="?section=stage6">repo</a> and be buildable from it, not from a heavier architecture pass.</p>
         <p class="why">🧰 <strong>Tools:</strong> <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a></p>
         <p class="why">🧪 <strong>Google Flow Community Tools:</strong></p>
         <ul>
@@ -1179,15 +1191,18 @@
         <p class="why">📥 <strong>Input:</strong> outputs from every stage — research, design, build, render, and distribution results.</p>
         <p class="why">📤 <strong>Output:</strong> a written sanity-check report — does this make sense, pros, cons, risks, and mitigations.</p>
         <ul>
-          <li>Review the whole pipeline output holistically, not stage by stage</li>
+          <li>Review the whole pipeline output holistically — overall sanity</li>
+          <li>Review each finished video individually before it ships — per-video sanity; both levels matter, neither replaces the other</li>
           <li>Document pros of the current approach</li>
           <li>Document cons and gaps that remain</li>
           <li>List risks and their mitigations</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> a written retrospective is how real production teams turn one course into a repeatable process — and proves he can evaluate his own work critically, not just produce it.</p>
         <p class="why">⚠️ <strong>Risk:</strong> skipping the sanity check means the same mistakes repeat in the next course cycle unnoticed.</p>
-        <p class="why">🧰 <strong>Tools:</strong> <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://obsidian.md/" target="_blank" rel="noopener">Obsidian</a></p>
+        <p class="why">🤖 <strong>Repo update:</strong> the same MCP + AI workflow that coordinates assets in <a href="?section=stage8">stage 8</a> is used here too — update the repo, commit, and push as part of closing out the sanity check.</p>
+        <p class="why">🧰 <strong>Tools:</strong> <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://obsidian.md/" target="_blank" rel="noopener">Obsidian</a>, <a href="https://github.com/rifaterdemsahin/canva-mcp/blob/main/4_Formula/canva_course_artifacts.md" target="_blank" rel="noopener">Canva MCP</a></p>
         <p class="task">☐ <strong>Task:</strong> Write the sanity-check report covering pros, cons, risks, and mitigations.</p>
+        <p class="task">☐ <strong>Task:</strong> Update the repo, commit, and push via the Canva MCP + AI workflow.</p>
         <p class="why">📅 <strong>Cadence:</strong> Once per course cycle</p>
         <p class="why">⏱️ <strong>Est. Time:</strong> ~1.5 hrs</p>
         <p class="why confidence-row">🎯 <strong>Confidence:</strong> <button class="conf-btn" onclick="adjustConfidence('stage12',-5)" aria-label="Decrease confidence">−</button> <span id="conf-stage12">50</span>% <button class="conf-btn" onclick="adjustConfidence('stage12',5)" aria-label="Increase confidence">+</button></p>
@@ -1224,7 +1239,7 @@ AND a short caption summarizing what actually happens in that stage, exactly as 
 1 🎨 Canva Slides — slide deck icon — "script, sprites, storyboard & notes built into one weekly cohort deck"
 2 🎞️ Review — checkmark-frame icon — "each scene reviewed in Canva Presentations and marked ready"
 3 🎞️ Add Animation Frames — filmstrip icon — "scenes broken into multiple animation frames with prompts"
-4 📦 Export Step — export-box icon — "ready scenes flattened and batched under Canva's 300-page limit"
+4 📦 Catalog Management — export-box icon — "ready scenes flattened and batched under Canva's 300-page limit"
 5 🧠 Mindmap Architecture — brain/mindmap icon — "course architecture diagrammed and checked against the syllabus"
 6 🛠️ Build GitHub Repo — code-repository icon — "this tracking repo built with an AI coding tool, published to GitHub Pages, secrets in a Key Vault"
 7 ⚡ Canva Bulk Create — lightning-bolt icon — "every scene bulk-rendered to video with voiceover embedded"
@@ -1256,6 +1271,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
           <li>Promote validated experiments into a numbered stage in a future cycle; discard the rest</li>
         </ul>
         <p class="why">🎓 <strong>Why it matters:</strong> we are exploring and going into different experiments — that's what keeps the whole practice a continuous-learning loop instead of a one-time build.</p>
+        <p class="why">🧭 <strong>Goal:</strong> the main goal is to serve others while doing self learning — service by discovery. Every experiment here is judged by whether it helps someone else learn faster, not just by whether it's interesting.</p>
         <p class="why">⚠️ <strong>Risk:</strong> letting exploration block a scheduled release — this stage must never stop the release cycle, that's the whole point of keeping it separate from stages 0-13.</p>
         <p class="why">🧰 <strong>Tools:</strong> whatever's being evaluated that week — <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>, <a href="https://www.canva.com/" target="_blank" rel="noopener">Canva</a>, or anything new worth a spike</p>
         <p class="task">☐ <strong>Task:</strong> Keep a running list of experiments tried each cycle, noting what got promoted vs. discarded.</p>
@@ -1280,16 +1296,16 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     <h2><span class="order-badge" id="order-build-phases">7</span> <a href="?section=build-phases">🏗️ Stages</a> <div class="confidence-bar" id="bar-build-phases"><div class="confidence-marker" id="marker-build-phases"></div></div><span class="confidence-pct" id="pct-build-phases"></span> <button class="reorder-btn" onclick="moveSection('build-phases',-1)" aria-label="Move section up" title="Move section up">⬆</button><button class="reorder-btn" onclick="moveSection('build-phases',1)" aria-label="Move section down" title="Move section down">⬇</button><button class="collapse-btn" id="toggle-build-phases" onclick="toggleSection('build-phases')" aria-label="Collapse section">▾</button></h2>
     <div class="section-body" id="body-build-phases">
     <p>⏱️ <strong>Total estimated time:</strong> ~33.5 hrs per course cycle (Research is ongoing/daily; Build GitHub Repo is a one-time setup; Sanity Check, Architecture, Archielogy, and Distribution are ongoing/once-per-cycle).</p>
-    <p>🎯 <strong>Average confidence:</strong> 54% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Export Step (30%) and the brand-new stage 14 Archielogy (40%), then stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).</p>
+    <p>🎯 <strong>Average confidence:</strong> 54% — lowest at stage 10 Export MP4 and stage 11 Distribution (10% each, both untested end-to-end and the biggest risk in the whole pipeline), followed by stage 4 Catalog Management (30%) and the brand-new stage 14 Archielogy (40%), then stage 7 Canva Bulk Create / stage 12 Sanity Check / stage 13 Architecture (50% each), and stage 5 Mindmap Architecture / stage 6 Build GitHub Repo (55% each); highest at stage 0 Research (90%, a well-worn habit).</p>
     <h3 id="stages-preprod" class="phase-group"><a href="?section=stages-preprod">🧪 Preprod</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Create the Canva course folder structure • Daily — add new screenshots and tasks to the whiteboard • Generate outline • Generate script • Complete the paid AI certificate"><div class="num" style="color:var(--muted)">0</div>Research 🔍<div class="sub">5 subtasks · 90%</div></div>
       <div class="phase" data-tasks="Build the script, images, storyboard &amp; notes in one Canva design"><div class="num" style="color:var(--accent2)">1</div>Canva Slides 🎨<div class="sub">1 subtask · 85%</div></div>
       <div class="phase" data-tasks="Review each scene in Canva Presentations and mark it &quot;ready&quot;"><div class="num" style="color:var(--accent1)">2</div>Review 🎞️<div class="sub">1 subtask · 75%</div></div>
       <div class="phase" data-tasks="Review each scene into many images that would help with animation"><div class="num" style="color:var(--accent7)">3</div>Animation Frames 🎞️<div class="sub">1 subtask · 60%</div></div>
-      <div class="phase" data-tasks="Run the export script to flatten &quot;ready&quot; scenes for Canva import"><div class="num" style="color:var(--accent4)">4</div>Export Step 📦<div class="sub">1 subtask · 30%</div></div>
+      <div class="phase" data-tasks="Run the export script to flatten &quot;ready&quot; scenes for Canva import"><div class="num" style="color:var(--accent4)">4</div>Catalog Management 📦<div class="sub">1 subtask · 30%</div></div>
     </div>
-    <p class="gap-note">🕳️ <strong>Gaps:</strong> 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Export Step — the weekly export cadence isn't automated, still a manual per-video trigger.</p>
+    <p class="gap-note">🕳️ <strong>Gaps:</strong> 0 Research — live WhatsApp/Teams discussions aren't captured into the vault automatically yet. 1 Canva Slides — pre-session prep still isn't a consistent habit, decks sometimes get built same-day. 2 Review — no formal checklist, just eyeballing the bigger view on a shared call. 3 Add Animation Frames — the Canva MCP integration for frame naming/generation isn't wired up yet. 4 Catalog Management — the weekly export cadence isn't automated, still a manual per-video trigger.</p>
     <h3 id="stages-prod" class="phase-group"><a href="?section=stages-prod">🏭 Prod</a></h3>
     <div class="phases">
       <div class="phase" data-tasks="Build the mindmap of the course architecture • Cross-check the mindmap against the certification syllabus"><div class="num" style="color:var(--accent9)">5</div>Mindmap Architecture 🧠<div class="sub">2 subtasks · 55%</div></div>
@@ -1363,6 +1379,9 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       <p><strong>Pipeline Summary:</strong> A lean, cost-optimized stack focused on free/local tools for most steps
       and selective premium AI where quality or speed justifies the cost. Emphasis on automation (scripts + APIs),
       minimal manual toil, and tight integration with Obsidian vault workflows.</p>
+      <p class="why">⚠️ <strong>Scope limit:</strong> this toolbox is exploration, not the goal — it needs to stay
+      bounded after the production process is locked in. Tools should never outrank production itself; what actually
+      matters more is what the audience gets out of the finished video, not how many tools were used to make it.</p>
       <div class="table-wrap">
         <table class="tools-table">
           <thead>
@@ -1524,6 +1543,9 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
 
   var defaultSectionOrder = ['problem', 'solution', 'problem-solution-fit', 'core-principle', 'hands-on', 'pipeline', 'build-phases', 'references', 'toolbox'];
   var sectionOrder = defaultSectionOrder.slice();
+  var defaultStageOrder = [];
+  for (var stageOrderInit = 0; stageOrderInit <= 14; stageOrderInit++) defaultStageOrder.push('stage' + stageOrderInit);
+  var stageOrder = defaultStageOrder.slice();
   function scrollSection(current, dir) {
     var idx = sectionOrder.indexOf(current) + dir;
     if (idx >= 0 && idx < sectionOrder.length) {
@@ -1553,9 +1575,44 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   function getOrderIndex(id) {
     var sIdx = sectionOrder.indexOf(id);
     if (sIdx !== -1) return sIdx + 1;
-    var m = /^stage(\d+)$/.exec(id);
-    if (m) return parseInt(m[1], 10);
+    var stIdx = stageOrder.indexOf(id);
+    if (stIdx !== -1) return sectionOrder.length + stIdx + 1;
     return null;
+  }
+
+  function saveStageOrder() {
+    setCookie('stageOrderState', JSON.stringify(stageOrder), 365);
+  }
+
+  function loadStageOrder() {
+    var raw = getCookie('stageOrderState');
+    if (!raw) return;
+    var saved;
+    try { saved = JSON.parse(raw); } catch (e) { return; }
+    if (!Array.isArray(saved) || saved.length !== stageOrder.length) return;
+    if (!saved.every(function (id) { return stageOrder.indexOf(id) !== -1; })) return;
+    stageOrder = saved;
+  }
+
+  function moveStageOrder(id, dir) {
+    var idx = stageOrder.indexOf(id);
+    var newIdx = idx + dir;
+    if (idx === -1 || newIdx < 0 || newIdx >= stageOrder.length) return;
+    var tmp = stageOrder[idx];
+    stageOrder[idx] = stageOrder[newIdx];
+    stageOrder[newIdx] = tmp;
+    saveStageOrder();
+    renderMaturityList();
+  }
+
+  function moveMaturityRow(id, dir) {
+    maturitySort.key = 'order';
+    maturitySort.dir = 'asc';
+    if (sectionOrder.indexOf(id) !== -1) {
+      moveSection(id, dir);
+    } else {
+      moveStageOrder(id, dir);
+    }
   }
 
   function saveSectionOrder() {
@@ -1682,7 +1739,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     toolbox: 'Toolbox', problem: 'Problem', solution: 'Solution', 'problem-solution-fit': 'Problem-Solution Fit', 'core-principle': 'Core Principle', 'hands-on': 'Half Hands-On, Half Automated',
     pipeline: 'Pipeline (overall)', 'build-phases': 'Stages (overall)', references: 'References',
     stage0: '0. Research', stage1: '1. Canva Slides', stage2: '2. Review',
-    stage3: '3. Add Animation Frames', stage4: '4. Export Step', stage5: '5. Mindmap Architecture',
+    stage3: '3. Add Animation Frames', stage4: '4. Catalog Management', stage5: '5. Mindmap Architecture',
     stage6: '6. Build GitHub Repo', stage7: '7. Canva Bulk Create', stage8: '8. Asset Generation',
     stage9: '9. Canva Manual Finishing', stage10: '10. Export MP4', stage11: '11. Distribution',
     stage12: '12. Sanity Check', stage13: '13. Architecture', stage14: '14. Archielogy',
@@ -1835,7 +1892,11 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     });
     body.innerHTML = rows.map(function (r) {
       var tier = maturityTier(r.val);
-      return '<tr><td>' + (r.order != null ? r.order : '—') + '</td>' +
+      return '<tr><td class="maturity-order-cell">' +
+        '<button class="reorder-btn" onclick="moveMaturityRow(\'' + r.id + '\',-1)" aria-label="Move up" title="Move up">⬆</button>' +
+        '<span>' + (r.order != null ? r.order : '—') + '</span>' +
+        '<button class="reorder-btn" onclick="moveMaturityRow(\'' + r.id + '\',1)" aria-label="Move down" title="Move down">⬇</button>' +
+        '</td>' +
         '<td><a href="?section=' + r.id + '">' + escapeHtml(r.name) + '</a></td>' +
         '<td>' + tier.emoji + ' ' + r.val + '%</td>' +
         '<td>' + tier.label + ' — ' + tier.action + '</td>' +
@@ -1868,6 +1929,11 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     if (JSON.stringify(sectionOrder) !== JSON.stringify(defaultSectionOrder)) {
       lines.push('Section order (top-level sections, reordered in the browser via ⬆/⬇ — reorder the matching <section> elements in index.html to match):');
       lines.push('  ' + sectionOrder.map(function (id) { return stageNames[id]; }).join(' → '));
+      lines.push('');
+    }
+    if (JSON.stringify(stageOrder) !== JSON.stringify(defaultStageOrder)) {
+      lines.push('Stage priority order (Maturity List ranking only, reordered in the browser — reference for prioritization, does NOT mean renumbering the actual pipeline stages 0-13):');
+      lines.push('  ' + stageOrder.map(function (id) { return stageNames[id]; }).join(' → '));
       lines.push('');
     }
     stageIdsAll.forEach(function (id) {
@@ -1965,6 +2031,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
   }
 
   loadSectionOrder();
+  loadStageOrder();
 
   loadSectionState();
   updateCollapseAllButton();

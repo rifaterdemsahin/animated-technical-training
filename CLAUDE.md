@@ -56,7 +56,7 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   `.confidence-marker`, and a collapse `<button>` wired to `toggleSection(id)`.
 - **Pipeline stages** (`#pipeline` section, `.stage.s0`..`.s14`, `id="stage0"`..
   `id="stage14"`): 15 numbered stages (Research → Canva Slides → Review →
-  Add Animation Frames → Export → Mindmap Architecture → Build GitHub Repo →
+  Add Animation Frames → Catalog Management → Mindmap Architecture → Build GitHub Repo →
   Bulk Create → Asset Generation → Manual Finishing → Export MP4 →
   Distribution → Sanity Check → Architecture → Archielogy). Stage 14
   (Archielogy) is an ongoing, parallel "continuous exploration" stage — it
@@ -94,12 +94,26 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   in `stageNames` that has a confidence value, each row tagged with a tier by
   `maturityTier(val)` (🔴 ≤25 / 🟠 ≤50 / 🟡 ≤75 / 🟢 else) and a "what to do"
   recommendation, plus a `.maturity-note-input` text field and a leading "#"
-  order-index column from `getOrderIndex(id)` (top-level sections: 1-based
-  position in `sectionOrder`; stages: their own fixed number parsed from the
-  id, e.g. `stage3` → `3`). Sortable by clicking the "#", "Section / Stage",
-  or "Confidence" `<th class="sortable">` (`setMaturitySort(key)` flips
-  `maturitySort {key, dir}` and re-renders; default is confidence ascending).
-  The note input is NOT separate storage —
+  order-index column from `getOrderIndex(id)` — globally unique 1-24, never
+  two rows sharing a number: top-level sections get 1-9 (their 1-based
+  position in `sectionOrder`), stages get 10-24 (`sectionOrder.length +`
+  their 1-based position in the separate `stageOrder` array). Each "#" cell
+  also has its own ⬆/⬇ `.reorder-btn` pair calling `moveMaturityRow(id, ±1)`,
+  which forces `maturitySort` to `{key:'order', dir:'asc'}` (so the swap is
+  visible immediately) then dispatches to `moveSection()` for section ids or
+  `moveStageOrder()` for stage ids — the latter only swaps `stageOrder` and
+  re-renders, it never touches the DOM (stage numbering in their titles,
+  e.g. "4. Catalog Management", is fixed; `stageOrder` is a priority
+  ranking, not a renumbering). `stageOrder` persists via
+  `saveStageOrder()`/`loadStageOrder()` to the `stageOrderState` cookie
+  (seeded from `defaultStageOrder`, `stage0`.. `stage14` in order — keep
+  both in sync if the stage list ever changes), loaded alongside
+  `loadSectionOrder()` at init. When `stageOrder` differs from
+  `defaultStageOrder`, `copyStageData()` prepends a task line the same way
+  it already does for `sectionOrder`. Sortable by clicking the "#",
+  "Section / Stage", or "Confidence" `<th class="sortable">`
+  (`setMaturitySort(key)` flips `maturitySort {key, dir}` and re-renders;
+  default is confidence ascending). The note input is NOT separate storage —
   `onMaturityNoteInput()` writes straight into that row's real
   `notes-<id>` element and calls `saveStageData()`, so it's just an
   alternate editor for the same cookie-backed note (two-way: editing the
