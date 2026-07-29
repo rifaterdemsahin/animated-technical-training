@@ -626,6 +626,67 @@
     .stage-rail { display: none; }
   }
 
+  .right-rail {
+    position: fixed;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    z-index: 400;
+    background: rgba(15,23,42,0.85);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 0.6rem 0.4rem;
+    backdrop-filter: blur(6px);
+  }
+  .right-rail a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.95rem;
+    background: rgba(148,163,184,0.1);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .right-rail a:hover { transform: scale(1.15); background: rgba(148,163,184,0.28); }
+  .right-rail a:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    background: #0b1120;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.35rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 950;
+    pointer-events: none;
+  }
+  .right-rail a:hover::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-4px);
+    border: 5px solid transparent;
+    border-left-color: var(--border);
+    z-index: 951;
+  }
+  @media (max-width: 1150px) {
+    .right-rail { display: none; }
+  }
+
   .overall-feedback {
     background: var(--card);
     border: 1px solid var(--border);
@@ -694,6 +755,10 @@
   <a href="?section=stage13" data-tip="13. Architecture" aria-label="Jump to stage 13: Architecture">🏛️</a>
   <a href="?section=stage14" data-tip="14. Archielogy" aria-label="Jump to stage 14: Archielogy">🔬</a>
 </nav>
+<nav class="right-rail" aria-label="External references">
+  <a href="https://claude.ai/code/artifact/ae698ab1-93dc-4940-83d8-3e05177283d4" target="_blank" rel="noopener" data-tip="Dashboard layout design (Claude artifact)" aria-label="Open Dashboard layout design artifact">🖥️</a>
+  <a href="https://canva.link/13vc3o4z6mgj2zw" target="_blank" rel="noopener" data-tip="Canva design" aria-label="Open Canva design">🎨</a>
+</nav>
 <nav class="topnav">
   <a href="?section=problem">🧩 Problem</a>
   <a href="?section=solution">✅ Solution</a>
@@ -718,7 +783,7 @@
 <div class="wrap">
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-29T06:34:22Z">v8.9.0 · Updated 2026-07-29 06:34 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-29T22:05:17Z">v8.10.0 · Updated 2026-07-29 22:05 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">

@@ -70,6 +70,13 @@ Everything — styles, markup, and JS — lives in this one file. Key structural
   `scrollIntoView` pattern as the top nav — no separate JS wiring needed when
   adding a stage, just add the `<a>`. Hidden below `max-width: 1150px` so it
   never overlaps the centered `.wrap` content.
+- **Right external-links rail** (`<nav class="right-rail">`, immediately
+  after `.stage-rail`): same fixed-pill/tooltip pattern as `.stage-rail`
+  but mirrored to the right edge (tooltip flips to open leftward via
+  `.right-rail a:hover::after`/`::before`) and its `<a>` targets are plain
+  external URLs (`target="_blank" rel="noopener"`), not `?section=` links —
+  currently the "Dashboard layout design" Claude artifact and a Canva
+  design. Also hidden below `max-width: 1150px`.
 - **Collapse All**: `#collapseAllBtn` in `.cookie-tools` calls
   `toggleAllSections()`, which flips every section/stage between collapsed
   and expanded via `setAllCollapsed()`/`areAllCollapsed()` and persists
