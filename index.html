@@ -1529,6 +1529,7 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
     Manual build wins on aesthetics — a <a href="?section=solution">comic</a> deserves craft over cringe. 🎨✨
     <p><a href="https://rifaterdemsahin.github.io/animated-technical-training/" target="_blank" rel="noopener">🌐 View on GitHub Pages</a></p>
     <p id="lastCommit"><a href="https://github.com/rifaterdemsahin/animated-technical-training/commits/main" target="_blank" rel="noopener">🔗 Last commit: loading…</a></p>
+    <p id="loadPerformance"></p>
   </footer>
 
 </div>
@@ -2138,6 +2139,22 @@ navy background, teal/amber/coral accent colors, flat vector style, no logos, no
       }
     })
     .catch(function () {});
+
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var perfEntries = performance.getEntriesByType("navigation");
+      var loadTime = 0;
+      if (perfEntries.length > 0) {
+        loadTime = Math.round(perfEntries[0].loadEventEnd);
+      } else if (window.performance && window.performance.timing) {
+        loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+      }
+      var el = document.getElementById('loadPerformance');
+      if (el && loadTime > 0) {
+        el.textContent = '⏱️ Page load time: ' + loadTime + 'ms';
+      }
+    }, 0);
+  });
 </script>
 </body>
 </html>
