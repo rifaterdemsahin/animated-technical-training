@@ -1,6 +1,6 @@
 # 🎬 Animated Technical Training
 
-🏆 Created & Maintained by **Rifat Erdem Sahin**
+🎬 **CREDITS** · Created &amp; Maintained by **Rifat Erdem Sahin**
 
 Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards & sprites into animated technical training videos using Canva + AI.
 

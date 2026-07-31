@@ -788,22 +788,40 @@
     color: #a5f3fc;
   }
   .credits-banner {
-    background: linear-gradient(135deg, rgba(251,191,36,0.1), rgba(244,114,182,0.1));
-    border: 1px solid rgba(251,191,36,0.3);
-    border-radius: 12px;
-    padding: 0.8rem 1.2rem;
-    margin-bottom: 2rem;
+    background: linear-gradient(90deg, rgba(15,23,42,0) 0%, rgba(30,41,59,0.8) 25%, rgba(30,41,59,0.8) 75%, rgba(15,23,42,0) 100%);
+    border-top: 1px solid rgba(251,191,36,0.25);
+    border-bottom: 1px solid rgba(251,191,36,0.25);
+    padding: 0.6rem 2rem;
+    margin-bottom: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    gap: 1rem;
+    font-size: 0.8rem;
     color: var(--text);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    box-shadow: inset 0 0 15px rgba(0,0,0,0.6);
   }
-  .credits-banner strong {
+  .credits-label {
+    font-weight: 800;
     color: var(--accent4);
-    text-shadow: 0 0 8px rgba(251, 191, 36, 0.4);
+    text-shadow: 0 0 10px rgba(251,191,36,0.6);
+  }
+  .credits-divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(251,191,36,0.3);
+  }
+  .credits-text {
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+  }
+  .credits-text strong {
+    color: var(--text);
+    font-weight: 700;
+    text-shadow: 0 0 6px rgba(226,232,240,0.4);
   }
   footer {
     text-align: center;
@@ -840,10 +858,23 @@
     .credits-banner {
       background: none !important;
       border: 1px solid #cbd5e1 !important;
+      border-left: none !important;
+      border-right: none !important;
       box-shadow: none !important;
       color: #0f172a !important;
+      padding: 0.5rem 0 !important;
     }
-    .credits-banner strong {
+    .credits-label {
+      color: #0f172a !important;
+      text-shadow: none !important;
+    }
+    .credits-divider {
+      background: #cbd5e1 !important;
+    }
+    .credits-text {
+      color: #0f172a !important;
+    }
+    .credits-text strong {
       color: #0f172a !important;
       text-shadow: none !important;
     }
@@ -927,11 +958,13 @@
 </div>
 <div class="wrap">
   <div class="credits-banner">
-    🏆 Created &amp; Maintained by <strong>Rifat Erdem Sahin</strong>
+    <span class="credits-label">CREDITS</span>
+    <span class="credits-divider"></span>
+    <span class="credits-text">Created &amp; Maintained by <strong>Rifat Erdem Sahin</strong></span>
   </div>
 
   <header>
-    <div class="version" id="versionBadge" data-updated="2026-07-31T18:54:04Z">v8.13.0 · Updated 2026-07-31 18:54 UTC · <span id="updatedAgo"></span></div>
+    <div class="version" id="versionBadge" data-updated="2026-07-31T18:55:02Z">v8.13.1 · Updated 2026-07-31 18:55 UTC · <span id="updatedAgo"></span></div>
     <h1>🎬 Animated Technical Training</h1>
     <p class="tagline">Show, don't tell. A repo-driven video production pipeline that turns scripts, storyboards &amp; sprites into animated technical training videos using Canva + AI.</p>
     <div class="links">
